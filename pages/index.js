@@ -3,99 +3,21 @@ import {Fragment, useEffect, useState} from "react";
 import {motion} from "framer-motion"
 import {InView} from 'react-intersection-observer';
 import Footer from "../shared/components/footer/footer";
-import SwiperCore, {Autoplay, Controller, Navigation, Pagination} from 'swiper/core';
 import Head from "next/head";
-import BackToTop from "../shared/components/back-to-top";
 import BookNow from "../shared/components/book-now";
 import PageHeader from "../shared/components/page-header/page-header";
+import Button from "../shared/components/button";
+
+import SwiperCore, {Autoplay, EffectFade, Navigation, Pagination} from 'swiper/core';
+import {Swiper, SwiperSlide} from 'swiper/react';
 
 
-SwiperCore.use([Autoplay, Pagination, Navigation, Controller]);
-const strip_items = [
-    {
-        title: 'Body',
-        url: '/products#body'
-    },
-    {
-        title: 'Hair',
-        url: '/products#hair'
-    },
-    {
-        title: 'Skincare',
-        url: '/products#skincare'
-    },
-    {
-        title: 'Supplements',
-        url: '/products#supplements'
-    },
-    {
-        title: 'Tools',
-        url: '/products#tools'
-    }
-]
-
+SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
 export default function Home() {
-    const [current_slide, set_current_slide] = useState(0);
-
-    const [is_menu_visible, set_is_menu_visible] = useState(false);
-
-    const [slider, set_slider] = useState({});
-    const carousel_content = [
-        {
-            title: 'Body',
-            content: 'A range of hand-picked brands for the best of body care products that are made with clean, active ingredients and are result-driven. Taking care of your body is equally rewarding.',
-            url: '/products#body'
-        },
-        {
-            title: 'Hair',
-            content: 'Give your hair care routine a bump onto the next level. Whether it is finding the right products for your hair type and concern or adding some lovely serums for that extra bounce, we’ve curated an array of products for each and every one of your needs.',
-            url: '/products#hair'
-        },
-        {
-            title: 'Skincare',
-            content: 'Whether you’re a beginner or a skincare enthusiast, we have something for you all. Choose from our repertoire of curated skincare products that have acquired a cult status for their new-age formulations and are targeted towards lasting skincare benefits. A healthy glow awaits you.',
-            url: '/products#skincare'
-        },
-        {
-            title: 'Supplements',
-            content: 'At Glow, we promote overall well-being for healthy skin and hair. Find supplements that come recommended for a glow that’s from within.',
-            url: '/products#supplements'
-        },
-        {
-            title: 'Tools',
-            content: 'For at-home facials and upkeep, we have a range of some of the most innovative technology that will work on a deeper level for that glow from within. Prep, prime and polish your skin with these must-try tools. Starting from easy-to-use to high-tech devices, we have a variety of tools that will enhance your at home beauty regime.',
-            url: '/products#tools'
-        }
-    ];
-
-    useEffect(() => {
-        const ids = ['banner', 'bannerText', 'SkinCarePhilosophy', 'sayHello', 'services', 'sliders', 'edit', 'visitus', 'journey']
-        let id = 0;
-
-        // window.addEventListener("wheel", function (e) { // or window.addEventListener("scroll"....
-        //     if (e.wheelDelta >= 0) {
-        //         if (id > 0) {
-        //             if (id - 1 === 0) {
-        //                 window.scrollTo(0, 0)
-        //             } else {
-        //                 document.getElementById(ids[id - 1]).scrollIntoView({behavior: "smooth", block: "start",});
-        //             }
-        //             id -= 1;
-        //         }
-        //
-        //
-        //     } else {
-        //         if (id < ids.length - 1) {
-        //             document.getElementById(ids[id + 1]).scrollIntoView({behavior: "smooth", block: "start",});
-        //             id += 1;
-        //         }
-        //
-        //     }
-        //     console.log(id)
-        // }, false);
-    }, [])
+    const places = [1, 2, 3, 4, 5]
 
     const [device, set_device] = useState(2);
+
     useEffect(() => {
         if (screen.width <= 648) {
             set_device(0)
@@ -113,14 +35,14 @@ export default function Home() {
             </Head>
             <PageHeader/>
 
-            <InView threshold={0.25}>
+            <InView threshold={0.25} triggerOnce={true}>
                 {
                     ({ref, inView}) => (
                         <motion.div className={"outer " + styles.traditionOuter}
                                     ref={ref}
                                     initial={{opacity: 0}}
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
-                                    transition={{duration: 2}}>
+                                    transition={{duration: 1}}>
                             <div className={"inner " + styles.tradition}>
                                 <h1>Honouring a century <br/> <span>Old</span> tradition <span className={styles.lower}>of</span><br/> opulence</h1>
                                 <p>Sanjay Gupta is built on the foundation laid by our predecessors in 1925 — of honouring culture and the century old
@@ -133,14 +55,14 @@ export default function Home() {
                 }
             </InView>
 
-            <InView threshold={0.25}>
+            <InView threshold={0.25} triggerOnce={true}>
                 {
                     ({ref, inView}) => (
                         <motion.div className={"outer " + styles.preservingOuter}
                                     ref={ref}
                                     initial={{opacity: 0}}
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
-                                    transition={{duration: 2}}>
+                                    transition={{duration: 1}}>
                             <div className={"inner " + styles.preserving}>
                                 <div className={styles.pLeft}>
                                     <h1>Preserving <br/> the Art</h1>
@@ -148,6 +70,7 @@ export default function Home() {
                                         the patronage to craftsmanship of the yesteryears. We have always had a deep devotion towards the art of jewellery making and
                                         work with artisans who have dedicated their life’s work to preserving these age-old renditions.
                                     </p>
+                                    <Button title={'Learn More'}/>
                                 </div>
                                 <div className={styles.pRight}>
                                     <img src={'/images/homepage/preserving.png'}/>
@@ -158,15 +81,15 @@ export default function Home() {
                 }
             </InView>
 
-
-            <InView threshold={0.25}>
+            {/*Distinguished*/}
+            <InView threshold={0.25} triggerOnce={true}>
                 {
                     ({ref, inView}) => (
                         <motion.div className={"outer " + styles.distinguishedOuter}
                                     ref={ref}
                                     initial={{opacity: 0}}
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
-                                    transition={{duration: 2}}>
+                                    transition={{duration: 1}}>
                             <div className={"inner " + styles.distinguished}>
                                 <div className={styles.disTop}>
                                     <h1>Distinguished designs</h1>
@@ -176,8 +99,42 @@ export default function Home() {
                                     </p>
                                 </div>
                                 <div className={styles.disBottom}>
-                                    <img src={'/images/homepage/preserving.png'}/>
-                                    <img src={'/images/homepage/preserving.png'}/>
+                                    <img src={'/images/homepage/distinguished/1.png'}/>
+                                    <img src={'/images/homepage/distinguished/2.png'}/>
+                                </div>
+                                <Button theme={'gold_large'} title={'Discover High Jewellery'}/>
+                            </div>
+                        </motion.div>
+                    )
+                }
+            </InView>
+
+            {/*Timeless*/}
+            <InView threshold={0.25} triggerOnce={true}>
+                {
+                    ({ref, inView}) => (
+                        <motion.div className={"outer " + styles.timelessOuter}
+                                    ref={ref}
+                                    initial={{opacity: 0}}
+                                    animate={inView ? {opacity: 1} : {opacity: 0}}
+                                    transition={{duration: 0.8}}>
+                            <div className={"inner " + styles.timeless}>
+                                <div className={styles.tlLeft}>
+                                    <div className={styles.tlContent}>
+                                        <img className={styles.timelessone} src={'/images/homepage/timeless/1.png'}/>
+                                        <div className={styles.tlCreation}>
+                                            <header>Timeless creations</header>
+                                            <p>Heritage jewellery by Sanjay Gupta has always been the talk-of-the-town as part of our signature collections.
+                                                These timeless creations are appreciated by those who enjoy romantic renditions of yore. The versatility
+                                                and immaculate precision of these designs renders them to any celebration.</p>
+                                        </div>
+                                    </div>
+
+                                    <img className={styles.timelesstwo} src={'/images/homepage/timeless/2.png'}/>
+                                </div>
+                                <div className={styles.tlRight}>
+                                    <img className={styles.timelessthree} src={'/images/homepage/timeless/3.png'}/>
+                                    <img className={styles.timelessfour} src={'/images/homepage/timeless/4.png'}/>
                                 </div>
                             </div>
                         </motion.div>
@@ -185,8 +142,90 @@ export default function Home() {
                 }
             </InView>
 
+            {/*Find What*/}
+            <InView threshold={0.25} triggerOnce={true}>
+                {
+                    ({ref, inView}) => (
+                        <motion.div className={"outer " + styles.findOuter}
+                                    ref={ref}
+                                    initial={{opacity: 0}}
+                                    animate={inView ? {opacity: 1} : {opacity: 0}}
+                                    transition={{duration: 1}}>
+                            <div className={"inner " + styles.find}>
+                                <h1>Find <span>what</span> <br/> you are looking <br/><span>for</span></h1>
+                                <p>We have devised a custom filter that helps you find jewellery that matches your mood and suits your style.
+                                    Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.
+                                </p>
+                                <div className={styles.sliders}>
+                                    <Swiper
+                                        spaceBetween={30}
+                                        slidesPerView={'2'}>
+                                        {
+                                            places.map((place, index) => {
+                                                return <SwiperSlide>
+                                                    <div>
+                                                        <img src={'/images/homepage/find/1.png'}/>
+                                                        {place}
+                                                    </div>
+                                                </SwiperSlide>
+                                            })
+                                        }
+                                    </Swiper>
+                                    <div className={styles.btn}>
+                                        <Button theme={'white_large'} title={'Explore Exclusively Yours'}/>
+                                    </div>
+                                </div>
 
-            <InView threshold={0.25}>
+                            </div>
+                        </motion.div>
+                    )
+                }
+            </InView>
+
+            {/*SG Exp*/}
+            <InView threshold={0.25} triggerOnce={true}>
+                {
+                    ({ref, inView}) => (
+                        <motion.div className={"outer " + styles.sgExOuter}
+                                    ref={ref}
+                                    initial={{opacity: 0}}
+                                    animate={inView ? {opacity: 1} : {opacity: 0}}
+                                    transition={{duration: 1}}>
+                            <div className={"inner " + styles.sgEx}>
+                                <div className={styles.sgExTop}>
+                                    <h2>The Sanjay Gupta <br/> Experience</h2>
+                                    <p>We have devised a custom filter that helps you find jewellery that matches your mood and suits your style.
+                                        Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.
+                                    </p>
+                                </div>
+                                <div className={styles.sgExBottom}>
+                                    <div className={styles.sgExBLeft}>
+                                        <img className={styles.timelessthree} src={'/images/homepage/sgex/1.png'}/>
+                                        <p>Handcrafted designs,hand-wrapped <br/> with love.
+                                        </p>
+                                        <Button title={'Discover Luxury'} theme={'blue'}/>
+                                    </div>
+
+                                    <div className={styles.sgExBRight}>
+                                        <div className={styles.timelessthree}>
+                                            <img src={'/images/homepage/sgex/2.png'}/>
+                                            <header>Unbox old memories</header>
+                                        </div>
+                                        <div className={styles.timelessfour}>
+                                            <img src={'/images/homepage/sgex/3.png'}/>
+                                            <header>Design <br/> your dream piece</header>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </motion.div>
+                    )
+                }
+            </InView>
+
+            {/*Legacy*/}
+            <InView threshold={0.25} triggerOnce={true}>
                 {
                     ({ref, inView}) => (
                         <motion.div className={"outer " + styles.legacyOuter}
@@ -208,14 +247,15 @@ export default function Home() {
                                 <div className={styles.legBottom}>
                                     <img src={'/images/homepage/legacy.png'}/>
                                 </div>
+                                <Button title={'Learn More'}/>
                             </div>
                         </motion.div>
                     )
                 }
             </InView>
 
-
-            <InView threshold={0.25}>
+            {/*Book*/}
+            <InView threshold={0.25} triggerOnce={true}>
                 {
                     ({ref, inView}) => (
                         <motion.div className={"outer " + styles.bookOuter}
@@ -232,7 +272,22 @@ export default function Home() {
                                     </p>
                                 </div>
                                 <div className={styles.bookBottom}>
-                                    <img src={'/images/homepage/legacy.png'}/>
+                                    <Swiper
+                                        spaceBetween={30}
+                                        centeredSlides={true}
+                                        loop={true}
+                                        slidesPerView={'auto'}>
+                                        {
+                                            places.map((place, index) => {
+                                                return <SwiperSlide>
+                                                    <div>
+                                                        <img src={'/images/homepage/places/1.png'}/>
+                                                        {place}
+                                                    </div>
+                                                </SwiperSlide>
+                                            })
+                                        }
+                                    </Swiper>
                                 </div>
                             </div>
                         </motion.div>
@@ -241,7 +296,7 @@ export default function Home() {
             </InView>
 
 
-            <InView threshold={0.25}>
+            <InView threshold={0.25} triggerOnce={true}>
                 {
                     ({ref, inView}) => (
                         <motion.div className={"outer"}

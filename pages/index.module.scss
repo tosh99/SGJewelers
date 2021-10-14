@@ -2,7 +2,8 @@
     .tradition {
         max-width: unset;
         min-height: 1267px;
-        background: url("/images/homepage/banner.png");
+        background: url("/images/homepage/banner.png") no-repeat;
+        background-size: cover;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -34,6 +35,8 @@
             line-height: 125%;
             text-align: center;
             letter-spacing: 0.05em;
+            font-family: TeodorTrialLight, sans-serif;
+            max-width: 1051px;
         }
     }
 }
@@ -63,6 +66,7 @@
                 font-size: 16px;
                 line-height: 130%;
                 letter-spacing: 0.06em;
+                margin-bottom: 62px;
             }
         }
     }
@@ -102,13 +106,211 @@
 
         .disBottom {
             display: flex;
-
+            margin-bottom: 72px;
 
             img {
                 width: 100%;
                 margin: 0 10px;
             }
         }
+    }
+}
+
+.timelessOuter {
+    .timeless {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 232px;
+
+        .tlLeft {
+            display: flex;
+            flex-direction: column;
+            margin-right: 82px;
+
+            .tlContent {
+                display: flex;
+                margin-bottom: 161px;
+
+                .timelessone {
+                    margin-right: 98px;
+                }
+
+                .tlCreation {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 299px;
+
+                    header {
+                        font-size: 28px;
+                        line-height: 40px;
+                        letter-spacing: 0.08em;
+                        text-transform: uppercase;
+                        color: rgba(0, 62, 82, 0.9);
+                        font-family: MillionaireTrialRoman, sans-serif;
+                        margin-bottom: 61px;
+                    }
+
+                    p {
+                        font-family: TeodorTrialLight, sans-serif;
+                        font-size: 16px;
+                        line-height: 130%;
+                        letter-spacing: 0.06em;
+                        margin-bottom: 62px;
+                    }
+                }
+            }
+
+            .timelesstwo {
+                margin-left: 128px;
+                max-width: 603px;
+            }
+        }
+
+        .tlRight {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 380px;
+        }
+    }
+
+}
+
+.findOuter {
+    .find {
+        max-width: unset;
+        background: url("/images/homepage/find.png") no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        padding-top: 130px;
+        padding-bottom: 130px;
+        margin-top: 172px;
+
+        h1 {
+            margin-bottom: 63px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family: MillionaireTrialRoman, sans-serif;
+            line-height: 145.5%;
+
+            span {
+                text-transform: lowercase;
+                font-family: MillionaireTrialScript, sans-serif;
+            }
+
+            .lower {
+                text-transform: lowercase;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            color: #FFFFFF;
+            line-height: 125%;
+            letter-spacing: 0.05em;
+            margin-bottom: 113px;
+            font-family: TeodorTrialLight, sans-serif;
+            font-weight: 300;
+            max-width: 631px;
+        }
+
+        .sliders {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            .btn {
+                margin-left: 50px;
+            }
+        }
+    }
+}
+
+.sgExOuter {
+    background: #B0C6C9;
+
+    .sgEx {
+        display: flex;
+        flex-direction: column;
+        padding-top: 227px;
+        padding-bottom: 239px;
+
+        .sgExTop {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 126px;
+
+            h2 {
+                font-size: 28px;
+                line-height: 40px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: rgba(0, 62, 82, 0.9);
+                font-family: MillionaireTrialRoman, sans-serif;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 125%;
+                letter-spacing: 0.05em;
+                font-family: TeodorTrialLight, sans-serif;
+                max-width: 508px;
+            }
+        }
+
+        .sgExBottom {
+            display: flex;
+            justify-content: space-between;
+
+            .sgExBLeft {
+                display: flex;
+                flex-direction: column;
+                max-width: 635px;
+
+                p {
+                    margin-top: 123px;
+                    margin-bottom: 172px;
+                    font-family: MillionaireTrialScript, sans-serif;
+                    font-size: 24px;
+                    line-height: 134.5%;
+                    color: #003E52;
+                }
+            }
+
+            .sgExBRight {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                max-width: 635px;
+
+                header {
+                    font-family: MillionaireTrialRoman, sans-serif;
+                    font-size: 24px;
+                    line-height: 134.5%;
+                    color: #003E52;
+                }
+
+                .timelessthree {
+                    img {
+                        margin-bottom: 26px;
+                    }
+                }
+
+                .timelessfour {
+                    display: flex;
+
+                    img {
+                        margin-right: 26px;
+                    }
+                }
+            }
+
+
+        }
+
     }
 }
 
@@ -160,6 +362,7 @@
 
         .legBottom {
             display: flex;
+            margin-bottom: 53px;
 
             img {
                 width: 100vw;
@@ -211,8 +414,11 @@
         .bookBottom {
             display: flex;
 
-            img {
-                width: 100vw;
+
+            div {
+                img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -313,12 +519,105 @@
         }
     }
 
+    .findOuter {
+        .find {
+            background: url("/images/homepage/find_mobile.png");
+            padding-top: 30px;
+            padding-bottom: 20px;
+            margin-top: 84px;
+
+            h1 {
+                margin-bottom: 256px;
+
+                span {
+                    text-transform: lowercase;
+                    font-family: MillionaireTrialScript, sans-serif;
+                }
+
+                .lower {
+                    text-transform: lowercase;
+                }
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 120%;
+            }
+
+            .sliders {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .sgExOuter {
+        .sgEx {
+            padding-top: 58px;
+            padding-bottom: 239px;
+
+            .sgExTop {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 126px;
+
+                h2 {
+                    font-size: 16px;
+                    line-height: 150%;
+                    letter-spacing: 0.08em;
+                    margin-bottom: 23px;
+                    text-align: center;
+
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 125%;
+                    letter-spacing: 0.05em;
+                    font-family: TeodorTrialLight, sans-serif;
+                    max-width: 508px;
+                }
+            }
+
+            .sgExBottom {
+                display: flex;
+                justify-content: space-between;
+
+                .sgExBLeft {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 635px;
+
+                    p {
+                        margin-top: 123px;
+                        margin-bottom: 172px;
+                        font-family: MillionaireTrialScript, sans-serif;
+                        font-size: 24px;
+                        line-height: 134.5%;
+                        color: #003E52;
+                    }
+                }
+
+                .sgExBRight {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 635px;
+                }
+
+
+            }
+
+        }
+    }
+
     .legacyOuter {
         .legacy {
             padding: 55px 20px 0 20px;
+            margin-bottom: 68px;
 
             .legTop {
-                margin-bottom: 68px;
+                margin-bottom: 32px;
                 padding: 0;
 
                 h1 {

@@ -1,0 +1,43 @@
+.buttons {
+    background: url("/icons/common/buttons/button_bg_gold.svg") no-repeat;
+    background-size: contain;
+    width: 234px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: TeodorTrial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    color: #CA9040;
+
+    white-space: nowrap;
+
+}
+
+.buttonsBlue {
+    background: url("/icons/common/buttons/button_bg_blue.svg") no-repeat;
+    background-size: contain;
+    color: #003E52;
+}
+
+.buttonsGoldLarge {
+    background: url("/icons/common/buttons/button_bg_large_gold.svg") no-repeat;
+    background-size: contain;
+    color: #CA9040;
+    width: 362px;
+}
+
+.buttonsWhiteLarge {
+    background: url("/icons/common/buttons/button_bg_large_white.svg") no-repeat;
+    background-size: contain;
+    color: #FFFFFF;
+    width: 362px;
+}
