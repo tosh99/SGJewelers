@@ -1,0 +1,22 @@
+.nextback {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 80px !important;
+    min-width: 80px !important;
+    max-width: 80px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    img {
+        cursor: pointer;
+        width: 10px !important;
+    }
+
+    .disabled {
+        cursor: default;
+    }
+
+
+}

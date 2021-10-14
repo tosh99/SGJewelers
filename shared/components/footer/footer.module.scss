@@ -1,0 +1,210 @@
+.footerOuter {
+    background: #2C2C2C;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 77px 0 0;
+
+    .footerTop {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 95px;
+
+        .ftLeft {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+
+            header {
+                display: none;
+                font-family: HattonRegular, sans-serif;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+        }
+
+        .ftRight {
+            display: flex;
+            justify-content: flex-end;
+
+            .column {
+                display: flex;
+                flex-direction: column;
+                margin-left: 85px;
+                align-items: flex-end;
+
+                .clHeader {
+                    font-family: MillionaireTrialRoman, sans-serif;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 22px;
+                    letter-spacing: 0.08em;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 54px;
+                    color: #CA9040;
+                    width: 170px;
+
+
+                    img {
+                        display: none;
+                    }
+                }
+
+                .item {
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 22px;
+                    letter-spacing: 0.03em;
+                    color: #FFFFFF;
+                    transition: 0.4s;
+                    margin-bottom: 14px;
+                    cursor: pointer;
+                    text-align: left;
+                    width: 170px;
+                }
+
+                .item:hover {
+                    color: #757575;
+                    transition: 0.4s;
+                }
+            }
+
+        }
+    }
+
+    .footerBottom {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 68px;
+
+        .fbLeft {
+            display: flex;
+            flex-direction: column;
+            color: #FFFFFF;
+
+            .mobile {
+                margin-bottom: 29px;
+            }
+
+            .emails {
+                display: flex;
+                align-items: center;
+                margin-bottom: 32px;
+            }
+
+            .address {
+
+
+            }
+        }
+    }
+
+    .footerBase {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 123.8%;
+        letter-spacing: 0.5px;
+        color: #BABABA;
+        font-family: TelegrafRegular, sans-serif;
+        padding: 17px 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer {
+
+        .footerTop {
+            .ftRight {
+
+                .column {
+                    margin-left: 45px;
+                    margin-bottom: 20px;
+
+                    .clHeader {
+                        width: 100%;
+                        margin-bottom: 10px;
+
+                        img {
+                            display: block;
+                            width: 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .footerBottom {
+
+        }
+
+    }
+}
+
+
+@media only screen and (max-width: 648px) {
+    .footer {
+        padding: 50px 0 0 0 !important;
+        padding-top: 20px !important;
+
+        .footerTop {
+            flex-direction: column;
+            margin-bottom: 35px;
+
+            .ftLeft {
+                margin-bottom: 17px;
+                padding: 0 20px 0 35px;
+
+                header {
+                    display: flex;
+                }
+
+                img {
+                    width: 60px;
+                }
+
+                .backtoToTop {
+                    display: flex;
+                }
+            }
+
+            .ftRight {
+                flex-direction: column;
+                justify-content: unset;
+                padding: 45px 35px 0;
+                border-top: 0.3px solid #444444;
+
+                .column {
+                    margin-left: 0;
+                    align-items: flex-start;
+                }
+            }
+        }
+
+        .footerBottom {
+            flex-direction: column-reverse;
+            margin-bottom: 0;
+
+            .fbLeft {
+                .address {
+                    padding: 0 35px;
+                    margin-bottom: 64px;
+                    font-size: 14px;
+                }
+
+                .appoint {
+                    font-size: 14px;
+                    padding: 18px 35px;
+                    border-top: 0.5px solid #313131;
+                }
+
+            }
+        }
+    }
+}

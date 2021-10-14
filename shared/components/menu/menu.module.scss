@@ -1,0 +1,100 @@
+.menuOuter {
+}
+
+.menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    z-index: 4;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+
+    .menuTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 75px;
+        border-bottom: 0.3px solid #c6c6c6;
+
+        .logo {
+            width: 47px;
+            cursor: pointer;
+        }
+
+        .close {
+            width: 20px;
+        }
+    }
+
+    .menuContent {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 45px 75px;
+
+        header {
+            margin-bottom: 45px;
+            line-height: 20px;
+            letter-spacing: 0.02em;
+            font-family: HattonRegular, sans-serif;
+            cursor: pointer;
+            font-size: 24px;
+        }
+    }
+
+    .menuBottom {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 20px 75px;
+        position: absolute;
+        bottom: 75px;
+        width: 100%;
+
+        p {
+            font-family: HattonRegular, sans-serif;
+            line-height: 155.5%;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 21px;
+            cursor: pointer;
+        }
+
+        .menuLast {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            margin-top: 70px;
+
+            header {
+                line-height: 20px;
+                letter-spacing: 0.02em;
+                font-family: HattonRegular, sans-serif;
+                cursor: pointer;
+                font-size: 24px;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 648px) {
+    .menu {
+        .menuTop {
+            padding: 20px 35px;
+        }
+
+        .menuContent {
+            padding: 20px 35px;
+            align-items: flex-start;
+        }
+
+        .menuBottom {
+            padding: 20px 35px;
+            align-items: flex-start;
+        }
+    }
+}

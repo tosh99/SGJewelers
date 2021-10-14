@@ -1,0 +1,388 @@
+.traditionOuter {
+    .tradition {
+        max-width: unset;
+        min-height: 1267px;
+        background: url("/images/homepage/banner.png");
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            margin-bottom: 450px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family: MillionaireTrialRoman, sans-serif;
+            line-height: 145.5%;
+
+            span {
+                text-transform: capitalize;
+                font-family: MillionaireTrialScript, sans-serif;
+            }
+
+            .lower {
+                text-transform: lowercase;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            color: #FFFFFF;
+            line-height: 125%;
+            text-align: center;
+            letter-spacing: 0.05em;
+        }
+    }
+}
+
+.preservingOuter {
+    .preserving {
+        display: flex;
+        padding-top: 130px;
+
+
+        .pLeft {
+            max-width: 302px;
+            margin-right: 83px;
+
+            h1 {
+                font-size: 28px;
+                line-height: 40px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: rgba(0, 62, 82, 0.9);
+                font-family: MillionaireTrialRoman, sans-serif;
+                margin-bottom: 25px;
+            }
+
+            p {
+                font-family: TeodorTrialLight, sans-serif;
+                font-size: 16px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+            }
+        }
+    }
+}
+
+.distinguishedOuter {
+    .distinguished {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 130px;
+
+        .disTop {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 68px;
+
+            h1 {
+                font-size: 28px;
+                line-height: 149%;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: rgba(0, 62, 82, 0.9);
+                font-family: MillionaireTrialRoman, sans-serif;
+                margin-bottom: 25px;
+                text-align: center;
+            }
+
+            p {
+                font-family: TeodorTrialLight, sans-serif;
+                font-size: 16px;
+                line-height: 130%;
+                letter-spacing: 0.06em;
+            }
+        }
+
+        .disBottom {
+            display: flex;
+
+
+            img {
+                width: 100%;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+.legacyOuter {
+    .legacy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 160px 0 0 0;
+        max-width: unset;
+
+
+        .legTop {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 68px;
+            padding: 0 100px;
+
+            h1 {
+                font-size: 32px;
+                line-height: 143.5%;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: rgba(0, 62, 82, 0.9);
+                font-family: MillionaireTrialRoman, sans-serif;
+                margin-bottom: 25px;
+                text-align: center;
+
+                span {
+                    text-transform: lowercase;
+                    font-family: MillionaireTrialScript, sans-serif;
+                }
+            }
+
+            p {
+                font-family: TeodorTrialLight, sans-serif;
+                font-size: 18px;
+                line-height: 125%;
+                letter-spacing: 0.06em;
+                max-width: 986px;
+                text-align: center;
+            }
+
+            .legBottom {
+                display: none;
+            }
+        }
+
+        .legBottom {
+            display: flex;
+
+            img {
+                width: 100vw;
+            }
+        }
+    }
+}
+
+.bookOuter {
+    .book {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 160px 0 0 0;
+        max-width: unset;
+
+
+        .bookTop {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 68px;
+            padding: 0 100px;
+
+            h1 {
+                font-size: 54px;
+                line-height: 75px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: rgba(0, 62, 82, 0.9);
+                font-family: MillionaireTrialRoman, sans-serif;
+                margin-bottom: 25px;
+
+                span {
+                    text-transform: lowercase;
+                    font-family: MillionaireTrialScript, sans-serif;
+                }
+            }
+
+            p {
+                font-family: TeodorTrialLight, sans-serif;
+                font-size: 18px;
+                line-height: 125%;
+                letter-spacing: 0.06em;
+                max-width: 604px;
+
+            }
+        }
+
+        .bookBottom {
+            display: flex;
+
+            img {
+                width: 100vw;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1280px) {
+
+
+}
+
+
+@media only screen and (max-width: 648px) {
+    .traditionOuter {
+        .tradition {
+            min-height: 716px;
+
+            h1 {
+                margin-bottom: 310px;
+                margin-top: 138px;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 125%;
+                font-family: TeodorTrialLightItalic, sans-serif;
+            }
+        }
+    }
+
+    .preservingOuter {
+        .preserving {
+            display: flex;
+            flex-direction: column;
+            padding-top: 55px;
+
+            .pLeft {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: unset;
+                margin-right: 0;
+                margin-bottom: 25px;
+
+                h1 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-bottom: 12px;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 12px;
+                    line-height: 120%;
+                    letter-spacing: 0.05em;
+                    text-align: center;
+                }
+            }
+
+            .pRight {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .distinguishedOuter {
+        .distinguished {
+            padding-top: 80px;
+
+            .disTop {
+                margin-bottom: 28px;
+
+                h1 {
+                    font-size: 16px;
+                    line-height: 150%;
+                    letter-spacing: 0.1em;
+                    margin-bottom: 18px;
+                }
+
+                p {
+                    font-size: 12px;
+                    line-height: 120%;
+                    letter-spacing: 0.07em;
+                    text-align: center;
+                }
+            }
+
+            .disBottom {
+                display: flex;
+
+                img {
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .legacyOuter {
+        .legacy {
+            padding: 55px 20px 0 20px;
+
+            .legTop {
+                margin-bottom: 68px;
+                padding: 0;
+
+                h1 {
+                    font-size: 16px;
+                    line-height: 150%;
+                    letter-spacing: 0.08em;
+                }
+
+                p {
+                    font-size: 12px;
+                    line-height: 120%;
+                    letter-spacing: 0.03em;
+                    max-width: unset;
+                    font-family: TeodorTrialLightItalic, sans-serif;
+                }
+
+                .legBottom {
+                    display: flex;
+                    margin-bottom: 18px;
+                }
+            }
+
+            .legBottom {
+                display: none;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .bookOuter {
+        .book {
+            padding: 55px 20px 20px 20px;
+
+            .bookTop {
+                margin-bottom: 47px;
+                padding: 0;
+
+                h1 {
+                    font-size: 24px;
+                    line-height: 33px;
+                    letter-spacing: 0.08em;
+                }
+
+                p {
+                    font-size: 12px;
+                    line-height: 120%;
+                    letter-spacing: 0.03em;
+                    max-width: unset;
+                    font-family: TeodorTrialLightItalic, sans-serif;
+                }
+
+            }
+
+            .bookBottom {
+                display: flex;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

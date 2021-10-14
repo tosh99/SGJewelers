@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import 'vars';
+
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 54px;
+    line-height: 145.5%;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 149%;
+}
+
+
+p {
+    font-size: 16px;
+}
+
+
+@media only screen and (max-width: 648px) {
+    h1 {
+        font-size: 24px;
+        line-height: 151%;
+    }
+
+    h2 {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+}
+
+@font-face {
+    font-family: 'MillionaireTrialItalic';
+    font-display: swap;
+    src: local('MillionaireTrialItalic'), url("/fonts/MillionaireTRIAL-Italic.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'MillionaireTrialScript';
+    font-display: swap;
+    src: local('MillionaireTrialScript'), url("/fonts/MillionaireTRIAL-Script.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'MillionaireTrialRoman';
+    font-display: swap;
+    src: local('MillionaireTrialRoman'), url("/fonts/MillionaireTRIAL-Roman.otf") format('opentype');
+}
+
+
+@font-face {
+    font-family: 'TeodorTrial';
+    font-display: swap;
+    src: local('TeodorTrial'), url("/fonts/TeodorTRIAL-Medium.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'TeodorTrialLight';
+    font-display: swap;
+    src: local('TeodorTrialLight'), url("/fonts/TeodorTRIAL-Light.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'TeodorTrialLightItalic';
+    font-display: swap;
+    src: local('TeodorTrialLightItalic'), url("/fonts/TeodorTRIAL-LightItalic.otf") format('opentype');
+}

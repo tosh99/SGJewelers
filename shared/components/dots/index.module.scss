@@ -1,0 +1,26 @@
+.dots {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .dot {
+        min-width: 6px;
+        max-width: 6px;
+        min-height: 6px;
+        max-height: 6px;
+        background: #AFAFAF;
+        margin-right: 10px;
+        border-radius: 50%;
+        transition: 0.4s;
+    }
+
+    .selected {
+        position: absolute;
+        background: black;
+        width: 26px;
+        min-height: 6px;
+        max-height: 6px;
+        border-radius: 20px;
+        transition: 0.4s;
+    }
+}

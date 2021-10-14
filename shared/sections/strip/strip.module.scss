@@ -1,0 +1,61 @@
+.stripOuter {
+    background: black;
+}
+
+.strips {
+    display: flex;
+    justify-content: space-between;
+}
+
+.strip {
+    color: white;
+    padding: 14px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    header, .imgContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header {
+        font-family: HattonRegular, sans-serif;
+        font-size: 20px;
+        line-height: 143%;
+        color: #EEEADD;
+        white-space: nowrap;
+    }
+
+    .navigable {
+        cursor: pointer;
+    }
+
+    img {
+        height: 13px;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 648px) {
+    .strips {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .strip {
+        color: white;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        header, .imgContainer {
+            min-width: 85px;
+        }
+    }
+
+}

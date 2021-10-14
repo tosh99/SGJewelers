@@ -1,0 +1,52 @@
+.bookNow {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    cursor: pointer;
+    z-index: 3;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow-x: hidden;
+    transition: 0.4s;
+    height: 50px;
+    padding: 0 5px;
+    background: black;
+    border-radius: 35px;
+
+    img {
+        min-width: 22px;
+        width: 22px;
+        margin-right: 9px;
+    }
+
+    header {
+        display: none;
+        color: white;
+        white-space: nowrap;
+        padding-right: 15px;
+        font-family: HattonRegular, sans-serif;
+        margin-top: 4px;
+        text-transform: uppercase;
+    }
+}
+
+.bookNow:hover {
+    width: 280px;
+    transition: 0.4s;
+    border-radius: 35px;
+
+    header {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 648px) {
+    .bookNow {
+        right: 20px;
+        top: unset;
+        bottom: 20px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "ui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prod": "next build && next export"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "framer-motion": "^4.1.17",
+    "jquery": "^3.6.0",
+    "jquery-scrollify": "^1.0.21",
+    "next": "10.2.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-fast-marquee": "^1.2.1",
+    "react-intersection-observer": "^8.32.0",
+    "react-slick": "^0.28.1",
+    "read-more-react": "^1.0.10",
+    "sass": "^1.30.0",
+    "swiper": "^6.8.2"
+  }
+}
