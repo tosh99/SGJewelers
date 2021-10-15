@@ -78,8 +78,29 @@
         }
 
     }
-
 }
+
+.menuFirst {
+    background: green;
+}
+
+.menuSecond {
+    background: red;
+}
+
+.menuThird {
+    background: blue;
+}
+
+.menuFourth {
+    background: yellow;
+}
+
+.menuFifth {
+    background: pink;
+}
+
+
 
 @media only screen and (max-width: 648px) {
     .menu {

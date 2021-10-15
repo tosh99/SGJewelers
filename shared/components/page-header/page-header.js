@@ -19,7 +19,9 @@ export default function PageHeader({title, bg = 'transparent'}) {
                     }}/>
                 </div>
                 <div className={styles.hRight}>
-                    <header>MENU</header>
+                    <header onClick={()=>{
+                        set_show_menu(true)
+                    }}>MENU</header>
                 </div>
             </div>
         </div>

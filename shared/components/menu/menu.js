@@ -1,12 +1,12 @@
 import {InView} from "react-intersection-observer";
 import {motion} from "framer-motion";
 import styles from "./menu.module.scss";
-import {Fragment} from "react";
+import {Fragment, useState} from "react";
 import Link from "next/link";
 import Router from "next/router";
 
 export default function Menu({close}) {
-
+    const [page, set_page] = useState(1);
 
     const getPageName = () => {
 
@@ -17,8 +17,15 @@ export default function Menu({close}) {
     }
 
     return (<Fragment>
+        <div className={styles.menu
+        + ' ' + (page === 1 ? styles.menuFirst : '')
+        + ' ' + (page === 2 ? styles.menuSecond : '')
+        + ' ' + (page === 3 ? styles.menuThird : '')
+        + ' ' + (page === 4 ? styles.menuFourth : '')
+        + ' ' + (page === 5 ? styles.menuFifth : '')
+        + ' ' + (page === 6 ? styles.menuFourth : '')
 
-        <div className={styles.menu}>
+        }>
             <InView threshold={0.5}>
                 {
                     ({ref, inView}) => (
@@ -28,31 +35,53 @@ export default function Menu({close}) {
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
                             <div className={styles.menuTop}>
-                                <img className={styles.logo} src={'/icons/header/logo.svg'} onClick={navigateHome}/>
-                                <img className={styles.close} src={'/icons/header/close.svg'} onClick={close}/>
+                                <img className={styles.close} src={'/icons/common/back.svg'} onClick={close}/>
+                                <img className={styles.logo} src={'/images/header/logo.svg'} onClick={navigateHome}/>
+                                <header>MENU</header>
                             </div>
                             <div className={styles.menuContent}>
-                                <Link href="/services">
-                                    <header>Services</header>
+                                <Link href="/exclusively-yours">
+                                    <header onMouseOver={() => {
+                                        set_page(1);
+                                    }}>Exclusively Yours
+                                    </header>
                                 </Link>
-                                <Link href="/products">
-                                    <header>Products</header>
+                                <Link href="/heritage-jewellery">
+                                    <header onMouseOver={() => {
+                                        set_page(2);
+                                    }}>Heritage Jewellery
+                                    </header>
                                 </Link>
-                                <Link href="/theedit">
-                                    <header>The Edit</header>
+                                <Link href="/iconic-design">
+                                    <header onMouseOver={() => {
+                                        set_page(3);
+                                    }}>Iconic Designs
+                                    </header>
                                 </Link>
-                                <Link href="/biologique">
-                                    <header>Biologique Recherche</header>
+                                <Link href="/art-of-jewellery-making">
+                                    <header onMouseOver={() => {
+                                        set_page(4);
+                                    }}>Art of Jewellery Making
+                                    </header>
                                 </Link>
-                                <Link href="/about">
-                                    <header>About</header>
+                                <Link href="/discover-luxury">
+                                    <header onMouseOver={() => {
+                                        set_page(5);
+                                    }}>Discover Luxury
+                                    </header>
+                                </Link>
+                                <Link href="/blogs">
+                                    <header onMouseOver={() => {
+                                        set_page(6);
+                                    }}>Blogs
+                                    </header>
                                 </Link>
                             </div>
                             <div className={styles.menuBottom}>
-                                <p>make AN appointment</p>
+                                {/*<p>make AN appointment</p>*/}
                                 <div className={styles.menuLast}>
                                     <Link href="/">
-                                        <header>Home</header>
+                                        <header>Back to Home</header>
                                     </Link>
                                 </div>
                             </div>

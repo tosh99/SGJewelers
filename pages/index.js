@@ -282,7 +282,6 @@ export default function Home() {
                                                 return <SwiperSlide>
                                                     <div>
                                                         <img src={'/images/homepage/places/1.png'}/>
-                                                        {place}
                                                     </div>
                                                 </SwiperSlide>
                                             })

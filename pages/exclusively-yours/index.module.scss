@@ -1,0 +1,115 @@
+@import "../index.module";
+
+.traditionOuter {
+    .tradition {
+        background: url("/images/exclusively/banner.png") no-repeat;
+
+
+        h1 {
+            font-size: 44px;
+            line-height: 142%;
+        }
+    }
+}
+
+.magniOuter {
+    .magni {
+        display: flex;
+        flex-direction: column;
+        padding-top: 70px;
+
+        .magniHeader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 130px;
+
+            h1 {
+                font-family: MillionaireTrialScript, sans-serif;
+                font-size: 54px;
+                line-height: 61px;
+                text-transform: capitalize;
+                color: #003E52;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-family: TeodorTrialLight, sans-serif;
+                font-size: 16px;
+                line-height: 125%;
+                text-align: center;
+                letter-spacing: 0.05em;
+                color: #003E52;
+                max-width: 457px;
+            }
+        }
+
+        .magniContent {
+            .item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 180px;
+
+                h3 {
+                    font-size: 28px;
+                    line-height: 134.5%;
+                    font-family: MillionaireTrialScript, sans-serif;
+                    color: #003E52;
+                    margin-bottom: 20px;
+                }
+
+                .itemAbout {
+                    width: 66%;
+
+                    .navigation {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 45px;
+                    }
+                }
+
+                .itemAction {
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 33%;
+                    padding-top: 53px;
+                }
+            }
+
+            .itemReversed {
+                flex-direction: row-reverse;
+
+                .itemAbout {
+                    width: 50%;
+                }
+
+                .itemAction {
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+                    padding-top: 0;
+                    justify-content: flex-start;
+                }
+            }
+
+            .itemFull {
+                .itemAbout {
+                    width: 100%;
+
+
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1280px) {
+
+
+}
+
+
+@media only screen and (max-width: 648px) {
+
+}

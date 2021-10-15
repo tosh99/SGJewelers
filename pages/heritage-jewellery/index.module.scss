@@ -1,0 +1,24 @@
+@import "../index.module";
+
+.traditionOuter {
+    .tradition {
+        background: url("/images/exclusively/banner.png") no-repeat;
+
+
+        h1 {
+            font-size: 44px;
+            line-height: 142%;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1280px) {
+
+
+}
+
+
+@media only screen and (max-width: 648px) {
+
+}
