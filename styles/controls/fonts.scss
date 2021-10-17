@@ -21,6 +21,26 @@ p {
     font-size: 16px;
 }
 
+h1.sectionTitle {
+    font-size: 32px;
+    line-height: 143.5%;
+    letter-spacing: 0.08em;
+    color: rgba(0, 62, 82, 0.9);
+    font-family: MillionaireTrialRoman, sans-serif;
+
+    span {
+        font-family: MillionaireTrialScript, sans-serif;
+    }
+}
+
+p.sectionSummary {
+    font-family: TeodorTrialLight, sans-serif;
+    font-size: 18px;
+    line-height: 125%;
+    letter-spacing: 0.06em;
+    max-width: 986px;
+}
+
 
 @media only screen and (max-width: 648px) {
     h1 {
@@ -36,6 +56,13 @@ p {
     h3 {
         font-size: 16px;
         line-height: 150%;
+    }
+
+    p.sectionSummary {
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.05em;
+        max-width: unset;
     }
 
 }

@@ -2,16 +2,138 @@
 
 .traditionOuter {
     .tradition {
-        background: url("/images/exclusively/banner.png") no-repeat;
-
+        background: url("/images/sketching/banner.png") no-repeat;
+        background-size: cover;
 
         h1 {
             font-size: 44px;
             line-height: 142%;
+            margin-bottom: 502px;
+            margin-top: 350px;
+
+            span {
+                text-transform: lowercase;
+            }
+        }
+
+        p {
+            max-width: 985px;
         }
     }
 }
 
+.vintageOuter {
+    background: #B0C6C9;
+
+    .vintage {
+        display: flex;
+        flex-direction: column;
+        padding-top: 115px;
+        padding-bottom: 115px;
+
+        .vintageTop {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 80px;
+
+            p {
+                max-width: 635px;
+            }
+        }
+
+        .vintageBanner {
+            margin-bottom: 56px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .vintageCarousel {
+            display: flex;
+            justify-content: space-between;
+
+            .carousel {
+                width: 50%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+
+        }
+    }
+}
+
+.sketchingOuter {
+    .sketching {
+        display: flex;
+        padding-top: 108px;
+        padding-bottom: 106px;
+
+        .sketchingLeft {
+            display: flex;
+            flex-direction: column;
+            max-width: 510px;
+            margin-right: 98px;
+            justify-content: space-between;
+
+            h1 {
+                margin-bottom: 26px;
+            }
+
+            p {
+                margin-bottom: 124px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .sketchingRight {
+            display: flex;
+            flex-direction: column;
+            max-width: 635px;
+
+            img {
+                width: 100%;
+                margin-bottom: 49px;
+            }
+        }
+    }
+}
+
+.pickOuter {
+
+    .pick {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        max-width: unset;
+
+        .sliders {
+            width: 100%;
+
+            .slide {
+                width: 100%;
+
+                .slideContent {
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        max-width: 889px;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
+}
 
 @media only screen and (max-width: 1280px) {
 

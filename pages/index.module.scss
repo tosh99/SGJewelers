@@ -421,6 +421,15 @@
                 }
             }
         }
+
+        .bookButtons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 100px;
+            max-width: 1440px;
+            margin: 48px 0;
+        }
     }
 }
 

@@ -10,6 +10,7 @@ import Button from "../shared/components/button";
 
 import SwiperCore, {Autoplay, EffectFade, Navigation, Pagination} from 'swiper/core';
 import {Swiper, SwiperSlide} from 'swiper/react';
+import NextBack from "../shared/components/nextback/nextback";
 
 
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
@@ -288,6 +289,10 @@ export default function Home() {
                                         }
                                     </Swiper>
                                 </div>
+                                <div className={styles.bookButtons}>
+                                    <Button title={'Book Now'}/>
+                                    <NextBack/>
+                                </div>
                             </div>
                         </motion.div>
                     )
@@ -303,7 +308,6 @@ export default function Home() {
                                     initial={{opacity: 0}}
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 0.8}}>
-
                         </motion.div>
                     )
                 }
