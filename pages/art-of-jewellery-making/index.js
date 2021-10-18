@@ -56,6 +56,38 @@ export default function ExclusivelyYours() {
                 }
             </InView>
 
+            {/*Tibarumal*/}
+            <InView threshold={0.25} triggerOnce={true}>
+                {
+                    ({ref, inView}) => (
+                        <motion.div className={"outer " + styles.tibarumalOuter}
+                                    ref={ref}
+                                    initial={{opacity: 0}}
+                                    animate={inView ? {opacity: 1} : {opacity: 0}}
+                                    transition={{duration: 1}}>
+                            <div className={"inner " + styles.tibarumal}>
+                                <div className={styles.tibarumalTop}>
+                                    <h1 className={'sectionTitle'}>THE LEGACY <span>of</span> <br/> TIBARUMALS JEWELLERS</h1>
+                                </div>
+                                <div className={styles.tibarumalContent}>
+                                    <div className={styles.tibarumalLeft}>
+                                        <img src={'/images/art/tibarumal-1.png'}/>
+                                        <p className={'sectionSummary'}>Mr. Sanjay Gupta sees design in everything around him.
+                                            He draws inspiration from artistic vintage paintings, marble statues, portraits of a
+                                            Royal courtsman or even architecture.
+                                        </p>
+                                        <Button title={'Read More'} theme={'blue'}/>
+                                    </div>
+                                    <div className={styles.tibarumalRight}>
+                                        <img src={'/images/art/tibarumal-2.png'}/>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )
+                }
+            </InView>
+
 
             <BookNow/>
             {/*<BackToTop/>*/}

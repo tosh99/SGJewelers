@@ -3,12 +3,64 @@
 .traditionOuter {
     .tradition {
         background: url("/images/exclusively/banner.png") no-repeat;
-
+        background-size: cover;
 
         h1 {
             font-size: 44px;
             line-height: 142%;
         }
+    }
+}
+
+.tibarumalOuter {
+    .tibarumal {
+        display: flex;
+        flex-direction: column;
+        padding-top: 108px;
+        padding-bottom: 106px;
+
+        .tibarumalTop {
+            h1 {
+                text-align: center;
+                margin-bottom: 74px;
+            }
+        }
+
+        .tibarumalContent {
+            display: flex;
+            justify-content: center;
+
+            .tibarumalLeft {
+                display: flex;
+                flex-direction: column;
+                max-width: 611px;
+                margin-right: 126px;
+
+                img {
+                    width: 100%;
+                    margin-bottom: 52px;
+                }
+
+                p {
+                    margin-bottom: 32px;
+                }
+
+
+            }
+
+            .tibarumalRight {
+                display: flex;
+                flex-direction: column;
+                max-width: 504px;
+
+                img {
+                    width: 100%;
+                    margin-bottom: 49px;
+                }
+            }
+        }
+
+
     }
 }
 

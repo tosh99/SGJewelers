@@ -149,7 +149,7 @@ export default function ExclusivelyYours() {
                                                     <div className={styles.slide}>
                                                         <h1 className={'sectionTitle'}>Find <span>what</span> <br/> you are looking <br/><span> &nbsp;for</span></h1>
                                                         <div className={styles.slideContent}>
-                                                            <p>We have devised a custom filter that helps you find jewellery that matches your mood and suits your style.
+                                                            <p className={'sectionSummary'}>We have devised a custom filter that helps you find jewellery that matches your mood and suits your style.
                                                                 Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.
                                                             </p>
                                                             <NextBack/>

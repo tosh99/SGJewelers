@@ -94,7 +94,7 @@ export default function Home() {
                             <div className={"inner " + styles.distinguished}>
                                 <div className={styles.disTop}>
                                     <h1>Distinguished designs</h1>
-                                    <p>Our story is one of nostalgia and an imperial wonder, growing with the times but never forgetting
+                                    <p className={'sectionSummary'}>Our story is one of nostalgia and an imperial wonder, growing with the times but never forgetting
                                         the patronage to craftsmanship of the yesteryears. We have always had a deep devotion towards the art of jewellery making and
                                         work with artisans who have dedicated their life’s work to preserving these age-old renditions.
                                     </p>
