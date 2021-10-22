@@ -2,7 +2,7 @@
 
 .traditionOuter {
     .tradition {
-        background: url("/images/exclusively/banner.png") no-repeat;
+        background: url("/images/art/banner.png") no-repeat;
         background-size: cover;
 
         h1 {
@@ -64,13 +64,151 @@
     }
 }
 
+.generationsOuter {
+    background: #B0C6C9;
+
+    .generations {
+        display: flex;
+        flex-direction: column;
+        padding-top: 127px;
+        padding-bottom: 114px;
+
+        .generationsTop {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 88px;
+
+            h1 {
+                margin-bottom: 72px;
+            }
+
+            p {
+                max-width: 504px;
+            }
+        }
+
+        .generationsVid {
+            margin-bottom: 67px;
+
+            video {
+                width: 100%;
+                height: 462px;
+            }
+        }
+
+        .generationsBottom {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                max-width: 100%;
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 1280px) {
 
 
 }
 
-
 @media only screen and (max-width: 648px) {
+    .traditionOuter {
+        .tradition {
+            background: url("/images/art/banner-mobile.png") no-repeat;
+            background-size: cover;
+
+            h1 {
+                font-size: 28px;
+                line-height: 38px;
+                margin-bottom: 224px;
+            }
+        }
+    }
+
+
+    .tibarumalOuter {
+        .tibarumal {
+            padding-top: 37px;
+            padding-bottom: 30px;
+
+            .tibarumalTop {
+                h1 {
+                    text-align: left;
+                    margin-bottom: 32px;
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+
+            .tibarumalContent {
+                display: flex;
+                justify-content: center;
+
+                .tibarumalLeft {
+                    max-width: 100%;
+                    margin-right: 0;
+
+                    img {
+                        width: 100%;
+                        margin-bottom: 26px;
+                    }
+
+                    p {
+                        margin-bottom: 27px;
+                    }
+
+
+                }
+
+                .tibarumalRight {
+                    display: none;
+                }
+            }
+
+
+        }
+    }
+
+    .generationsOuter {
+        .generations {
+            padding-top: 36px;
+            padding-bottom: 30px;
+
+            .generationsTop {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 22px;
+
+                h1 {
+                    margin-bottom: 24px;
+                    text-align: left;
+                }
+
+                p {
+                    max-width: 100%;
+                }
+            }
+
+            .generationsVid {
+                margin-bottom: 10px;
+
+                video {
+                    width: 100%;
+                    height: 281px;
+                }
+            }
+
+            .generationsBottom {
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    max-width: 100%;
+                    display: none;
+                }
+            }
+        }
+    }
 
 }

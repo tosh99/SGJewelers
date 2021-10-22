@@ -103,3 +103,15 @@ p.sectionSummary {
     font-display: swap;
     src: local('TeodorTrialLightItalic'), url("/fonts/TeodorTRIAL-LightItalic.otf") format('opentype');
 }
+
+@font-face {
+    font-family: 'GoldenBookBold';
+    font-display: swap;
+    src: local('GoldenBookBold'), url("/fonts/Goldenbook W01 Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'GoldenBookLight';
+    font-display: swap;
+    src: local('GoldenBookLight'), url("/fonts/Goldenbook W01 Light.ttf") format('truetype');
+}
