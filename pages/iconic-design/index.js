@@ -25,9 +25,6 @@ export default function ExclusivelyYours() {
         }
     }, [])
 
-    const gotoShop = () => {
-
-    }
 
     return (
         <Fragment>
@@ -45,10 +42,12 @@ export default function ExclusivelyYours() {
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.tradition}>
-                                <h1>I am looking for <br/> jewellery TO <br/> compliment my mood of <br/> FEELING</h1>
-                                <p>Sanjay Gupta is built on the foundation laid by our predecessors in 1925 — of honouring culture and the century old
-                                    tradition of opulence. Our passion for perfection and modern-age interpretation of Indian jewellery have
-                                    procured us the praise and patronage of many notable connoisseurs and noblemen, alike.
+                                <h1>Distinguished <br/><span>designs</span> that make <br/> heads <span>turn</span></h1>
+                                <p>Having been the jewellery designers for the imperial courts of the Nizams,
+                                    we have been the preferred jewellers of many noblemen, not only because of our
+                                    dedication towards perfection but also because of our keen eye for design.
+                                    Our precision and deliberation at every stage of jewellery making is
+                                    what makes our high jewellery enviable.
                                 </p>
                             </div>
                         </motion.div>
@@ -56,6 +55,118 @@ export default function ExclusivelyYours() {
                 }
             </InView>
 
+            {/*Story*/}
+            <InView threshold={0.25} triggerOnce={true}>
+                {
+                    ({ref, inView}) => (
+                        <motion.div className={"outer " + styles.storyOuter}
+                                    ref={ref}
+                                    initial={{opacity: 0}}
+                                    animate={inView ? {opacity: 1} : {opacity: 0}}
+                                    transition={{duration: 1}}>
+                            <div className={"inner " + styles.story}>
+                                <div className={styles.storyHeader}>
+                                    <h1 className={'sectionTitle'}>Jewellery <br/> <span>that</span> tells a story</h1>
+                                </div>
+                                <div className={styles.storyTop}>
+                                    <div className={styles.stLeft}>
+                                        <img src={'/images/iconic/tibarumal-1.png'}/>
+                                    </div>
+                                    <div className={styles.stRight}>
+                                        <p className={'sectionSummary'}>The design inspiration for our high jewellery collection can come
+                                            from places far and wide.
+                                            We are connoisseurs of art and have an inclination towards the fine jewellery periods of yore —
+                                            <br/><br/>
+                                            <span>Georgian, Victorina, Edwardian, Art Nouveau, Art Deco and Retro.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className={styles.storyBottom}>
+                                    <div className={styles.sbLeft}>
+                                        <Button title={'Read More'}/>
+                                    </div>
+                                    <div className={styles.sbRight}>
+                                        <img src={'/images/iconic/tibarumal-2.png'}/>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )
+                }
+            </InView>
+
+            {/*Rare*/}
+            <InView threshold={0.25} triggerOnce={true}>
+                {
+                    ({ref, inView}) => (
+                        <motion.div className={"outer " + styles.rareOuter}
+                                    ref={ref}
+                                    initial={{opacity: 0}}
+                                    animate={inView ? {opacity: 1} : {opacity: 0}}
+                                    transition={{duration: 1}}>
+                            <div className={"inner " + styles.rare}>
+                                <div className={styles.rareHeader}>
+                                    <h1 className={'sectionTitle'}>Jewellery <br/> <span>that</span> tells a story</h1>
+                                </div>
+                                <div className={styles.rareTop}>
+                                    <Swiper
+                                        spaceBetween={130}
+                                        slidesPerView={'1'}>
+                                        {
+                                            places.map((place, index) => {
+                                                return <SwiperSlide>
+                                                    <div>
+                                                        <img src={'/images/iconic/places/1.png'}/>
+                                                    </div>
+                                                </SwiperSlide>
+                                            })
+                                        }
+                                    </Swiper>
+                                </div>
+                                <div className={styles.rareBottom}>
+                                    <div className={styles.rbLeft}>
+                                        <p>The diamonds and gemstones used in high jewellery are distinct in nature, colour, shape, carat and clarity.
+                                            Owing to their origins they are valued very highly and rare to come by in certain instances. </p>
+                                        <Button title={'Read More'}/>
+                                    </div>
+                                    <NextBack/>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )
+                }
+            </InView>
+
+            {/*Movement*/}
+            <InView threshold={0.25} triggerOnce={true}>
+                {
+                    ({ref, inView}) => (
+                        <motion.div className={"outer " + styles.movementOuter}
+                                    ref={ref}
+                                    initial={{opacity: 0}}
+                                    animate={inView ? {opacity: 1} : {opacity: 0}}
+                                    transition={{duration: 1}}>
+                            <div className={"inner " + styles.movement}>
+                                <div className={styles.movementLeft}>
+                                    <h1 className={'sectionTitle'}>Jewellery <br/> <span>that</span> tells a story</h1>
+                                    <p className={'sectionSummary'}>The design inspiration for our high jewellery collection can come
+                                        from places far and wide.
+                                        We are connoisseurs of art and have an inclination towards the fine jewellery periods of yore —
+                                        <br/><br/>
+                                        <span>Georgian, Victorina, Edwardian, Art Nouveau, Art Deco and Retro.</span>
+                                    </p>
+                                    <img src={'/images/iconic/tibarumal-1.png'}/>
+                                    <img src={'/images/iconic/tibarumal-2.png'}/>
+                                </div>
+                                <div className={styles.movementRight}>
+                                    <img src={'/images/iconic/tibarumal-1.png'}/>
+                                    <Button title={'Read More'} theme={'blue'}/>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )
+                }
+            </InView>
 
             <BookNow/>
             {/*<BackToTop/>*/}

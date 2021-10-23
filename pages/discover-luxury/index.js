@@ -23,9 +23,6 @@ export default function ExclusivelyYours() {
         }
     }, [])
 
-    const gotoShop = () => {
-
-    }
 
     return (
         <Fragment>
@@ -43,7 +40,7 @@ export default function ExclusivelyYours() {
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.tradition}>
-                                <h1>THE SANJAY GUPTA <span>experience</span> OF HANDCRAFTED <span>perfection</span></h1>
+                                <h1>THE SANJAY GUPTA <br/><span>experience</span> OF HANDCRAFTED<br/> <span>perfection</span></h1>
                                 <p>Discover Luxury
                                     Menu
                                     The Sanjay Gupta

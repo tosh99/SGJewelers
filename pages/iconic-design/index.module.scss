@@ -3,15 +3,81 @@
 .traditionOuter {
     .tradition {
         background: url("/images/exclusively/banner.png") no-repeat;
-
+        background-size: cover;
 
         h1 {
-            font-size: 44px;
-            line-height: 142%;
+            font-size: 54px;
+            line-height: 78px;
         }
     }
 }
 
+.storyOuter {
+    .story {
+        .storyHeader {
+
+        }
+
+        .storyTop {
+            .stLeft {
+
+            }
+
+            .stRight {
+
+            }
+        }
+
+
+        .storyBottom {
+            .sbLeft {
+
+            }
+
+            .sbRight {
+
+            }
+        }
+    }
+}
+
+.rareOuter {
+    .rare {
+        .rareHeader {
+
+        }
+
+        .rareTop {
+            .stLeft {
+
+            }
+
+            .stRight {
+
+            }
+        }
+
+
+        .rareBottom {
+            .rbLeft {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.movementOuter {
+    .movement {
+        .movementLeft {
+
+        }
+
+        .movementRight {
+
+        }
+    }
+}
 
 @media only screen and (max-width: 1280px) {
 

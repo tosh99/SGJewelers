@@ -25,9 +25,6 @@ export default function ExclusivelyYours() {
         }
     }, [])
 
-    const gotoShop = () => {
-
-    }
 
     return (
         <Fragment>

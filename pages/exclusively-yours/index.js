@@ -25,9 +25,6 @@ export default function ExclusivelyYours() {
         }
     }, [])
 
-    const gotoShop = () => {
-
-    }
 
     return (
         <Fragment>
@@ -45,10 +42,12 @@ export default function ExclusivelyYours() {
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.tradition}>
-                                <h1>I am looking for <br/> jewellery TO <br/> compliment my mood of <br/> FEELING</h1>
-                                <p>Sanjay Gupta is built on the foundation laid by our predecessors in 1925 — of honouring culture and the century old
-                                    tradition of opulence. Our passion for perfection and modern-age interpretation of Indian jewellery have
-                                    procured us the praise and patronage of many notable connoisseurs and noblemen, alike.
+                                <h1>I am looking for jewellery TO compliment my mood of FEELING</h1>
+                                <p>Having been the jewellery designers for the imperial courts of the Nizams,
+                                    we have been the preferred jewellers of many noblemen, not only because of our
+                                    dedication towards perfection but also because of our keen eye for design.
+                                    Our precision and deliberation at every stage of jewellery making is
+                                    what makes our high jewellery enviable.
                                 </p>
                             </div>
                         </motion.div>
@@ -56,94 +55,42 @@ export default function ExclusivelyYours() {
                 }
             </InView>
 
+            {/*Rare*/}
             <InView threshold={0.25} triggerOnce={true}>
                 {
                     ({ref, inView}) => (
-                        <motion.div className={"outer " + styles.magniOuter}
+                        <motion.div className={"outer " + styles.rareOuter}
                                     ref={ref}
                                     initial={{opacity: 0}}
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
-                            <div className={"inner " + styles.magni}>
-                                <div className={styles.magniHeader}>
-                                    <h1>feeling magnificent</h1>
-                                    <p>
-                                        Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.
-                                    </p>
+                            <div className={"inner " + styles.rare}>
+                                <div className={styles.rareHeader}>
+                                    <h1 className={'sectionTitle'}>Jewellery <br/> <span>that</span> tells a story</h1>
                                 </div>
-                                <div className={styles.magniContent}>
-                                    <div className={styles.item}>
-                                        <div className={styles.itemAbout}>
-                                            <h3>Briolette Jhumkas</h3>
-                                            <Swiper
-                                                spaceBetween={130}
-                                                slidesPerView={'1'}>
-                                                {
-                                                    places.map((place, index) => {
-                                                        return <SwiperSlide>
-                                                            <div>
-                                                                <img src={'/images/homepage/places/1.png'}/>
-                                                            </div>
-                                                        </SwiperSlide>
-                                                    })
-                                                }
-                                            </Swiper>
-                                            <div className={styles.navigation}>
-                                                <NextBack/>
-                                            </div>
-                                        </div>
-                                        <div className={styles.itemAction}>
-                                            <Button title={'See Info'}/>
+                                <div className={styles.rareContent}>
+                                    <div className={styles.rcLeft}>
+                                        <header>Briolette Jhumkas</header>
+                                        <Swiper
+                                            spaceBetween={130}
+                                            slidesPerView={'1'}>
+                                            {
+                                                places.map((place, index) => {
+                                                    return <SwiperSlide>
+                                                        <div>
+                                                            <img src={'/images/iconic/places/1.png'}/>
+                                                        </div>
+                                                    </SwiperSlide>
+                                                })
+                                            }
+                                        </Swiper>
+                                        <div className={styles.rareBottom}>
+                                            <header>01/03</header>
+                                            <NextBack/>
                                         </div>
                                     </div>
-
-                                    <div className={styles.item + ' ' + styles.itemReversed}>
-                                        <div className={styles.itemAbout}>
-
-                                            <Swiper
-                                                spaceBetween={130}
-                                                slidesPerView={'1'}>
-                                                {
-                                                    places.map((place, index) => {
-                                                        return <SwiperSlide>
-                                                            <div>
-                                                                <img src={'/images/homepage/places/1.png'}/>
-                                                            </div>
-                                                        </SwiperSlide>
-                                                    })
-                                                }
-                                            </Swiper>
-                                            <div className={styles.navigation}>
-                                                <NextBack/>
-                                            </div>
-                                        </div>
-                                        <div className={styles.itemAction}>
-                                            <h3>Briolette Jhumkas</h3>
-                                            <Button title={'See Info'}/>
-                                        </div>
-                                    </div>
-
-
-                                    <div className={styles.item + ' ' + styles.itemFull}>
-                                        <div className={styles.itemAbout}>
-                                            <Swiper
-                                                spaceBetween={130}
-                                                slidesPerView={'1'}>
-                                                {
-                                                    places.map((place, index) => {
-                                                        return <SwiperSlide>
-                                                            <div>
-                                                                <img src={'/images/homepage/places/1.png'}/>
-                                                            </div>
-                                                        </SwiperSlide>
-                                                    })
-                                                }
-                                            </Swiper>
-                                            <div className={styles.navigation}>
-                                                 <h3>Briolette Jhumkas</h3>
-                                                <NextBack/>
-                                            </div>
-                                        </div>
+                                    <div className={styles.rcRight}>
+                                        <Button title={'See Info'}/>
                                     </div>
                                 </div>
                             </div>

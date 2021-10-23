@@ -25,9 +25,7 @@ export default function Home() {
         }
     }, [])
 
-    const gotoShop = () => {
 
-    }
 
     return (
         <Fragment>
