@@ -84,7 +84,6 @@
             flex-direction: column;
             color: #FFFFFF;
 
-
             .mobile {
                 margin-bottom: 29px;
                 font-family: GoldenBookBold, sans-serif;
@@ -110,8 +109,6 @@
                 font-family: GoldenBookLight, sans-serif;
                 font-size: 18px;
                 line-height: 24px;
-
-
             }
         }
     }
@@ -132,6 +129,7 @@
     .footer {
 
         .footerTop {
+
             .ftRight {
 
                 .column {
@@ -204,8 +202,19 @@
             margin-bottom: 0;
 
             .fbLeft {
+                padding: 0 35px;
+
+                .mobile {
+
+                }
+
+                .emails {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
                 .address {
-                    padding: 0 35px;
                     margin-bottom: 64px;
                     font-size: 14px;
                 }

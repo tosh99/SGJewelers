@@ -66,11 +66,11 @@ export default function ExclusivelyYours() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.story}>
                                 <div className={styles.storyHeader}>
-                                    <h1 className={'sectionTitle'}>Jewellery <br/> <span>that</span> tells a story</h1>
+                                    <h1 className={'sectionTitle'}>Jewellery <br/> <span>that</span> tells <span>a</span> story</h1>
                                 </div>
                                 <div className={styles.storyTop}>
                                     <div className={styles.stLeft}>
-                                        <img src={'/images/iconic/tibarumal-1.png'}/>
+                                        <img src={'/images/iconic/story/1.png'}/>
                                     </div>
                                     <div className={styles.stRight}>
                                         <p className={'sectionSummary'}>The design inspiration for our high jewellery collection can come
@@ -86,7 +86,7 @@ export default function ExclusivelyYours() {
                                         <Button title={'Read More'}/>
                                     </div>
                                     <div className={styles.sbRight}>
-                                        <img src={'/images/iconic/tibarumal-2.png'}/>
+                                        <img src={'/images/iconic/story/2.png'}/>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +106,8 @@ export default function ExclusivelyYours() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.rare}>
                                 <div className={styles.rareHeader}>
-                                    <h1 className={'sectionTitle'}>Jewellery <br/> <span>that</span> tells a story</h1>
+                                    <header>01/03</header>
+                                    <h1 className={'sectionTitle'}>RARE <span>and</span> <br/> pRECIOUS sTONES</h1>
                                 </div>
                                 <div className={styles.rareTop}>
                                     <Swiper
@@ -116,7 +117,7 @@ export default function ExclusivelyYours() {
                                             places.map((place, index) => {
                                                 return <SwiperSlide>
                                                     <div>
-                                                        <img src={'/images/iconic/places/1.png'}/>
+                                                        <img src={'/images/iconic/rare/1.png'}/>
                                                     </div>
                                                 </SwiperSlide>
                                             })
@@ -125,7 +126,7 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.rareBottom}>
                                     <div className={styles.rbLeft}>
-                                        <p>The diamonds and gemstones used in high jewellery are distinct in nature, colour, shape, carat and clarity.
+                                        <p className={'sectionSummary'}>The diamonds and gemstones used in high jewellery are distinct in nature, colour, shape, carat and clarity.
                                             Owing to their origins they are valued very highly and rare to come by in certain instances. </p>
                                         <Button title={'Read More'}/>
                                     </div>
@@ -148,18 +149,23 @@ export default function ExclusivelyYours() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.movement}>
                                 <div className={styles.movementLeft}>
-                                    <h1 className={'sectionTitle'}>Jewellery <br/> <span>that</span> tells a story</h1>
-                                    <p className={'sectionSummary'}>The design inspiration for our high jewellery collection can come
-                                        from places far and wide.
-                                        We are connoisseurs of art and have an inclination towards the fine jewellery periods of yore —
-                                        <br/><br/>
-                                        <span>Georgian, Victorina, Edwardian, Art Nouveau, Art Deco and Retro.</span>
-                                    </p>
-                                    <img src={'/images/iconic/tibarumal-1.png'}/>
-                                    <img src={'/images/iconic/tibarumal-2.png'}/>
+                                    <h1 className={'sectionTitle'}>Movement <span>AND</span> <br/> Setting</h1>
+                                    <div className={styles.mvLeftContent}>
+                                        <p className={'sectionSummary'}>The design inspiration for our high jewellery collection can come
+                                            from places far and wide.
+                                            We are connoisseurs of art and have an inclination towards the fine jewellery periods of yore —
+                                            <br/><br/>
+                                            <span>Georgian, Victorina, Edwardian, Art Nouveau, Art Deco and Retro.</span>
+                                        </p>
+
+                                        <div className={styles.mvLeftImages}>
+                                            <img src={'/images/iconic/movement/1.png'}/>
+                                            <img className={styles.m2} src={'/images/iconic/movement/2.png'}/>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className={styles.movementRight}>
-                                    <img src={'/images/iconic/tibarumal-1.png'}/>
+                                    <img src={'/images/iconic/movement/2.png'}/>
                                     <Button title={'Read More'} theme={'blue'}/>
                                 </div>
                             </div>

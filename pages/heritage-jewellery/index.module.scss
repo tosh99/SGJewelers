@@ -147,5 +147,133 @@
 
 
 @media only screen and (max-width: 648px) {
+    .traditionOuter {
+        .tradition {
+            background: url("/images/sketching/banner_mobile.png") no-repeat;
+            background-size: cover;
+
+            h1 {
+                font-size: 24px;
+                line-height: 142%;
+
+            }
+        }
+    }
+
+    .vintageOuter {
+        background: #B0C6C9;
+
+        .vintage {
+            display: flex;
+            flex-direction: column;
+            padding-top: 115px;
+            padding-bottom: 115px;
+
+            .vintageTop {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 40px;
+            }
+
+            .vintageBanner {
+                margin-bottom: 24px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .vintageCarousel {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .carousel {
+                    width: 50%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .sketchingOuter {
+        .sketching {
+            display: flex;
+            padding-top: 108px;
+            padding-bottom: 106px;
+
+            .sketchingLeft {
+                display: flex;
+                flex-direction: column;
+                max-width: 510px;
+                margin-right: 98px;
+                justify-content: space-between;
+
+                h1 {
+                    margin-bottom: 26px;
+                }
+
+                p {
+                    margin-bottom: 124px;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .sketchingRight {
+                display: flex;
+                flex-direction: column;
+                max-width: 635px;
+
+                img {
+                    width: 100%;
+                    margin-bottom: 49px;
+                }
+            }
+        }
+    }
+
+    .pickOuter {
+
+        .pick {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            max-width: unset;
+
+            .sliders {
+                width: 100%;
+
+                .slide {
+                    width: 100%;
+
+                    h1 {
+                        margin-bottom: 270px;
+                    }
+
+                    .slideContent {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 62px;
+
+                        p {
+                            max-width: 889px;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+
+    }
+
 
 }

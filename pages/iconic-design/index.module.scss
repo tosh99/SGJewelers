@@ -2,7 +2,7 @@
 
 .traditionOuter {
     .tradition {
-        background: url("/images/exclusively/banner.png") no-repeat;
+        background: url("/images/iconic/banner.png") no-repeat;
         background-size: cover;
 
         h1 {
@@ -14,28 +14,58 @@
 
 .storyOuter {
     .story {
-        .storyHeader {
+        display: flex;
+        flex-direction: column;
+        padding-top: 112px;
+        padding-bottom: 112px;
 
+        .storyHeader {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 38px;
+
+            h1 {
+                text-transform: uppercase;
+
+                span {
+                    text-transform: lowercase;
+                }
+            }
         }
 
         .storyTop {
-            .stLeft {
+            display: flex;
+            justify-content: space-between;
 
+            .stLeft {
+                max-width: 630px;
+
+                img {
+                    width: 100%;
+                }
             }
 
             .stRight {
-
+                max-width: 504px;
             }
         }
 
 
         .storyBottom {
-            .sbLeft {
+            display: flex;
+            justify-content: space-between;
 
+            .sbLeft {
+                max-width: 630px;
+                padding-top: 49px;
             }
 
             .sbRight {
+                max-width: 504px;
 
+                img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -43,38 +73,94 @@
 
 .rareOuter {
     .rare {
-        .rareHeader {
+        display: flex;
+        flex-direction: column;
+        padding-top: 72px;
+        padding-bottom: 171px;
 
+        .rareHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 61px;
+
+            h1 {
+                text-transform: uppercase;
+
+                span {
+                    text-transform: lowercase;
+                }
+            }
         }
 
         .rareTop {
-            .stLeft {
-
-            }
-
-            .stRight {
-
-            }
+            margin-bottom: 42px;
         }
 
 
         .rareBottom {
+            display: flex;
+            justify-content: space-between;
+
             .rbLeft {
                 display: flex;
                 flex-direction: column;
+                max-width: 882px;
+
+                p {
+                    margin-bottom: 40px;
+                }
             }
         }
     }
 }
 
 .movementOuter {
-    .movement {
-        .movementLeft {
+    background: #B0C6C9;
 
+    .movement {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 94px;
+        padding-bottom: 111px;
+
+        .movementLeft {
+            display: flex;
+            flex-direction: column;
+            max-width: 610px;
+
+            h1 {
+                text-transform: uppercase;
+                margin-bottom: 24px;
+
+                span {
+                    text-transform: lowercase;
+                }
+            }
+
+            .mvLeftContent {
+                p {
+                    margin-bottom: 112px;
+                }
+
+                .mvLeftImages {
+                    display: flex;
+
+                    .m2 {
+                        display: none;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
         }
 
         .movementRight {
-
+            img {
+                margin-bottom: 42px;
+            }
         }
     }
 }
@@ -86,5 +172,130 @@
 
 
 @media only screen and (max-width: 648px) {
+    .traditionOuter {
+        .tradition {
+            background: url("/images/iconic/banner_mobile.png") no-repeat;
+            background-size: cover;
+
+            h1 {
+                font-size: 28px;
+                line-height: 144.5%;
+            }
+        }
+    }
+
+    .storyOuter {
+        .story {
+            padding-top: 40px;
+            padding-bottom: 40px;
+
+            .storyHeader {
+                margin-bottom: 22px;
+            }
+
+            .storyTop {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 24px;
+
+                .stLeft {
+                    margin-bottom: 27px;
+                }
+
+                .stRight {
+                    max-width: 504px;
+                }
+            }
+
+
+            .storyBottom {
+                display: flex;
+                flex-direction: column-reverse;
+
+                .sbLeft {
+                    padding-top: 29px;
+                }
+            }
+        }
+    }
+
+    .rareOuter {
+        .rare {
+            padding-top: 12px;
+            padding-bottom: 35px;
+
+            .rareHeader {
+                margin-bottom: 31px;
+
+                h1 {
+                    font-size: 24px;
+                    line-height: 35px;
+                }
+
+                header {
+                    display: none;
+                }
+            }
+
+            .rareTop {
+                margin-bottom: 19px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+
+            .rareBottom {
+                display: flex;
+                justify-content: space-between;
+
+                .rbLeft {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 263px;
+
+                    p {
+                        margin-bottom: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+    .movementOuter {
+        .movement {
+            display: flex;
+            flex-direction: column;
+            padding-top: 35px;
+            padding-bottom: 35px;
+
+            .movementLeft {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 21px;
+
+                .mvLeftContent {
+                    display: flex;
+                    flex-direction: column-reverse;
+
+                    p {
+                        margin-bottom: 0;
+                    }
+
+                    .mvLeftImages {
+                        display: flex;
+                        margin-bottom: 18px;
+                    }
+                }
+            }
+
+            .movementRight {
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
 
 }
