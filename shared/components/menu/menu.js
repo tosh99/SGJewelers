@@ -24,7 +24,6 @@ export default function Menu({close}) {
         + ' ' + (page === 4 ? styles.menuFourth : '')
         + ' ' + (page === 5 ? styles.menuFifth : '')
         + ' ' + (page === 6 ? styles.menuFourth : '')
-
         }>
             <InView threshold={0.5}>
                 {
@@ -81,11 +80,10 @@ export default function Menu({close}) {
                                 {/*<p>make AN appointment</p>*/}
                                 <div className={styles.menuLast}>
                                     <Link href="/">
-                                        <header>Back to Home</header>
+                                        <header onClick={close}>Back to Home</header>
                                     </Link>
                                 </div>
                             </div>
-
                         </motion.div>)
                 }
             </InView>

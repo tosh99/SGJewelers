@@ -16,15 +16,18 @@
         align-items: center;
         justify-content: space-between;
         padding: 20px 75px;
-        border-bottom: 0.3px solid #c6c6c6;
 
         .logo {
-            width: 47px;
+            width: 356px;
             cursor: pointer;
         }
 
         .close {
             width: 20px;
+        }
+
+        header {
+            color: white;
         }
     }
 
@@ -38,9 +41,11 @@
             margin-bottom: 45px;
             line-height: 20px;
             letter-spacing: 0.02em;
-            font-family: HattonRegular, sans-serif;
+            font-family: GoldenBookBold, sans-serif;
             cursor: pointer;
             font-size: 24px;
+            text-transform: uppercase;
+            color: white;
         }
     }
 
@@ -81,25 +86,24 @@
 }
 
 .menuFirst {
-    background: green;
+    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/homepage/banner.png");
 }
 
 .menuSecond {
-    background: red;
+    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/heritage/banner.png");
 }
 
 .menuThird {
-    background: blue;
+    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/iconic/banner.png");
 }
 
 .menuFourth {
-    background: yellow;
+    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/art/banner.png");
 }
 
 .menuFifth {
-    background: pink;
+    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/discover-luxury/banner.png");
 }
-
 
 
 @media only screen and (max-width: 648px) {

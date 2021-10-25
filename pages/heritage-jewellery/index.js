@@ -79,7 +79,7 @@ export default function ExclusivelyYours() {
                                     <div className={styles.carousel}>
                                         <Swiper
                                             spaceBetween={30}
-                                            slidesPerView={'2'}>
+                                            slidesPerView={'auto'}>
                                             {
                                                 places.map((place, index) => {
                                                     return <SwiperSlide>
@@ -110,11 +110,17 @@ export default function ExclusivelyYours() {
                             <div className={"inner " + styles.sketching}>
                                 <div className={styles.sketchingLeft}>
                                     <h1 className={'sectionTitle'}>SKETCHING</h1>
-                                    <p className={'sectionSummary'}>Mr. Sanjay Gupta sees design in everything around him.
-                                        He draws inspiration from artistic vintage paintings, marble statues, portraits of a
-                                        Royal courtsman or even architecture.
-                                    </p>
-                                    <img src={'/images/sketching/sketch-1.png'}/>
+                                    <div className={styles.sketchingContent}>
+                                        <Button title={'Read More'}/>
+                                        <p className={'sectionSummary'}>Mr. Sanjay Gupta sees design in everything around him.
+                                            He draws inspiration from artistic vintage paintings, marble statues, portraits of a
+                                            Royal courtsman or even architecture.
+                                        </p>
+                                        <div className={styles.sketchingImages}>
+                                            <img src={'/images/sketching/sketch-1.png'}/>
+                                            <img className={styles.img2} src={'/images/sketching/sketch-2.png'}/>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className={styles.sketchingRight}>
                                     <img src={'/images/sketching/sketch-2.png'}/>

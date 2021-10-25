@@ -41,3 +41,32 @@
     color: #FFFFFF;
     width: 362px;
 }
+
+
+@media only screen and (max-width: 648px) {
+    .buttons {
+        width: 234px;
+        height: 40px;
+        font-size: 10px;
+        line-height: 150%;
+    }
+
+    .buttonsBlue {
+        background: url("/icons/common/buttons/button_bg_blue.svg") no-repeat;
+        background-size: contain;
+        color: #003E52;
+    }
+
+    .buttonsGoldLarge {
+        color: #CA9040;
+        width: 248px;
+        height: 29px;
+    }
+
+    .buttonsWhiteLarge {
+        width: 248px;
+        height: 29px;
+    }
+
+
+}

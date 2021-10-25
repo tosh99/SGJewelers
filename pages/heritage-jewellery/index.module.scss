@@ -2,7 +2,7 @@
 
 .traditionOuter {
     .tradition {
-        background: url("/images/sketching/banner.png") no-repeat;
+        background: url("/images/heritage/banner.png") no-repeat;
         background-size: cover;
 
         h1 {
@@ -83,12 +83,27 @@
                 margin-bottom: 26px;
             }
 
-            p {
-                margin-bottom: 124px;
-            }
+            .sketchingContent {
+                display: flex;
+                flex-direction: column;
 
-            img {
-                width: 100%;
+                p {
+                    margin-bottom: 124px;
+                }
+
+                .sketchingImages {
+                    img {
+                        width: 100%;
+                    }
+
+                    .img2 {
+                        display: none;
+                    }
+                }
+
+                section {
+                    display: none;
+                }
             }
         }
 
@@ -149,30 +164,33 @@
 @media only screen and (max-width: 648px) {
     .traditionOuter {
         .tradition {
-            background: url("/images/sketching/banner_mobile.png") no-repeat;
+            background: url("/images/heritage/banner_mobile.png") no-repeat;
             background-size: cover;
 
             h1 {
                 font-size: 24px;
                 line-height: 142%;
-
+                margin-top: 125px;
+                margin-bottom: 332px;
             }
         }
     }
 
     .vintageOuter {
-        background: #B0C6C9;
-
         .vintage {
-            display: flex;
-            flex-direction: column;
-            padding-top: 115px;
-            padding-bottom: 115px;
+            padding-top: 47px;
+            padding-bottom: 42px;
 
             .vintageTop {
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 40px;
+
+                h1 {
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 20px;
+                }
             }
 
             .vintageBanner {
@@ -185,18 +203,18 @@
 
             .vintageCarousel {
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                flex-direction: column-reverse;
 
                 .carousel {
-                    width: 50%;
+                    width: 100%;
+                    margin-bottom: 27px;
 
-                    img {
-                        width: 100%;
+                    div {
+                        img {
+                            width: 260px;
+                        }
                     }
                 }
-
-
             }
         }
     }
@@ -204,44 +222,54 @@
     .sketchingOuter {
         .sketching {
             display: flex;
-            padding-top: 108px;
-            padding-bottom: 106px;
+            padding-top: 38px;
+            padding-bottom: 0;
 
             .sketchingLeft {
-                display: flex;
-                flex-direction: column;
-                max-width: 510px;
-                margin-right: 98px;
-                justify-content: space-between;
+                max-width: 100%;
+                margin-right: 0;
 
                 h1 {
                     margin-bottom: 26px;
                 }
 
-                p {
-                    margin-bottom: 124px;
+                .sketchingContent {
+                    flex-direction: column-reverse;
+
+                    p {
+                        margin-bottom: 25px;
+                    }
+
+                    .sketchingImages {
+                        display: flex;
+                        justify-content: space-between;
+                        overflow-x: auto;
+                        margin-bottom: 31px;
+
+                        img {
+                            width: 260px;
+                            margin-right: 20px;
+                        }
+
+                        .img2 {
+                            display: flex;
+                        }
+                    }
+
+                    section {
+                        display: flex;
+                    }
                 }
 
-                img {
-                    width: 100%;
-                }
             }
 
             .sketchingRight {
-                display: flex;
-                flex-direction: column;
-                max-width: 635px;
-
-                img {
-                    width: 100%;
-                    margin-bottom: 49px;
-                }
+                display: none;
             }
         }
     }
 
     .pickOuter {
-
         .pick {
             padding-top: 80px;
             padding-bottom: 80px;

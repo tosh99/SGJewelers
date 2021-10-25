@@ -19,9 +19,13 @@ export default function PageHeader({title, bg = 'transparent'}) {
                     }}/>
                 </div>
                 <div className={styles.hRight}>
-                    <header onClick={()=>{
+                    <header onClick={() => {
                         set_show_menu(true)
-                    }}>MENU</header>
+                    }}>MENU
+                    </header>
+                    <img src={'/icons/header/menu.svg'} onClick={() => {
+                        set_show_menu(true)
+                    }}/>
                 </div>
             </div>
         </div>

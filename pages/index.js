@@ -15,7 +15,18 @@ import NextBack from "../shared/components/nextback/nextback";
 
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
 export default function Home() {
-    const places = [1, 2, 3, 4, 5]
+    const booking_places = [
+        {
+            'img_src': '/images/homepage/places/1.png'
+        },
+        {
+            'img_src': '/images/homepage/places/1.png'
+        },
+        {
+            'img_src': '/images/homepage/places/1.png'
+        }
+    ]
+    const [book_swiper, set_book_swiper] = useState({});
 
     const [device, set_device] = useState(2);
 
@@ -24,7 +35,6 @@ export default function Home() {
             set_device(0)
         }
     }, [])
-
 
 
     return (
@@ -65,7 +75,7 @@ export default function Home() {
                             <div className={"inner " + styles.preserving}>
                                 <div className={styles.pLeft}>
                                     <h1>Preserving <br/> the Art</h1>
-                                    <p>Our story is one of nostalgia and an imperial wonder, growing with the times but never forgetting
+                                    <p className={'sectionSummary'}>Our story is one of nostalgia and an imperial wonder, growing with the times but never forgetting
                                         the patronage to craftsmanship of the yesteryears. We have always had a deep devotion towards the art of jewellery making and
                                         work with artisans who have dedicated their life’s work to preserving these age-old renditions.
                                     </p>
@@ -73,6 +83,7 @@ export default function Home() {
                                 </div>
                                 <div className={styles.pRight}>
                                     <img src={'/images/homepage/preserving.png'}/>
+                                    <Button title={'Learn More'}/>
                                 </div>
                             </div>
                         </motion.div>
@@ -120,15 +131,21 @@ export default function Home() {
                             <div className={"inner " + styles.timeless}>
                                 <div className={styles.tlLeft}>
                                     <div className={styles.tlContent}>
-                                        <img className={styles.timelessone} src={'/images/homepage/timeless/1.png'}/>
+                                        <div className={styles.tlContImages}>
+                                            <img className={styles.timelesstwo} src={'/images/homepage/timeless/2.png'}/>
+                                            <img className={styles.timelessone} src={'/images/homepage/timeless/1.png'}/>
+                                        </div>
                                         <div className={styles.tlCreation}>
-                                            <header>Timeless creations</header>
-                                            <p>Heritage jewellery by Sanjay Gupta has always been the talk-of-the-town as part of our signature collections.
+                                            <h1 className={'sectionTitle'}>Timeless creations</h1>
+                                            <div className={styles.tlContImages}>
+                                                <img className={styles.timelesstwo} src={'/images/homepage/timeless/2.png'}/>
+                                                <img className={styles.timelessone} src={'/images/homepage/timeless/1.png'}/>
+                                            </div>
+                                            <p className={'sectionSummary'}>Heritage jewellery by Sanjay Gupta has always been the talk-of-the-town as part of our signature collections.
                                                 These timeless creations are appreciated by those who enjoy romantic renditions of yore. The versatility
                                                 and immaculate precision of these designs renders them to any celebration.</p>
                                         </div>
                                     </div>
-
                                     <img className={styles.timelesstwo} src={'/images/homepage/timeless/2.png'}/>
                                 </div>
                                 <div className={styles.tlRight}>
@@ -151,20 +168,19 @@ export default function Home() {
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.find}>
-                                <h1>Find <span>what</span> <br/> you are looking <br/><span>for</span></h1>
-                                <p>We have devised a custom filter that helps you find jewellery that matches your mood and suits your style.
+                                <h1 className={'sectionTitle'}>Find <span>what</span> <br/> you are looking <br/><span>for</span></h1>
+                                <p className={'sectionSummary'}>We have devised a custom filter that helps you find jewellery that matches your mood and suits your style.
                                     Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.
                                 </p>
                                 <div className={styles.sliders}>
                                     <Swiper
                                         spaceBetween={30}
-                                        slidesPerView={'2'}>
+                                        slidesPerView={'auto'}>
                                         {
-                                            places.map((place, index) => {
+                                            booking_places.map((place, index) => {
                                                 return <SwiperSlide>
                                                     <div>
-                                                        <img src={'/images/homepage/find/1.png'}/>
-                                                        {place}
+                                                        <img className={styles.sliderImg} src={'/images/homepage/find/1.png'}/>
                                                     </div>
                                                 </SwiperSlide>
                                             })
@@ -199,12 +215,15 @@ export default function Home() {
                                 </div>
                                 <div className={styles.sgExBottom}>
                                     <div className={styles.sgExBLeft}>
-                                        <img className={styles.timelessthree} src={'/images/homepage/sgex/1.png'}/>
-                                        <p>Handcrafted designs,hand-wrapped <br/> with love.
+                                        <video width="320" height="240" controls>
+                                            <source src="movie.mp4" type="video/mp4"/>
+                                        </video>
+                                        <p>Handcrafted designs,hand-wrapped <br/> with love. </p>
+                                        <p className={styles.summary}>We have devised a custom filter that helps you find jewellery that matches your mood and suits your style.
+                                            Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.
                                         </p>
                                         <Button title={'Discover Luxury'} theme={'blue'}/>
                                     </div>
-
                                     <div className={styles.sgExBRight}>
                                         <div className={styles.timelessthree}>
                                             <img src={'/images/homepage/sgex/2.png'}/>
@@ -216,7 +235,6 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </motion.div>
                     )
@@ -236,7 +254,9 @@ export default function Home() {
                                 <div className={styles.legTop}>
                                     <h1>Legacy <span>of&nbsp;</span> perfection <span>and</span> <br/>craftsmanship</h1>
                                     <div className={styles.legBottom}>
-                                        <img src={'/images/homepage/legacy.png'}/>
+                                        <video width="320" height="240" controls>
+                                            <source src="movie.mp4" type="video/mp4"/>
+                                        </video>
                                     </div>
                                     <p>Having established the standard of impeccable jewellery in 1925, Tibarumals is the forefather of preserving
                                         craftsmanship that elevates jewellery. Sanjay Gupta being an offspring of this school of thought has carried
@@ -244,7 +264,9 @@ export default function Home() {
                                     </p>
                                 </div>
                                 <div className={styles.legBottom}>
-                                    <img src={'/images/homepage/legacy.png'}/>
+                                    <video width="320" height="240" controls>
+                                        <source src="movie.mp4" type="video/mp4"/>
+                                    </video>
                                 </div>
                                 <Button title={'Learn More'}/>
                             </div>
@@ -275,12 +297,15 @@ export default function Home() {
                                         spaceBetween={30}
                                         centeredSlides={true}
                                         loop={true}
+                                        onInit={(ev) => {
+                                            set_book_swiper(ev)
+                                        }}
                                         slidesPerView={'auto'}>
                                         {
-                                            places.map((place, index) => {
+                                            booking_places.map((place, index) => {
                                                 return <SwiperSlide>
                                                     <div>
-                                                        <img src={'/images/homepage/places/1.png'}/>
+                                                        <img src={place.img_src}/>
                                                     </div>
                                                 </SwiperSlide>
                                             })
@@ -289,7 +314,11 @@ export default function Home() {
                                 </div>
                                 <div className={styles.bookButtons}>
                                     <Button title={'Book Now'}/>
-                                    <NextBack/>
+                                    <NextBack onNext={() => {
+                                        book_swiper.slideNext()
+                                    }} onBack={() => {
+                                        book_swiper.slidePrev()
+                                    }}/>
                                 </div>
                             </div>
                         </motion.div>
@@ -298,20 +327,20 @@ export default function Home() {
             </InView>
 
 
-            <InView threshold={0.25} triggerOnce={true}>
-                {
-                    ({ref, inView}) => (
-                        <motion.div className={"outer"}
-                                    ref={ref}
-                                    initial={{opacity: 0}}
-                                    animate={inView ? {opacity: 1} : {opacity: 0}}
-                                    transition={{duration: 0.8}}>
-                        </motion.div>
-                    )
-                }
-            </InView>
+            {/*<InView threshold={0.25} triggerOnce={true}>*/}
+            {/*    {*/}
+            {/*        ({ref, inView}) => (*/}
+            {/*            <motion.div className={"outer"}*/}
+            {/*                        ref={ref}*/}
+            {/*                        initial={{opacity: 0}}*/}
+            {/*                        animate={inView ? {opacity: 1} : {opacity: 0}}*/}
+            {/*                        transition={{duration: 0.8}}>*/}
+            {/*            </motion.div>*/}
+            {/*        )*/}
+            {/*    }*/}
+            {/*</InView>*/}
 
-            <BookNow/>
+            {/*<BookNow/>*/}
             {/*<BackToTop/>*/}
             <Footer/>
         </Fragment>

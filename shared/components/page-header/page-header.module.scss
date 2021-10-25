@@ -69,14 +69,14 @@
 
         .hRight {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: flex-end;
 
             header {
                 display: none;
             }
 
             img {
+                display: flex;
                 margin-left: 10px;
             }
         }
