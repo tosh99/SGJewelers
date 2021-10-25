@@ -42,37 +42,37 @@ export default function Menu({close}) {
                                 <Link href="/exclusively-yours">
                                     <header onMouseOver={() => {
                                         set_page(1);
-                                    }}>Exclusively Yours
+                                    }} onClick={close}>Exclusively Yours
                                     </header>
                                 </Link>
                                 <Link href="/heritage-jewellery">
                                     <header onMouseOver={() => {
                                         set_page(2);
-                                    }}>Heritage Jewellery
+                                    }} onClick={close}>Heritage Jewellery
                                     </header>
                                 </Link>
                                 <Link href="/iconic-design">
                                     <header onMouseOver={() => {
                                         set_page(3);
-                                    }}>Iconic Designs
+                                    }} onClick={close}>Iconic Designs
                                     </header>
                                 </Link>
                                 <Link href="/art-of-jewellery-making">
                                     <header onMouseOver={() => {
                                         set_page(4);
-                                    }}>Art of Jewellery Making
+                                    }} onClick={close}>Art of Jewellery Making
                                     </header>
                                 </Link>
                                 <Link href="/discover-luxury">
                                     <header onMouseOver={() => {
                                         set_page(5);
-                                    }}>Discover Luxury
+                                    }} onClick={close}>Discover Luxury
                                     </header>
                                 </Link>
                                 <Link href="/blogs">
                                     <header onMouseOver={() => {
                                         set_page(6);
-                                    }}>Blogs
+                                    }} onClick={close}>Blogs
                                     </header>
                                 </Link>
                             </div>

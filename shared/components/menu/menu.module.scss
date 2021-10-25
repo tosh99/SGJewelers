@@ -86,23 +86,28 @@
 }
 
 .menuFirst {
-    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/homepage/banner.png");
+    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/homepage/banner.png") no-repeat;
+    background-size: cover;
 }
 
 .menuSecond {
-    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/heritage/banner.png");
+    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/heritage/banner.png") no-repeat;
+    background-size: cover;
 }
 
 .menuThird {
-    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/iconic/banner.png");
+    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/iconic/banner.png") no-repeat;
+    background-size: cover;
 }
 
 .menuFourth {
-    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/art/banner.png");
+    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/art/banner.png") no-repeat;
+    background-size: cover;
 }
 
 .menuFifth {
-    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/discover-luxury/banner.png");
+    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/discover-luxury/banner.png") no-repeat;
+    background-size: cover;
 }
 
 
