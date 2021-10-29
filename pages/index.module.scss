@@ -1,23 +1,24 @@
 .traditionOuter {
     .tradition {
         max-width: unset;
-        min-height: 1267px;
+        //min-height: 1267px;
         background: url("/images/homepage/banner.png") no-repeat;
         background-size: cover;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        //justify-content: center;
         align-items: center;
+        color: #FFFFFF;
 
         h1 {
-            margin-bottom: 450px;
             text-align: center;
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            color: #FFFFFF;
             font-weight: 400;
             font-family: MillionaireTrialRoman, sans-serif;
             line-height: 145.5%;
+            margin-top: 325px;
+            margin-bottom: 187px;
 
             span {
                 text-transform: capitalize;
@@ -29,6 +30,13 @@
             }
         }
 
+        header {
+            margin-bottom: 187px;
+            height: 78px;
+            width: 1px;
+            background: white;
+        }
+
         p {
             font-size: 20px;
             color: #FFFFFF;
@@ -37,6 +45,7 @@
             letter-spacing: 0.05em;
             font-family: TeodorTrialLight, sans-serif;
             max-width: 1051px;
+            margin-bottom: 120px;
         }
     }
 }
@@ -169,6 +178,11 @@
                         line-height: 130%;
                         letter-spacing: 0.06em;
                         margin-bottom: 62px;
+
+                        span {
+
+
+                        }
                     }
 
                     .tlContImages {
@@ -182,6 +196,11 @@
                 max-width: 603px;
                 width: 100%;
             }
+
+            section {
+                margin-left: 128px;
+                margin-top: 80px;
+            }
         }
 
         .tlRight {
@@ -192,6 +211,10 @@
 
             img {
                 width: 100%;
+            }
+
+            .timelessfour {
+                margin-bottom: 118px;
             }
         }
     }
@@ -214,6 +237,9 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
             color: #FFFFFF;
+            font-size: 54px;
+            line-height: 74px;
+            font-weight: 400;
 
             span {
                 text-transform: lowercase;
@@ -237,6 +263,8 @@
 
             .sliderImg {
                 width: 100%;
+                margin-right: 20px;
+                max-width: 351px;
             }
 
             .btn {
@@ -412,20 +440,19 @@
         .bookTop {
             display: flex;
             flex-direction: column;
-            margin-bottom: 68px;
             padding: 0 100px;
 
             h1 {
                 font-size: 54px;
                 line-height: 75px;
                 letter-spacing: 0.08em;
-                text-transform: uppercase;
+                //text-transform: uppercase;
                 color: rgba(0, 62, 82, 0.9);
                 font-family: MillionaireTrialRoman, sans-serif;
                 margin-bottom: 25px;
 
                 span {
-                    text-transform: lowercase;
+                    //text-transform: lowercase;
                     font-family: MillionaireTrialScript, sans-serif;
                 }
             }
@@ -440,8 +467,27 @@
             }
         }
 
-        .bookBottom {
+        .bookIndex {
             display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            max-width: 1440px;
+            padding: 0 100px;
+            margin-bottom: 68px;
+
+            header {
+                font-family: BickhamScriptPro, sans-serif;
+                font-size: 32px;
+                line-height: 116.5%;
+            }
+
+            span {
+                color: lightgray;
+            }
+        }
+
+        .bookBottom {
+            //display: flex;
 
 
             div {

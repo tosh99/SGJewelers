@@ -75,7 +75,7 @@ export default function ExclusivelyYours() {
                                             position that has been held strongly by Mr. Sanjay Gupta by being the notable jewellery
                                             designer in the industry today.
                                         </p>
-                                        <Button title={'Read More'} theme={'blue'}/>
+                                        <Button title={'Read More'} theme={'blue'} casing={'capitalize'}/>
                                     </div>
                                     <div className={styles.tibarumalRight}>
                                         <img src={'/images/art/tibarumal-2.png'}/>

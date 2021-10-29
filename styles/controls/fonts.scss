@@ -39,6 +39,10 @@ p.sectionSummary {
     line-height: 125%;
     letter-spacing: 0.06em;
     max-width: 986px;
+
+    span {
+        font-family: MillionaireTrialScript, sans-serif;
+    }
 }
 
 
@@ -112,6 +116,13 @@ p.sectionSummary {
 
 @font-face {
     font-family: 'GoldenBookLight';
+    font-display: swap;
+    src: local('GoldenBookLight'), url("/fonts/Goldenbook W01 Light.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family: 'BickhamScriptPro';
     font-display: swap;
     src: local('GoldenBookLight'), url("/fonts/Goldenbook W01 Light.ttf") format('truetype');
 }

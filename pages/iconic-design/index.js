@@ -15,7 +15,9 @@ import NextBack from "../../shared/components/nextback/nextback";
 
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
 export default function ExclusivelyYours() {
-    const places = [1, 2, 3, 4]
+    const rare_jewelleries = [1, 2, 3, 4]
+    const [rare_swiper, set_rare_swiper] = useState({});
+    const [current_rare_slide, set_current_rare_slide] = useState(0);
 
     const [device, set_device] = useState(2);
 
@@ -43,6 +45,7 @@ export default function ExclusivelyYours() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.tradition}>
                                 <h1>Distinguished <br/><span>designs</span> that make <br/> heads <span>turn</span></h1>
+                                <header>&nbsp;</header>
                                 <p>Having been the jewellery designers for the imperial courts of the Nizams,
                                     we have been the preferred jewellers of many noblemen, not only because of our
                                     dedication towards perfection but also because of our keen eye for design.
@@ -83,7 +86,7 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.storyBottom}>
                                     <div className={styles.sbLeft}>
-                                        <Button title={'Read More'}/>
+                                        <Button title={'Read More'} casing={'capitalize'}/>
                                     </div>
                                     <div className={styles.sbRight}>
                                         <img src={'/images/iconic/story/2.png'}/>
@@ -112,9 +115,16 @@ export default function ExclusivelyYours() {
                                 <div className={styles.rareTop}>
                                     <Swiper
                                         spaceBetween={130}
+                                        onInit={(ev) => {
+                                            set_rare_swiper(ev)
+                                        }}
+                                        onSlideChange={(ev) => {
+                                            console.log(ev.activeIndex)
+                                            set_current_rare_slide(ev.activeIndex)
+                                        }}
                                         slidesPerView={'1'}>
                                         {
-                                            places.map((place, index) => {
+                                            rare_jewelleries.map((place, index) => {
                                                 return <SwiperSlide>
                                                     <div>
                                                         <img src={'/images/iconic/rare/1.png'}/>
@@ -126,11 +136,20 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.rareBottom}>
                                     <div className={styles.rbLeft}>
-                                        <p className={'sectionSummary'}>The diamonds and gemstones used in high jewellery are distinct in nature, colour, shape, carat and clarity.
+                                        <p className={'sectionSummary'}>The diamonds and gemstones used in high jewellery are distinct in nature,
+                                            colour, shape, carat and clarity.
                                             Owing to their origins they are valued very highly and rare to come by in certain instances. </p>
-                                        <Button title={'Read More'}/>
+                                        <Button title={'Read More'} casing={'capitalize'}/>
                                     </div>
-                                    <NextBack/>
+                                    <NextBack
+                                        prevDisabled={current_rare_slide === 0}
+                                        nextDisabled={current_rare_slide === rare_jewelleries.length - 1}
+                                        onNext={() => {
+                                            rare_swiper.slideNext()
+                                        }}
+                                        onBack={() => {
+                                            rare_swiper.slidePrev()
+                                        }}/>
                                 </div>
                             </div>
                         </motion.div>
@@ -151,11 +170,15 @@ export default function ExclusivelyYours() {
                                 <div className={styles.movementLeft}>
                                     <h1 className={'sectionTitle'}>Movement <span>AND</span> <br/> Setting</h1>
                                     <div className={styles.mvLeftContent}>
-                                        <p className={'sectionSummary'}>The design inspiration for our high jewellery collection can come
-                                            from places far and wide.
-                                            We are connoisseurs of art and have an inclination towards the fine jewellery periods of yore —
-                                            <br/><br/>
-                                            <span>Georgian, Victorina, Edwardian, Art Nouveau, Art Deco and Retro.</span>
+                                        <p className={'sectionSummary'}>The stones picked are of immense value and need to be mounted to bring out
+                                            their unique qualities. As designers of high jewellery, we make sure to use mounting techniques and
+                                            settings that do justice to their prominence. Whether it is <span>prong-setting or bezel-setting</span> to
+                                            highlight a
+                                            single precious stone, or the <span>pave-setting or channel-setting</span> to bring together many stones
+                                            in a way to
+                                            form beautiful clusters of light or even the <span>flush-setting</span> allowing more romantic play of
+                                            hide and seek,
+                                            we choose the setting to compliment both, the stone and design.
                                         </p>
 
                                         <div className={styles.mvLeftImages}>
@@ -166,7 +189,7 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.movementRight}>
                                     <img src={'/images/iconic/movement/2.png'}/>
-                                    <Button title={'Read More'} theme={'blue'}/>
+                                    <Button title={'Read More'} theme={'blue'} casing={'capitalize'}/>
                                 </div>
                             </div>
                         </motion.div>

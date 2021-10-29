@@ -8,6 +8,10 @@
         h1 {
             font-size: 54px;
             line-height: 78px;
+
+            span {
+                text-transform: lowercase;
+            }
         }
     }
 }
@@ -132,6 +136,8 @@
             h1 {
                 text-transform: uppercase;
                 margin-bottom: 24px;
+                font-size: 44px;
+                line-height: 60px;
 
                 span {
                     text-transform: lowercase;

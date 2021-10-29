@@ -16,6 +16,21 @@ import NextBack from "../../shared/components/nextback/nextback";
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
 export default function ExclusivelyYours() {
     const places = [1, 2, 3, 4]
+    const pickings = [
+        {
+            bg_img_url: '/images/heritage/picking/1.png',
+            content: 'We meticulously hand-select each and every one of our diamonds, assessing them individually by eye. ' +
+                'We look for the  <span>perfect alignment of facets and angles, which maximises how a diamond reflects, refracts and ' +
+                'disperses light. </span> This not only represents the quality of a diamond but results in its ultimate sparkle, ' +
+                'so you can confidently shine.'
+        },
+        {
+            bg_img_url: '/images/heritage/picking/1.png'
+        },
+        {
+            bg_img_url: '/images/heritage/picking/1.png'
+        }
+    ]
 
     const [device, set_device] = useState(2);
 
@@ -43,6 +58,7 @@ export default function ExclusivelyYours() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.tradition}>
                                 <h1>TIMELESS <br/> CREATIONS <span>of</span> AN <br/> ETHEREAL <span>era</span></h1>
+                                <header>&nbsp;</header>
                                 <p>Having been passed down generations as heirloom pieces and adorning the modern-day bride,
                                     our heritage jewellery is appreciated by the quintessential modern woman who respects her heritage even
                                     as she appreciates the freshness of the future.
@@ -65,9 +81,9 @@ export default function ExclusivelyYours() {
                             <div className={"inner " + styles.vintage}>
                                 <div className={styles.vintageTop}>
                                     <h1 className={'sectionTitle'}>VINTAGE DESIGN</h1>
-                                    <p className={'sectionSummary'}>Ancient jewellery making techniques such as enamelling,
-                                        inlay and gold etching have stood the test of time, and are fostered in our modern collections. We marry
-                                        the old and the new to create visually intriguing pieces crafted using these ancient techniques,
+                                    <p className={'sectionSummary'}>Ancient jewellery making techniques such as <span>&nbsp;enamelling,
+                                        inlay and gold etching</span> have stood the test of time, and are fostered in our modern collections. We
+                                        marry the old and the new to create visually intriguing pieces crafted using these ancient techniques,
                                         creating fine luxury masterpieces with genuine workmanship.
                                     </p>
                                 </div>
@@ -75,11 +91,11 @@ export default function ExclusivelyYours() {
                                     <img src={'/images/heritage/vintage-design-banner.png'}/>
                                 </div>
                                 <div className={styles.vintageCarousel}>
-                                    <Button theme={'blue'} title={'Read More'}/>
+                                    <Button theme={'blue'} title={'Read More'} casing={'capitalize'}/>
                                     <div className={styles.carousel}>
                                         <Swiper
                                             spaceBetween={30}
-                                            slidesPerView={'auto'}>
+                                            slidesPerView={'2'}>
                                             {
                                                 places.map((place, index) => {
                                                     return <SwiperSlide>
@@ -111,7 +127,7 @@ export default function ExclusivelyYours() {
                                 <div className={styles.sketchingLeft}>
                                     <h1 className={'sectionTitle'}>SKETCHING</h1>
                                     <div className={styles.sketchingContent}>
-                                        <Button title={'Read More'}/>
+                                        <Button title={'Read More'} casing={'capitalize'}/>
                                         <p className={'sectionSummary'}>Mr. Sanjay Gupta sees design in everything around him.
                                             He draws inspiration from artistic vintage paintings, marble statues, portraits of a
                                             Royal courtsman or even architecture.
@@ -124,7 +140,7 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.sketchingRight}>
                                     <img src={'/images/sketching/sketch-2.png'}/>
-                                    <Button title={'Read More'}/>
+                                    <Button title={'Read More'} casing={'capitalize'}/>
                                 </div>
                             </div>
                         </motion.div>
@@ -132,7 +148,7 @@ export default function ExclusivelyYours() {
                 }
             </InView>
 
-            {/*Find What*/}
+            {/*Pick*/}
             <InView threshold={0.25} triggerOnce={true}>
                 {
                     ({ref, inView}) => (
@@ -141,23 +157,26 @@ export default function ExclusivelyYours() {
                                     initial={{opacity: 0}}
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
-                            <div className={"inner " + styles.pick}>
+                            <div className={styles.pick}>
                                 <div className={styles.sliders}>
                                     <Swiper
                                         spaceBetween={120}
                                         slidesPerView={'1'}>
                                         {
-                                            places.map((place, index) => {
+                                            pickings.map((place, index) => {
                                                 return <SwiperSlide>
-                                                    <div className={styles.slide}>
-                                                        <h1 className={'sectionTitle'}>Find <span>what</span> <br/> you are looking <br/><span> &nbsp;for</span></h1>
+                                                    <div className={styles.slide}
+                                                         style={{
+                                                             background: 'url(' + place.bg_img_url + ')',
+                                                             backgroundSize: 'cover',
+                                                             backgroundRepeat: 'no-repeat'
+                                                         }}>
+                                                        <h1 className={'sectionTitle'}>Picking <br/> <span>and</span> mounting <br/> stones</h1>
                                                         <div className={styles.slideContent}>
-                                                            <p className={'sectionSummary'}>We have devised a custom filter that helps you find jewellery that matches your mood and suits your style.
-                                                                Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.
-                                                            </p>
+                                                            <p className={'sectionSummary'} dangerouslySetInnerHTML={{__html: place.content}}/>
                                                             <NextBack/>
                                                         </div>
-                                                        <Button title={'Read More'}/>
+                                                        <Button title={'Read More'} casing={'capitalize'}/>
                                                     </div>
                                                 </SwiperSlide>
                                             })

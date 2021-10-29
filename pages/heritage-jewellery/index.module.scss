@@ -6,10 +6,8 @@
         background-size: cover;
 
         h1 {
-            font-size: 44px;
-            line-height: 142%;
-            margin-bottom: 502px;
-            margin-top: 350px;
+            font-size: 54px;
+            line-height: 78px;
 
             span {
                 text-transform: lowercase;
@@ -58,6 +56,7 @@
 
                 img {
                     width: 100%;
+                    max-width: 250px;
                 }
             }
 
@@ -121,10 +120,7 @@
 }
 
 .pickOuter {
-
     .pick {
-        padding-top: 80px;
-        padding-bottom: 80px;
         max-width: unset;
 
         .sliders {
@@ -132,18 +128,33 @@
 
             .slide {
                 width: 100%;
+                padding: 80px 100px;
 
                 h1 {
                     margin-bottom: 270px;
+                    text-transform: uppercase;
+                    color: white;
+                    font-size: 54px;
+                    line-height: 69px;
+                    font-weight: 400;
+
+                    span {
+                        text-transform: lowercase;
+                    }
                 }
 
                 .slideContent {
                     display: flex;
                     justify-content: space-between;
+                    align-items: flex-end;
                     margin-bottom: 62px;
 
                     p {
                         max-width: 889px;
+                        color: white;
+                        font-weight: 300;
+                        font-size: 20px;
+                        line-height: 140%;
                     }
                 }
 
