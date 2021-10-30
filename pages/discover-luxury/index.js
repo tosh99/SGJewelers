@@ -41,12 +41,10 @@ export default function ExclusivelyYours() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.tradition}>
                                 <h1>THE SANJAY GUPTA <br/><span>experience</span> OF HANDCRAFTED<br/> <span>perfection</span></h1>
-                                <p>Discover Luxury
-                                    Menu
-                                    The Sanjay Gupta
-                                    experience of handcrafted perfection
-                                    Sanjay gupta is built on the foundation of traditions and culture, where our specialised craftsmen and artists come together to create luxury with our skilled designers who bring their modern-age impressions. Thus, bringing
-                                    you new world designs mixed with old world charm.
+                                <header>&nbsp;</header>
+                                <p>Sanjay gupta is built on the foundation of traditions and culture, where our specialised craftsmen and artists come
+                                    together to create luxury with our skilled designers who bring their modern-age impressions. Thus, bringing you
+                                    new world designs mixed with old world charm.
                                     <br/><br/>
                                     <span>Each piece is a hallmark of sheer dedication and pure craftsmanship. Come down to our store to experience it for yourself.</span>
                                 </p>
@@ -69,8 +67,10 @@ export default function ExclusivelyYours() {
                                 <div className={styles.virtualTop}>
                                     <h1 className={'sectionTitle'}>Virtual <br/>
                                         <span>design</span> Consultations</h1>
-                                    <p className={'sectionSummary'}>Our client base is spread around the globe. To make it easier for you to own your exclusive Sanjay Gupta masterpiece,
-                                        we also offer virtual consultations on special requests. Drop us an email at <span>info@sanjaygupta.world</span> to
+                                    <p className={'sectionSummary'}>Our client base is spread around the globe. To make it easier for you to own your
+                                        exclusive Sanjay Gupta masterpiece,
+                                        we also offer virtual consultations on special requests. Drop us an email
+                                        at <a href="mailto: info@sanjaygupta.world"><span>info@sanjaygupta.world</span></a> to
                                         set up an appointment with the design team.
                                     </p>
                                 </div>
@@ -115,7 +115,8 @@ export default function ExclusivelyYours() {
                                 <div className={styles.boxedBottom}>
                                     <p className={'sectionSummary'}>We believe that every touchpoint of that first look is of prime importance.
                                         Our jewellery boxes have been especially designed to add to the jewellery’s shine. They have been <span>handcrafted in
-                                        India </span> and made to keep your jewellery secure so when you open the box, the first look leaves you mesmerised
+                                        India </span> and made to keep your jewellery secure so when you open the box, the first look leaves you
+                                        mesmerised
                                     </p>
                                     <img src={'/images/discover-luxury/boxed-love-2.png'}/>
                                 </div>
@@ -142,8 +143,8 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.giftWrappingRight}>
                                     <p className={'sectionSummary'}>We are here for all your needs and to go above and beyond to make
-                                        your jewellery dreams come true. Offering Gift Wrapping services for a large custom order so that you can elevate your gifting
-                                        experience.
+                                        your jewellery dreams come true. Offering Gift Wrapping services for a large custom order so that you can
+                                        <span>&nbsp;elevate your gifting experience.</span>
                                     </p>
                                     <img src={'/images/discover-luxury/gift-wrap-2.png'}/>
                                 </div>

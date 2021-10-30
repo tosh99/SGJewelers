@@ -30,6 +30,8 @@
 
             h1 {
                 text-transform: uppercase;
+                font-size: 44px;
+                line-height: 60px;
 
                 span {
                     text-transform: lowercase;
@@ -50,7 +52,7 @@
             }
 
             .stRight {
-                max-width: 504px;
+                max-width: 510px;
             }
         }
 
@@ -65,7 +67,7 @@
             }
 
             .sbRight {
-                max-width: 504px;
+                max-width: 510px;
 
                 img {
                     width: 100%;
@@ -88,8 +90,15 @@
             align-items: flex-end;
             margin-bottom: 61px;
 
+            header {
+                font-size: 44px;
+                line-height: 42%;
+            }
+
             h1 {
                 text-transform: uppercase;
+                font-size: 54px;
+                line-height: 69px;
 
                 span {
                     text-transform: lowercase;

@@ -110,7 +110,7 @@ export default function ExclusivelyYours() {
                             <div className={"inner " + styles.rare}>
                                 <div className={styles.rareHeader}>
                                     <header>01/03</header>
-                                    <h1 className={'sectionTitle'}>RARE <span>and</span> <br/> pRECIOUS sTONES</h1>
+                                    <h1 className={'sectionTitle'}>RARE <span>and</span> <br/> pRECIOUS <span>stones</span></h1>
                                 </div>
                                 <div className={styles.rareTop}>
                                     <Swiper

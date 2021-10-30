@@ -6,35 +6,117 @@
         background-size: cover;
 
         h1 {
-            font-size: 54px;
-            line-height: 78px;
+            font-size: 44px;
+            line-height: 142%;
+            margin-bottom: 59px;
+        }
+
+        .themes {
+            display: flex;
+            align-items: center;
+            margin-bottom: 81px;
+
+            .themeLeft, .themeRight {
+                img {
+                    cursor: pointer;
+                }
+            }
+
+
+            .themeContent {
+                display: flex;
+                flex-direction: column;
+                margin: 0 38px;
+
+                h2 {
+                    transition: 1s;
+                    font-family: MillionaireTrialScript, sans-serif;
+                    text-transform: capitalize;
+                    font-size: 44px;
+                    line-height: 175%;
+                    border-bottom: 1.5px solid white;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        header {
+            margin-bottom: 67px;
+        }
+
+        section {
+            margin-bottom: 150px;
         }
     }
 }
 
-.rareOuter {
-    .rare {
-        .rareHeader {
+.sectionOneOuter {
+    .sectionOne {
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+        padding-bottom: 121px;
+
+        .sectionOneHeader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 131px;
+
+            h1 {
+                font-size: 54px;
+                line-height: 61px;
+                text-transform: capitalize;
+                font-family: MillionaireTrialScript, sans-serif;
+                margin-bottom: 21px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 125%;
+                max-width: 477px;
+                color: #003E52;
+                text-align: center;
+            }
 
         }
 
-        .rareTop {
-            .stLeft {
+        .sectionOneContent {
+            display: flex;
+            justify-content: space-between;
 
+            .socLeft {
+                max-width: 880px;
+
+                h3 {
+                    font-family: MillionaireTrialScript, sans-serif;
+                    color: #003E52;
+                    font-size: 28px;
+                    line-height: 134.5%;
+                    margin-bottom: 10px;
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                .sectionOneBottom {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 20px;
+
+                    header {
+                        font-size: 44px;
+                    }
+                }
             }
 
-            .stRight {
-
+            .socRight {
+                padding-top: 40px;
             }
         }
 
 
-        .rareBottom {
-            .rbLeft {
-                display: flex;
-                flex-direction: column;
-            }
-        }
     }
 }
 

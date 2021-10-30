@@ -69,12 +69,6 @@ export default function Menu({close}) {
                                     }} onClick={close}>Discover Luxury
                                     </header>
                                 </Link>
-                                <Link href="/blogs">
-                                    <header onMouseOver={() => {
-                                        set_page(6);
-                                    }} onClick={close}>Blogs
-                                    </header>
-                                </Link>
                             </div>
                             <div className={styles.menuBottom}>
                                 {/*<p>make AN appointment</p>*/}

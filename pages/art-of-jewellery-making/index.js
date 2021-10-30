@@ -42,7 +42,9 @@ export default function ExclusivelyYours() {
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.tradition}>
-                                <h1>I am looking for <br/> jewellery TO <br/> compliment my mood of <br/> FEELING</h1>
+                                <h1>Preserving <span>the</span> <br/> art <span>AND</span> craftsmanship <br/>
+                                    <span>of</span> jewellery <span>making</span></h1>
+                                <header>&nbsp;</header>
                                 <p>Sanjay Gupta is built on the foundation laid by our predecessors in 1925 — of honouring culture and the century old
                                     tradition of opulence. Our passion for perfection and modern-age interpretation of Indian jewellery have
                                     procured us the praise and patronage of many notable connoisseurs and noblemen, alike.
@@ -87,7 +89,6 @@ export default function ExclusivelyYours() {
                 }
             </InView>
 
-
             {/*Generations*/}
             <InView threshold={0.25} triggerOnce={true}>
                 {
@@ -99,12 +100,12 @@ export default function ExclusivelyYours() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.generations}>
                                 <div className={styles.generationsTop}>
-                                    <h1 className={'sectionTitle'}>Generations <span>of</span> jewellers</h1>
+                                    <h1 className={'sectionTitle'}>Generations <span>of</span> <br/> jewellers</h1>
                                     <p className={'sectionSummary'}>The love and appreciation for the art of jewellery making was passed down to
                                         Mr. Sanjay Gupta by his forefathers. Having taken the reigns over from his
                                         father and industry stalwart, Mr. Haitram Gupta, Sanjay Gupta has paved way
                                         for designs that are one-of-a-kind and has successfully set sail into yet
-                                        another glorious era for Tibarumals by setting up <span>his first flagship store -Sanjay Gupta by
+                                        another glorious era for Tibarumals by setting up <span>&nbsp;his first flagship store -Sanjay Gupta by
                                         Tibarumals Jewellers.</span></p>
                                 </div>
                                 <div className={styles.generationsVid}>
@@ -119,6 +120,45 @@ export default function ExclusivelyYours() {
                                         towards the art of jewellery making to his son, Shivek Gupta who is also a jewellery designer,
                                         the next generation of jewellers are gearing to take the brand to new heights.
                                     </p>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )
+                }
+            </InView>
+
+            {/*Inspired*/}
+            <InView threshold={0.25} triggerOnce={true}>
+                {
+                    ({ref, inView}) => (
+                        <motion.div className={"outer " + styles.inspiredOuter}
+                                    ref={ref}
+                                    initial={{opacity: 0}}
+                                    animate={inView ? {opacity: 1} : {opacity: 0}}
+                                    transition={{duration: 1}}>
+                            <div className={"inner " + styles.inspired}>
+                                <div className={styles.inspiredLeft}>
+                                    <img src={'/images/art/inspired/1.png'}/>
+                                </div>
+                                <div className={styles.inspiredRight}>
+                                    <h1 className={'sectionTitle'}>Inspired <span>and</span> <br/> innovative designs</h1>
+                                    <img src={'/images/art/inspired/2.png'}/>
+                                    <div className={styles.inspiredContent}>
+                                    <img src={'/images/art/inspired/1.png'}/>
+                                        <div className={styles.icRight}>
+                                            <p className={'sectionSummary'}>Heritage jewellery by Sanjay Gupta has always been the talk-of-the-town
+                                                and is
+                                                a
+                                                sure head turner. We are appreciators of artisanship and enjoy the romantic renditions of yore. Hand
+                                                selected
+                                                by our CEO and Creative Director, Mr. Sanjay Gupta himself, these are rare gems of artistry and can
+                                                only
+                                                be
+                                                understood by a true patron of the art of jewellery making.
+                                            </p>
+                                            <Button title={'Read More'} casing={'capitalize'}/>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>

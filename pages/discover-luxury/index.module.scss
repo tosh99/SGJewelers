@@ -6,8 +6,18 @@
         background-size: cover;
 
         h1 {
-            font-size: 44px;
-            line-height: 142%;
+            font-size: 54px;
+            line-height: 78px;
+
+            span {
+                text-transform: lowercase;
+            }
+        }
+
+        p {
+            span {
+                font-family: TeodorTrialLightItalic, sans-serif;
+            }
         }
     }
 }
@@ -23,8 +33,24 @@
             justify-content: space-between;
             margin-bottom: 88px;
 
+            h1 {
+                font-size: 28px;
+                line-height: 40px;
+                text-transform: uppercase;
+
+                span {
+                    text-transform: lowercase;
+                }
+            }
+
             p {
                 max-width: 376px;
+
+                span {
+                    font-family: TeodorTrial, sans-serif;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -45,6 +71,13 @@
             h1 {
                 margin-bottom: 72px;
                 text-align: center;
+                text-transform: uppercase;
+                font-size: 44px;
+                line-height: normal;
+
+                span {
+                    text-transform: lowercase;
+                }
             }
 
             video {
@@ -83,6 +116,13 @@
             h1 {
                 margin-bottom: 59px;
                 color: black;
+                font-size: 54px;
+                text-transform: uppercase;
+                font-weight: 400;
+
+                span {
+                    text-transform: capitalize;
+                }
             }
 
             img {
@@ -97,7 +137,7 @@
             max-width: 485px;
 
             p {
-
+                margin-top: 125px;
             }
 
             img {

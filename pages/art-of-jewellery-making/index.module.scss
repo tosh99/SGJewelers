@@ -6,8 +6,12 @@
         background-size: cover;
 
         h1 {
-            font-size: 44px;
-            line-height: 142%;
+            font-size: 54px;
+            line-height: 78px;
+
+            span {
+                text-transform: lowercase;
+            }
         }
     }
 }
@@ -80,6 +84,13 @@
 
             h1 {
                 margin-bottom: 72px;
+                font-size: 28px;
+                line-height: 45px;
+                text-transform: uppercase;
+
+                span {
+                    text-transform: lowercase;
+                }
             }
 
             p {
@@ -106,6 +117,63 @@
         }
     }
 }
+
+.inspiredOuter {
+    .inspired {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 121px;
+        padding-bottom: 207px;
+
+        .inspiredLeft {
+            max-width: 377px;
+            padding-top: 167px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .inspiredRight {
+            display: flex;
+            flex-direction: column;
+            max-width: 757px;
+
+            h1 {
+                margin-bottom: 77px;
+                text-transform: uppercase;
+
+                span {
+                    text-transform: lowercase;
+                }
+            }
+
+            img {
+                margin-bottom: 53px;
+                width: 100%;
+            }
+
+
+            .inspiredContent {
+                display: flex;
+                justify-content: space-between;
+
+
+                img {
+                    display: none;
+                }
+
+                .icRight {
+                    p {
+                        margin-bottom: 37px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
 
 @media only screen and (max-width: 1280px) {
 
