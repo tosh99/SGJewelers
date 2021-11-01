@@ -206,6 +206,11 @@
 
             .storyHeader {
                 margin-bottom: 22px;
+
+                h1 {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
             }
 
             .storyTop {
@@ -289,6 +294,11 @@
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 21px;
+
+                h1 {
+                    font-size: 24px;
+                    line-height: 35px;
+                }
 
                 .mvLeftContent {
                     display: flex;

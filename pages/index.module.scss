@@ -1,12 +1,10 @@
 .traditionOuter {
     .tradition {
         max-width: unset;
-        //min-height: 1267px;
         background: url("/images/homepage/banner.png") no-repeat;
         background-size: cover;
         display: flex;
         flex-direction: column;
-        //justify-content: center;
         align-items: center;
         color: #FFFFFF;
 
@@ -55,7 +53,6 @@
         display: flex;
         padding-top: 130px;
 
-
         .pLeft {
             max-width: 302px;
             margin-right: 83px;
@@ -68,6 +65,12 @@
                 color: rgba(0, 62, 82, 0.9);
                 font-family: MillionaireTrialRoman, sans-serif;
                 margin-bottom: 25px;
+
+                span {
+                    font-family: TeodorTrialLight, sans-serif;
+                    font-size: 28px;
+                    line-height: 40px;
+                }
             }
 
             p {
@@ -76,6 +79,8 @@
                 line-height: 130%;
                 letter-spacing: 0.06em;
                 margin-bottom: 62px;
+
+
             }
         }
 
@@ -105,10 +110,16 @@
                 line-height: 149%;
                 letter-spacing: 0.08em;
                 text-transform: uppercase;
-                color: rgba(0, 62, 82, 0.9);
-                font-family: MillionaireTrialRoman, sans-serif;
+                //color: rgba(0, 62, 82, 0.9);
+                //font-family: MillionaireTrialRoman, sans-serif;
                 margin-bottom: 25px;
                 text-align: center;
+
+                span {
+                    font-family: TeodorTrialLight, sans-serif;
+                    font-size: 28px;
+                    line-height: 40px;
+                }
             }
 
             p {
@@ -215,6 +226,10 @@
 
             .timelessfour {
                 margin-bottom: 118px;
+            }
+
+            section {
+                display: none;
             }
         }
     }
@@ -518,11 +533,16 @@
 @media only screen and (max-width: 648px) {
     .traditionOuter {
         .tradition {
-            min-height: 716px;
+            background: url("/images/homepage/banner_mobile.png") no-repeat;
+            background-size: cover;
 
             h1 {
-                margin-bottom: 310px;
-                margin-top: 138px;
+                margin-bottom: 116px;
+                margin-top: 166px;
+            }
+
+            header {
+                margin-bottom: 116px;
             }
 
             p {
@@ -553,10 +573,19 @@
                     line-height: 24px;
                     margin-bottom: 12px;
                     text-align: center;
+
+                    span {
+                        font-family: MillionaireTrialScript, sans-serif;
+                        font-size: 16px;
+                        line-height: 24px;
+                        text-transform: lowercase;
+                    }
                 }
 
                 p {
                     margin-bottom: 25px;
+                    font-size: 12px;
+                    line-height: 120%;
                 }
 
                 section {
@@ -593,6 +622,13 @@
                     line-height: 150%;
                     letter-spacing: 0.1em;
                     margin-bottom: 18px;
+
+                    span {
+                        font-family: MillionaireTrialScript, sans-serif;
+                        font-size: 16px;
+                        line-height: 24px;
+                        text-transform: lowercase;
+                    }
                 }
 
                 p {
@@ -676,6 +712,10 @@
                 .timelesstwo {
                     display: none;
                 }
+
+                section {
+                    display: none;
+                }
             }
 
             .tlRight {
@@ -694,6 +734,11 @@
 
                 .timelessfour {
                     max-width: 193px;
+                    margin-bottom: 23px;
+                }
+
+                section {
+                    display: flex;
                 }
             }
         }
@@ -710,6 +755,8 @@
 
             h1 {
                 margin-bottom: 256px;
+                font-size: 24px;
+                line-height: 38px;
 
                 span {
                     text-transform: lowercase;
@@ -733,7 +780,7 @@
                 justify-content: space-between;
 
                 .sliderImg {
-                    width: 193px;
+                    width: calc(50% - 20px);
                 }
 
                 .btn {
@@ -907,12 +954,33 @@
 
             }
 
+            .bookIndex {
+                display: flex;
+                justify-content: flex-start;
+                padding: 0;
+                margin-bottom: 10px;
+
+                header {
+                    font-size: 20px;
+                    line-height: 116.5%;
+                }
+            }
+
+
             .bookBottom {
                 display: flex;
 
                 img {
                     width: 100%;
                 }
+            }
+
+            .bookButtons {
+                display: flex;
+                justify-content: space-between;
+                padding: 0;
+                margin: 15px 0 0 0;
+
             }
         }
     }

@@ -70,6 +70,7 @@ export default function Home() {
                 }
             </InView>
 
+            {/*Preserving*/}
             <InView threshold={0.25} triggerOnce={true}>
                 {
                     ({ref, inView}) => (
@@ -80,7 +81,7 @@ export default function Home() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.preserving}>
                                 <div className={styles.pLeft}>
-                                    <h1>Preserving <br/> the Art</h1>
+                                    <h1 className={'sectionTitle'}>Preserving <br/> <span>the</span> Art</h1>
                                     <p className={'sectionSummary'}>Our story is one of nostalgia and an imperial
                                         wonder, growing with the times but never forgetting
                                         the patronage to craftsmanship of the yesteryears. We have always had a deep
@@ -111,7 +112,7 @@ export default function Home() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.distinguished}>
                                 <div className={styles.disTop}>
-                                    <h1>Distinguished designs</h1>
+                                    <h1 className={'sectionTitle'}>Distinguished <span>designs</span></h1>
                                     <p className={'sectionSummary'}>Our High Jewellery designs are magnificent creations
                                         made using the best, beauteous and brightest diamonds and gemstones.
                                         Hand-picked, composed and designed by our CEO and Creative Director, Mr. Sanjay
@@ -170,6 +171,7 @@ export default function Home() {
                                 <div className={styles.tlRight}>
                                     <img className={styles.timelessthree} src={'/images/homepage/timeless/3.png'}/>
                                     <img className={styles.timelessfour} src={'/images/homepage/timeless/4.png'}/>
+                                    <Button title={'Discover High Jewelery'} theme={'gold_large'}/>
                                 </div>
                             </div>
                         </motion.div>
