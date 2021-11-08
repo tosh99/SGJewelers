@@ -156,7 +156,7 @@ export default function ExclusivelyYours() {
                                                 be
                                                 understood by a true patron of the art of jewellery making.
                                             </p>
-                                            <Button title={'Read More'} casing={'capitalize'}/>
+                                            <Button theme={'small'} title={'Read More'} casing={'capitalize'}/>
                                         </div>
                                     </div>
                                 </div>

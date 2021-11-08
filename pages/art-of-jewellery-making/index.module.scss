@@ -142,6 +142,8 @@
             h1 {
                 margin-bottom: 77px;
                 text-transform: uppercase;
+                font-size: 44px;
+                line-height: 60px;
 
                 span {
                     text-transform: lowercase;
@@ -193,7 +195,6 @@
             }
         }
     }
-
 
     .tibarumalOuter {
         .tibarumal {
@@ -274,6 +275,56 @@
                 p {
                     max-width: 100%;
                     display: none;
+                }
+            }
+        }
+    }
+
+    .inspiredOuter {
+        .inspired {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 44px;
+            padding-bottom: 34px;
+
+            .inspiredLeft {
+                display: none;
+            }
+
+            .inspiredRight {
+                display: flex;
+                flex-direction: column;
+                max-width: 757px;
+
+                h1 {
+                    margin-bottom: 25px;
+                    font-size: 24px;
+                    line-height: 35px;
+                }
+
+                img {
+                    margin-bottom: 21px;
+                }
+
+
+                .inspiredContent {
+                    display: flex;
+                    justify-content: space-between;
+
+
+                    img {
+                        display: flex;
+                        height: 120px;
+                        margin-right: 21px;
+                    }
+
+                    .icRight {
+                        p {
+                            margin-bottom: 23px;
+                            font-family: TeodorTrialLightItalic, sans-serif;
+                        }
+                    }
+
                 }
             }
         }

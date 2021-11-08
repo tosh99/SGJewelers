@@ -59,8 +59,10 @@ export default function ExclusivelyYours() {
                             <div className={"inner " + styles.tradition}>
                                 <h1>TIMELESS <br/> CREATIONS <span>of</span> AN <br/> ETHEREAL <span>era</span></h1>
                                 <header>&nbsp;</header>
-                                <p>Having been passed down generations as heirloom pieces and adorning the modern-day bride,
-                                    our heritage jewellery is appreciated by the quintessential modern woman who respects her heritage even
+                                <p>Having been passed down generations as heirloom pieces and adorning the modern-day
+                                    bride,
+                                    our heritage jewellery is appreciated by the quintessential modern woman who
+                                    respects her heritage even
                                     as she appreciates the freshness of the future.
                                 </p>
                             </div>
@@ -81,9 +83,12 @@ export default function ExclusivelyYours() {
                             <div className={"inner " + styles.vintage}>
                                 <div className={styles.vintageTop}>
                                     <h1 className={'sectionTitle'}>VINTAGE DESIGN</h1>
-                                    <p className={'sectionSummary'}>Ancient jewellery making techniques such as <span>&nbsp;enamelling,
-                                        inlay and gold etching</span> have stood the test of time, and are fostered in our modern collections. We
-                                        marry the old and the new to create visually intriguing pieces crafted using these ancient techniques,
+                                    <p className={'sectionSummary'}>Ancient jewellery making techniques such
+                                        as <span>&nbsp;enamelling,
+                                        inlay and gold etching</span> have stood the test of time, and are fostered in
+                                        our modern collections. We
+                                        marry the old and the new to create visually intriguing pieces crafted using
+                                        these ancient techniques,
                                         creating fine luxury masterpieces with genuine workmanship.
                                     </p>
                                 </div>
@@ -128,8 +133,10 @@ export default function ExclusivelyYours() {
                                     <h1 className={'sectionTitle'}>SKETCHING</h1>
                                     <div className={styles.sketchingContent}>
                                         <Button title={'Read More'} casing={'capitalize'}/>
-                                        <p className={'sectionSummary'}>Mr. Sanjay Gupta sees design in everything around him.
-                                            He draws inspiration from artistic vintage paintings, marble statues, portraits of a
+                                        <p className={'sectionSummary'}>Mr. Sanjay Gupta sees design in everything
+                                            around him.
+                                            He draws inspiration from artistic vintage paintings, marble statues,
+                                            portraits of a
                                             Royal courtsman or even architecture.
                                         </p>
                                         <div className={styles.sketchingImages}>
@@ -159,29 +166,46 @@ export default function ExclusivelyYours() {
                                     transition={{duration: 1}}>
                             <div className={styles.pick}>
                                 <div className={styles.sliders}>
-                                    <Swiper
-                                        spaceBetween={120}
-                                        slidesPerView={'1'}>
-                                        {
-                                            pickings.map((place, index) => {
-                                                return <SwiperSlide>
-                                                    <div className={styles.slide}
-                                                         style={{
-                                                             background: 'url(' + place.bg_img_url + ')',
-                                                             backgroundSize: 'cover',
-                                                             backgroundRepeat: 'no-repeat'
-                                                         }}>
-                                                        <h1 className={'sectionTitle'}>Picking <br/> <span>and</span> mounting <br/> stones</h1>
-                                                        <div className={styles.slideContent}>
-                                                            <p className={'sectionSummary'} dangerouslySetInnerHTML={{__html: place.content}}/>
-                                                            <NextBack/>
-                                                        </div>
-                                                        <Button title={'Read More'} casing={'capitalize'}/>
-                                                    </div>
-                                                </SwiperSlide>
-                                            })
-                                        }
-                                    </Swiper>
+                                    {/*<Swiper*/}
+                                    {/*    spaceBetween={120}*/}
+                                    {/*    slidesPerView={'1'}>*/}
+                                    {/*    {*/}
+                                    {/*        pickings.map((place, index) => {*/}
+                                    {/*            return <SwiperSlide>*/}
+                                    {/*                <div className={styles.slide}*/}
+                                    {/*                     style={{*/}
+                                    {/*                         background: 'url(' + place.bg_img_url + ')',*/}
+                                    {/*                         backgroundSize: 'cover',*/}
+                                    {/*                         backgroundRepeat: 'no-repeat'*/}
+                                    {/*                     }}>*/}
+                                    {/*                    <h1 className={'sectionTitle'}>Picking <br/> <span>and</span> mounting <br/> stones</h1>*/}
+                                    {/*                    <div className={styles.slideContent}>*/}
+                                    {/*                        <p className={'sectionSummary'} dangerouslySetInnerHTML={{__html: place.content}}/>*/}
+                                    {/*                    </div>*/}
+                                    {/*                    <Button title={'Read More'} casing={'capitalize'} theme={'white_large'}/>*/}
+                                    {/*                </div>*/}
+                                    {/*            </SwiperSlide>*/}
+                                    {/*        })*/}
+                                    {/*    }*/}
+                                    {/*</Swiper>*/}
+                                    <div className={styles.slide}>
+                                        <h1 className={'sectionTitle'}>Picking <br/>
+                                            <span>and</span> mounting <br/> stones</h1>
+                                        <div className={styles.slideContent}>
+                                            <p className={'sectionSummary'}>
+                                                We meticulously hand-select each and every one of our diamonds,
+                                                assessing them individually by eye.
+                                                We look for the <span>perfect alignment of facets and angles,
+                                                which maximises how a diamond reflects, refracts and disperses light.
+                                            </span> This not only represents the quality of a diamond but results in its
+                                                ultimate
+                                                sparkle,
+                                                so you can confidently shine.
+                                            </p>
+
+                                        </div>
+                                        <Button title={'Read More'} casing={'capitalize'} theme={'white_large'}/>
+                                    </div>
                                 </div>
 
                             </div>

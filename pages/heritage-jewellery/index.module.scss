@@ -129,6 +129,8 @@
             .slide {
                 width: 100%;
                 padding: 80px 100px;
+                background: url("/images/heritage/picking/1.png") no-repeat;
+                background-size: cover;
 
                 h1 {
                     margin-bottom: 270px;
@@ -159,11 +161,8 @@
                 }
 
             }
-
         }
     }
-
-
 }
 
 @media only screen and (max-width: 1280px) {
@@ -280,8 +279,8 @@
 
     .pickOuter {
         .pick {
-            padding-top: 80px;
-            padding-bottom: 80px;
+            padding-top: 20px;
+            padding-bottom: 0;
             max-width: unset;
 
             .sliders {
@@ -289,18 +288,25 @@
 
                 .slide {
                     width: 100%;
+                    padding: 20px 20px;
+                    background: url("/images/heritage/picking/1_mobile.png") no-repeat;
+                    background-size: cover;
 
                     h1 {
-                        margin-bottom: 270px;
+                        margin-bottom: 300px;
+                        font-size: 24px;
+                        line-height: 35px;
                     }
 
                     .slideContent {
                         display: flex;
                         justify-content: space-between;
-                        margin-bottom: 62px;
+                        margin-bottom: 25px;
 
                         p {
-                            max-width: 889px;
+                            font-size: 12px;
+                            line-height: 120%;
+                            letter-spacing: 0.04em;
                         }
                     }
 

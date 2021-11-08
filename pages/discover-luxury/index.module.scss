@@ -171,7 +171,6 @@
         }
     }
 
-
     .virtualOuter {
         .virtual {
             padding-top: 30px;
@@ -182,6 +181,8 @@
 
                 h1 {
                     margin-bottom: 15px;
+                    font-size: 18px;
+                    line-height: 28px;
                 }
 
                 p {
@@ -190,7 +191,6 @@
             }
         }
     }
-
 
     .boxedOuter {
         .boxed {
@@ -203,6 +203,8 @@
                 h1 {
                     margin-bottom: 15px;
                     text-align: left;
+                    font-size: 24px;
+                    line-height: 40px;
                 }
 
                 video {
@@ -237,6 +239,8 @@
 
                 h1 {
                     margin-bottom: 28px;
+                    font-size: 24px;
+                    line-height: 40px;
                 }
 
                 img {
@@ -251,6 +255,10 @@
 
                 img {
                     margin-bottom: 22px;
+                }
+
+                p {
+                    margin-top: 0;
                 }
             }
         }
