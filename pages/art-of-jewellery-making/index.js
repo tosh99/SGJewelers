@@ -31,7 +31,7 @@ export default function ExclusivelyYours() {
             <Head>
                 <title>Sanjay Gupta</title>
             </Head>
-            <PageHeader/>
+            <PageHeader title={'Art Of Jewellery Making'}/>
 
             <InView threshold={0.25} triggerOnce={true}>
                 {
@@ -77,7 +77,7 @@ export default function ExclusivelyYours() {
                                             position that has been held strongly by Mr. Sanjay Gupta by being the notable jewellery
                                             designer in the industry today.
                                         </p>
-                                        <Button title={'Read More'} theme={'blue'} casing={'capitalize'}/>
+                                        <Button title={'Read More'} theme={'blue_small'} casing={'capitalize'}/>
                                     </div>
                                     <div className={styles.tibarumalRight}>
                                         <img src={'/images/art/tibarumal-2.png'}/>
@@ -156,7 +156,7 @@ export default function ExclusivelyYours() {
                                                 be
                                                 understood by a true patron of the art of jewellery making.
                                             </p>
-                                            <Button theme={'small'} title={'Read More'} casing={'capitalize'}/>
+                                            <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'}/>
                                         </div>
                                     </div>
                                 </div>

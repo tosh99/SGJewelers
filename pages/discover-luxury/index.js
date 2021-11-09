@@ -29,7 +29,7 @@ export default function ExclusivelyYours() {
             <Head>
                 <title>Sanjay Gupta</title>
             </Head>
-            <PageHeader/>
+            <PageHeader title={'Discover Luxury'}/>
 
             <InView threshold={0.25} triggerOnce={true}>
                 {

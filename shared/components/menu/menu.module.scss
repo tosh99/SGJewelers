@@ -23,11 +23,16 @@
         }
 
         .close {
-            width: 20px;
+            width: 83px;
+            cursor: pointer;
         }
 
         header {
             color: white;
+            font-family: MillionaireTrialItalic, sans-serif;
+            font-size: 14px;
+            line-height: 25px;
+            letter-spacing: 0.2em;
         }
     }
 
@@ -38,14 +43,20 @@
         padding: 45px 75px;
 
         header {
-            margin-bottom: 45px;
-            line-height: 20px;
-            letter-spacing: 0.02em;
+            margin-bottom: 16px;
             font-family: GoldenBookBold, sans-serif;
             cursor: pointer;
-            font-size: 24px;
+            font-size: 20px;
+            line-height: 32px;
             text-transform: uppercase;
             color: white;
+            transition: 0.3s;
+        }
+
+        header:hover {
+            font-size: 24px;
+            line-height: 32px;
+            transition: 0.3s;
         }
     }
 
@@ -58,15 +69,6 @@
         bottom: 75px;
         width: 100%;
 
-        p {
-            font-family: HattonRegular, sans-serif;
-            line-height: 155.5%;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            font-size: 21px;
-            cursor: pointer;
-        }
-
         .menuLast {
             display: flex;
             align-items: flex-end;
@@ -74,11 +76,12 @@
             margin-top: 70px;
 
             header {
-                line-height: 20px;
                 letter-spacing: 0.02em;
-                font-family: HattonRegular, sans-serif;
+                font-family: MillionaireTrialScript, sans-serif;
                 cursor: pointer;
-                font-size: 24px;
+                font-size: 18px;
+                line-height: 32px;
+                color: #FFFFFF;
             }
         }
 
@@ -86,27 +89,27 @@
 }
 
 .menuFirst {
-    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/homepage/banner.png") no-repeat;
+    background: linear-gradient(0deg, rgba(145, 182, 187, 0.5), rgba(145, 182, 187, 0.5)), url("/images/exclusively/banner.png") no-repeat;
     background-size: cover;
 }
 
 .menuSecond {
-    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/heritage/banner.png") no-repeat;
+    background: linear-gradient(0deg, rgba(145, 182, 187, 0.5), rgba(145, 182, 187, 0.5)), url("/images/heritage/banner.png") no-repeat;
     background-size: cover;
 }
 
 .menuThird {
-    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/iconic/banner.png") no-repeat;
+    background: linear-gradient(0deg, rgba(145, 182, 187, 0.5), rgba(145, 182, 187, 0.5)), url("/images/iconic/banner.png") no-repeat;
     background-size: cover;
 }
 
 .menuFourth {
-    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/art/banner.png") no-repeat;
+    background: linear-gradient(0deg, rgba(145, 182, 187, 0.5), rgba(145, 182, 187, 0.5)), url("/images/art/banner.png") no-repeat;
     background-size: cover;
 }
 
 .menuFifth {
-    background: linear-gradient(0deg, rgba(176, 198, 201, 0.3), rgba(176, 198, 201, 0.3)), url("/images/discover-luxury/banner.png") no-repeat;
+    background: linear-gradient(0deg, rgba(145, 182, 187, 0.5), rgba(145, 182, 187, 0.5)), url("/images/discover-luxury/banner.png") no-repeat;
     background-size: cover;
 }
 

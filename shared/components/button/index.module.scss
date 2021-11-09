@@ -22,8 +22,46 @@
 
 }
 
+.buttonsGoldSmall {
+    font-family: MillionaireTrialRoman, sans-serif;
+    background: url("/icons/common/buttons/button_bg_gold_small.svg") no-repeat;
+    background-size: contain;
+    width: 148px;
+    height: 42px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.buttonsBlueSmall {
+    font-family: MillionaireTrialRoman, sans-serif;
+    background: url("/icons/common/buttons/button_bg_blue_small.svg") no-repeat;
+    background-size: contain;
+    color: #003E52;
+    width: 148px;
+    height: 42px;
+    font-size: 14px;
+}
+
+
+.buttonsWhiteSmall {
+    font-family: MillionaireTrialRoman, sans-serif;
+    background: url("/icons/common/buttons/button_bg_white_small.svg") no-repeat;
+    background-size: contain;
+    color: white;
+    width: 148px;
+    height: 42px;
+    font-size: 14px;
+}
+
 .buttonsBlue {
     background: url("/icons/common/buttons/button_bg_blue.svg") no-repeat;
+    background-size: contain;
+    color: #003E52;
+}
+
+.buttonsBlueLarge {
+    width: 300px;
+    background: url("/icons/common/buttons/button_bg_blue_large.svg") no-repeat;
     background-size: contain;
     color: #003E52;
 }

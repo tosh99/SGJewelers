@@ -34,7 +34,7 @@ export default function Menu({close}) {
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
                             <div className={styles.menuTop}>
-                                <img className={styles.close} src={'/icons/common/back.svg'} onClick={close}/>
+                                <img className={styles.close} src={'/icons/common/menu_back.svg'} onClick={close}/>
                                 <img className={styles.logo} src={'/images/header/logo.svg'} onClick={navigateHome}/>
                                 <header>MENU</header>
                             </div>
@@ -71,7 +71,6 @@ export default function Menu({close}) {
                                 </Link>
                             </div>
                             <div className={styles.menuBottom}>
-                                {/*<p>make AN appointment</p>*/}
                                 <div className={styles.menuLast}>
                                     <Link href="/">
                                         <header onClick={close}>Back to Home</header>

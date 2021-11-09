@@ -46,7 +46,7 @@ export default function ExclusivelyYours() {
             <Head>
                 <title>Sanjay Gupta</title>
             </Head>
-            <PageHeader/>
+            <PageHeader title={'Heritage Jewellery'}/>
 
             <InView threshold={0.25} triggerOnce={true}>
                 {
@@ -93,24 +93,30 @@ export default function ExclusivelyYours() {
                                     </p>
                                 </div>
                                 <div className={styles.vintageBanner}>
-                                    <img src={'/images/heritage/vintage-design-banner.png'}/>
+                                    <img src={'/images/heritage/vintage/vintage-design-banner.png'}/>
                                 </div>
                                 <div className={styles.vintageCarousel}>
-                                    <Button theme={'blue'} title={'Read More'} casing={'capitalize'}/>
+                                    <Button theme={'blue_small'} title={'Read More'} casing={'capitalize'}/>
                                     <div className={styles.carousel}>
-                                        <Swiper
-                                            spaceBetween={30}
-                                            slidesPerView={'2'}>
-                                            {
-                                                places.map((place, index) => {
-                                                    return <SwiperSlide>
-                                                        <div>
-                                                            <img src={'/images/homepage/places/1.png'}/>
-                                                        </div>
-                                                    </SwiperSlide>
-                                                })
-                                            }
-                                        </Swiper>
+                                        {/*<Swiper*/}
+                                        {/*    spaceBetween={30}*/}
+                                        {/*    slidesPerView={'2'}>*/}
+                                        {/*    {*/}
+                                        {/*        places.map((place, index) => {*/}
+                                        {/*            return <SwiperSlide>*/}
+                                        {/*                <div>*/}
+                                        {/*                    <img src={'/images/homepage/places/1.png'}/>*/}
+                                        {/*                </div>*/}
+                                        {/*            </SwiperSlide>*/}
+                                        {/*        })*/}
+                                        {/*    }*/}
+                                        {/*</Swiper>*/}
+                                        <div>
+                                            <img src={'/images/heritage/vintage/1.png'}/>
+                                        </div>
+                                        <div>
+                                            <img src={'/images/heritage/vintage/2.png'}/>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +138,7 @@ export default function ExclusivelyYours() {
                                 <div className={styles.sketchingLeft}>
                                     <h1 className={'sectionTitle'}>SKETCHING</h1>
                                     <div className={styles.sketchingContent}>
-                                        <Button title={'Read More'} casing={'capitalize'}/>
+                                        <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'}/>
                                         <p className={'sectionSummary'}>Mr. Sanjay Gupta sees design in everything
                                             around him.
                                             He draws inspiration from artistic vintage paintings, marble statues,
@@ -147,7 +153,7 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.sketchingRight}>
                                     <img src={'/images/sketching/sketch-2.png'}/>
-                                    <Button title={'Read More'} casing={'capitalize'}/>
+                                    <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'}/>
                                 </div>
                             </div>
                         </motion.div>
@@ -204,7 +210,7 @@ export default function ExclusivelyYours() {
                                             </p>
 
                                         </div>
-                                        <Button title={'Read More'} casing={'capitalize'} theme={'white_large'}/>
+                                        <Button title={'Read More'} casing={'capitalize'} theme={'white_small'}/>
                                     </div>
                                 </div>
 

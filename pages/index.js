@@ -4,13 +4,13 @@ import {motion} from "framer-motion"
 import {InView} from 'react-intersection-observer';
 import Footer from "../shared/components/footer/footer";
 import Head from "next/head";
-import BookNow from "../shared/components/book-now";
 import PageHeader from "../shared/components/page-header/page-header";
 import Button from "../shared/components/button";
 
 import SwiperCore, {Autoplay, EffectFade, Navigation, Pagination} from 'swiper/core';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import NextBack from "../shared/components/nextback/nextback";
+import Link from 'next/link'
 
 
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
@@ -157,7 +157,8 @@ export default function Home() {
                                                 <img className={styles.timelessone}
                                                      src={'/images/homepage/timeless/1.png'}/>
                                             </div>
-                                            <p className={'sectionSummary'}><span>Heritage jewellery by Sanjay Gupta</span> has
+                                            <p className={'sectionSummary'}>
+                                                <span>Heritage jewellery by Sanjay Gupta</span> has
                                                 always been the talk-of-the-town as part of our signature collections.
                                                 These timeless creations are appreciated by those who enjoy romantic
                                                 renditions of yore. The versatility
@@ -166,12 +167,15 @@ export default function Home() {
                                         </div>
                                     </div>
                                     <img className={styles.timelesstwo} src={'/images/homepage/timeless/2.png'}/>
-                                    <Button title={'Discover High Jewelery'} theme={'gold_large'}/>
-                                </div>
+                                    <a href={'/heritage-jewellery'}>
+                                        <Button title={'Discover Heritage Jewelery'} theme={'gold_large'}/>
+                                    </a></div>
                                 <div className={styles.tlRight}>
                                     <img className={styles.timelessthree} src={'/images/homepage/timeless/3.png'}/>
                                     <img className={styles.timelessfour} src={'/images/homepage/timeless/4.png'}/>
-                                    <Button title={'Discover High Jewelery'} theme={'gold_large'}/>
+                                    <a href={'/heritage-jewellery'}>
+                                        <Button title={'Discover Heritage Jewelery'} theme={'gold_large'}/>
+                                    </a>
                                 </div>
                             </div>
                         </motion.div>
@@ -238,9 +242,12 @@ export default function Home() {
                             <div className={"inner " + styles.sgEx}>
                                 <div className={styles.sgExTop}>
                                     <h2>The Sanjay Gupta <br/> Experience</h2>
-                                    <p>Exceptional designs and exclusivity are just one of the few things you’ll come to love about us. We put your
-                                        needs and vision before anything else. It is important for us that you fall in love with what you come to
-                                        co-create with Sanjay Gupta. Your comfort with the jewellery and satisfaction with design are of profound
+                                    <p>Exceptional designs and exclusivity are just one of the few things you’ll come to
+                                        love about us. We put your
+                                        needs and vision before anything else. It is important for us that you fall in
+                                        love with what you come to
+                                        co-create with Sanjay Gupta. Your comfort with the jewellery and satisfaction
+                                        with design are of profound
                                         importance to us.
                                     </p>
                                 </div>
@@ -255,7 +262,7 @@ export default function Home() {
                                             Explore the poetic fusion of age-old traditions and contemporary renditions.
                                             Our jewellery, your way.
                                         </p>
-                                        <Button title={'Discover Luxury'} theme={'blue'}/>
+                                        <Button title={'Discover Luxury'} theme={'blue_large'}/>
                                     </div>
                                     <div className={styles.sgExBRight}>
                                         <div className={styles.timelessthree}>
