@@ -1,5 +1,5 @@
 .footerOuter {
-    background: #2C2C2C;
+    background: #003E52;
 }
 
 .footer {
@@ -39,13 +39,15 @@
 
                 .clHeader {
                     font-family: MillionaireTrialRoman, sans-serif;
-                    font-size: 18px;
-                    line-height: 22px;
+                    font-size: 16px;
+                    line-height: 19px;
                     letter-spacing: 0.08em;
                     display: flex;
                     justify-content: space-between;
                     margin-bottom: 54px;
                     color: #CA9040;
+                    text-transform: uppercase;
+                    font-weight: 700;
 
                     img {
                         display: none;
@@ -83,6 +85,7 @@
             display: flex;
             flex-direction: column;
             color: #FFFFFF;
+            width: 100%;
 
             .mobile {
                 margin-bottom: 29px;
@@ -99,6 +102,7 @@
                 margin-bottom: 32px;
                 font-size: 20px;
                 line-height: 24px;
+                max-width: 300px;
 
                 header {
                     margin-right: 35px;
@@ -109,6 +113,9 @@
                 font-family: GoldenBookLight, sans-serif;
                 font-size: 18px;
                 line-height: 24px;
+                display: flex;
+                justify-content: space-between;
+
             }
         }
     }

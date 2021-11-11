@@ -1,8 +1,6 @@
-import {InView} from "react-intersection-observer";
-import {motion} from "framer-motion";
 import styles from "./footer.module.scss";
 import {Fragment, useEffect, useState} from "react";
-import Router from "next/router";
+import BackToTop from "../back-to-top";
 
 export default function Footer() {
     const [is_visible, set_is_visible] = useState({});
@@ -107,6 +105,8 @@ export default function Footer() {
                             Signature 36, Rd.NO.10, OPP. al cazar mall <br/>
                             jublee hills, hyderabad <br/>
                             500033
+
+                            <BackToTop />
                         </div>
                     </div>
                 </div>

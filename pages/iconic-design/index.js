@@ -4,7 +4,6 @@ import {motion} from "framer-motion"
 import {InView} from 'react-intersection-observer';
 import Footer from "../../shared/components/footer/footer";
 import Head from "next/head";
-import BookNow from "../../shared/components/book-now";
 import PageHeader from "../../shared/components/page-header/page-header";
 import Button from "../../shared/components/button";
 
@@ -197,7 +196,7 @@ export default function ExclusivelyYours() {
                 }
             </InView>
 
-            <BookNow/>
+            {/*<BookNow/>*/}
             {/*<BackToTop/>*/}
             <Footer/>
         </Fragment>

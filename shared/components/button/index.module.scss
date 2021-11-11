@@ -42,7 +42,6 @@
     font-size: 14px;
 }
 
-
 .buttonsWhiteSmall {
     font-family: MillionaireTrialRoman, sans-serif;
     background: url("/icons/common/buttons/button_bg_white_small.svg") no-repeat;
@@ -93,12 +92,25 @@
         line-height: 150%;
     }
 
-    .buttonsSmall {
-        width: 154px;
-        height: 25px;
-        font-weight: 300;
-        font-family: TeodorTrialLight, sans-serif;
+
+    .buttonsGoldSmall {
+        width: 119px;
+        height: 38px;
+        font-size: 12px;
     }
+
+    .buttonsBlueSmall {
+        width: 119px;
+        height: 38px;
+        font-size: 12px;
+    }
+
+    .buttonsWhiteSmall {
+        width: 119px;
+        height: 38px;
+        font-size: 12px;
+    }
+
 
     .buttonsBlue {
         background: url("/icons/common/buttons/button_bg_blue.svg") no-repeat;
@@ -108,8 +120,8 @@
 
     .buttonsGoldLarge {
         color: #CA9040;
-        width: 248px;
-        height: 29px;
+        width: 284px;
+        height: 32px;
     }
 
     .buttonsWhiteLarge {

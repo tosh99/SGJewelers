@@ -124,8 +124,13 @@
                 width: 167px;
             }
 
+            .close {
+                visibility: hidden;
+            }
+
             header {
                 font-style: italic;
+                visibility: hidden;
             }
         }
 

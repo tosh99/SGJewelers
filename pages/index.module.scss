@@ -643,6 +643,7 @@
             .disBottom {
                 display: flex;
                 margin-bottom: 26px;
+                overflow-x: auto;
 
                 img {
                     width: 100%;

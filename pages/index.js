@@ -10,7 +10,6 @@ import Button from "../shared/components/button";
 import SwiperCore, {Autoplay, EffectFade, Navigation, Pagination} from 'swiper/core';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import NextBack from "../shared/components/nextback/nextback";
-import Link from 'next/link'
 
 
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
@@ -124,7 +123,9 @@ export default function Home() {
                                     <img src={'/images/homepage/distinguished/1.png'}/>
                                     <img src={'/images/homepage/distinguished/2.png'}/>
                                 </div>
-                                <Button theme={'gold_large'} title={'Discover High Jewellery'}/>
+                                <a href={'/heritage-jewellery'}>
+                                    <Button theme={'gold_large'} title={'Discover High Jewellery'}/>
+                                </a>
                             </div>
                         </motion.div>
                     )
@@ -220,7 +221,9 @@ export default function Home() {
                                         <img className={styles.sliderImg} src={'/images/homepage/find/1.png'}/>
                                     </div>
                                     <div className={styles.btn}>
-                                        <Button theme={'white_large'} title={'Explore Exclusively Yours'}/>
+                                        <a href={'/exclusively-yours'}>
+                                            <Button theme={'white_large'} title={'Explore Exclusively Yours'}/>
+                                        </a>
                                     </div>
                                 </div>
 
@@ -262,7 +265,9 @@ export default function Home() {
                                             Explore the poetic fusion of age-old traditions and contemporary renditions.
                                             Our jewellery, your way.
                                         </p>
-                                        <Button title={'Discover Luxury'} theme={'blue_large'}/>
+                                        <a href={'/discover-luxury'}>
+                                            <Button title={'Discover Luxury'} theme={'blue_large'}/>
+                                        </a>
                                     </div>
                                     <div className={styles.sgExBRight}>
                                         <div className={styles.timelessthree}>

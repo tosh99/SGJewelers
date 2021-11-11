@@ -10,12 +10,20 @@
     img {
         cursor: pointer;
         max-width: 91px;
-
+        width: 100%;
     }
 
     .disabled {
         cursor: default;
     }
+}
 
+@media only screen and (max-width: 648px) {
+    .nextback {
+        width: 90px;
 
+        img {
+            max-width: 33px;
+        }
+    }
 }

@@ -15,7 +15,7 @@
     height: 50px;
     padding: 0 5px;
     border-radius: 35px;
-    border: 1px solid;
+    border: 1.5px solid #CA9040;
 
     img {
         min-width: 22px;
@@ -27,14 +27,15 @@
         display: none;
         white-space: nowrap;
         padding-right: 15px;
-        font-family: HattonRegular, sans-serif;
+        font-family: MillionaireTrialRoman, sans-serif;
         margin-top: 4px;
         text-transform: uppercase;
+        color: #CA9040;
     }
 }
 
 .backtoToTop:hover {
-    width: 180px;
+    width: 220px;
     transition: 0.4s;
     border-radius: 35px;
 
