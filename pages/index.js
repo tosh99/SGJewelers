@@ -342,7 +342,7 @@ export default function Home() {
                                         design that is going to add the glimmer to your shine.
                                     </p>
                                 </div>
-                                <div className={styles.bookIndex}>
+                                <div className={'bookIndex ' + styles.bookIndex}>
                                     <header>0{current_book_slide + 1}/<span>0{booking_places.length}</span></header>
                                 </div>
                                 <div className={styles.bookBottom}>

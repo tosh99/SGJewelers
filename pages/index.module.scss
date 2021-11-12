@@ -484,21 +484,14 @@
         }
 
         .bookIndex {
-            display: flex;
-            justify-content: flex-end;
-            width: 100%;
-            max-width: 1440px;
             padding: 0 100px;
             margin-bottom: 68px;
+            width: 100%;
+            max-width: 1440px;
 
             header {
-                font-family: BickhamScriptPro, sans-serif;
                 font-size: 32px;
                 line-height: 116.5%;
-            }
-
-            span {
-                color: lightgray;
             }
         }
 

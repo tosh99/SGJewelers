@@ -36,17 +36,17 @@ export default function Footer() {
                             </div>
                             {
                                 is_visible.follow && <>
-                                    <a target="_blank">
+                                    <a href={'/after-purchase-care'} target="_blank">
                                         <header className={styles.item}>After Purchase Care</header>
                                     </a>
-                                    <a target="_blank">
-                                        <header className={styles.item}>4 Cs of Diamonds</header>
+                                    <a href={'/gia-certification'} target="_blank">
+                                        <header className={styles.item}>GIA Certification</header>
                                     </a>
                                     <a target="_blank">
-                                        <header className={styles.item}>Blog</header>
+                                        <header className={styles.item}>4 Cs of Diamond</header>
                                     </a>
                                     <a target="_blank">
-                                        <header className={styles.item}>Site Map</header>
+                                        <header className={styles.item}>Social Responsibility</header>
                                     </a>
                                 </>
                             }
@@ -60,9 +60,12 @@ export default function Footer() {
                             </div>
                             {
                                 is_visible.legal && <>
-                                    <header className={styles.item}>GIA & <br/> Other Certifications</header>
-                                    <header className={styles.item}>After Purchase Care</header>
-                                    <header className={styles.item}>Legal Documents</header>
+                                    <a href={'/privacy-policy'}>
+                                        <header className={styles.item}>Privacy Policy</header>
+                                    </a>
+                                    <a href={'/disclaimer'}>
+                                        <header className={styles.item}>Disclaimer</header>
+                                    </a>
                                 </>
                             }
                         </div>
@@ -75,11 +78,11 @@ export default function Footer() {
                             </div>
                             {
                                 is_visible.company && <>
-                                    <a target="_blank">
+                                    <a href={'/after-purchase-care'} target="_blank">
                                         <header className={styles.item}>Instagram</header>
                                     </a>
-                                    <a target="_blank">
-                                        <header className={styles.item}>Twitter</header>
+                                    <a href={'/after-purchase-care'} target="_blank">
+                                        <header className={styles.item}>Facebook</header>
                                     </a>
                                 </>
                             }
@@ -106,7 +109,7 @@ export default function Footer() {
                             jublee hills, hyderabad <br/>
                             500033
 
-                            <BackToTop />
+                            <BackToTop/>
                         </div>
                     </div>
                 </div>

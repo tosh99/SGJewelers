@@ -1,0 +1,85 @@
+@import "../index.module";
+
+.traditionOuter {
+    .tradition {
+        background: #003E52;
+
+        h1 {
+            font-size: 54px;
+            line-height: 145.5%;
+            margin-top: 221px;
+
+            span {
+                text-transform: lowercase;
+            }
+        }
+    }
+}
+
+.summaryOuter {
+    background: #B0C6C9;
+    padding: 58px 0;
+
+    .summary {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        p {
+            max-width: 1046px;
+            font-size: 18px;
+            line-height: 120%;
+        }
+    }
+}
+
+.researchOuter {
+    padding-top: 61px;
+    padding-bottom: 61px;
+
+    .research {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 29px;
+        padding-bottom: 29px;
+
+        h1 {
+            font-size: 28px;
+            line-height: 147%;
+            letter-spacing: 0.08em;
+            color: #003E52;
+        }
+
+        p {
+            display: flex;
+            font-size: 18px;
+            line-height: 125%;
+            max-width: 731px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+
+
+}
+
+
+@media only screen and (max-width: 648px) {
+    .traditionOuter {
+        .tradition {
+            h1 {
+                font-size: 28px;
+                line-height: 144.5%;
+            }
+        }
+    }
+
+    .researchOuter {
+        .research {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}

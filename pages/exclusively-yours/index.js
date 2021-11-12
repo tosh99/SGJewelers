@@ -21,6 +21,10 @@ export default function ExclusivelyYours() {
         section_1: {
             title: 'Briolette Jhumkas',
             images: ['/images/exclusively/section_1/1.png']
+        },
+        section_2: {
+            title: 'Pacheli Bangels',
+            images: ['/images/exclusively/section_2/1.png']
         }
     }, {
         title: 'Magnificent 2'
@@ -104,7 +108,56 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.sectionOneContent}>
                                     <div className={styles.socLeft}>
-                                        <h3>Briolette Jhumkas</h3>
+                                        <h3>{themes[selected_theme].section_1.title}</h3>
+                                        <Swiper
+                                            onInit={(ev) => {
+                                                set_section_1_swiper(ev)
+                                            }}
+                                            onSlideChange={(ev) => {
+                                                set_current_section_1_slide(ev.activeIndex)
+                                            }}
+                                            slidesPerView={'1'}>
+                                            {
+                                                themes[selected_theme].section_1.images.map((item, index) => {
+                                                    return <SwiperSlide>
+                                                        <div>
+                                                            <img src={item}/>
+                                                        </div>
+                                                    </SwiperSlide>
+                                                })
+                                            }
+                                        </Swiper>
+                                        <div className={styles.sectionOneBottom}>
+                                            <div className={'bookIndex ' + styles.bookIndex}>
+                                                <header>0{current_section_1_slide + 1}/<span>0{themes[selected_theme].section_1.images.length}</span></header>
+                                            </div>
+                                            <NextBack
+                                                prevDisabled={current_section_1_slide === 0}
+                                                nextDisabled={current_section_1_slide === themes[selected_theme].section_1.images.length - 1}
+                                                onNext={() => {
+                                                    section_1_swiper.slideNext()
+                                                }}
+                                                onBack={() => {
+                                                    section_1_swiper.slidePrev()
+                                                }}/>
+                                        </div>
+                                    </div>
+                                    <div className={styles.socRight}>
+                                        <Button theme={'gold_small'} title={'See Info'}/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={"inner " + styles.sectionMobile}>
+                                <div className={styles.smHeader}>
+                                    <h1 className={'sectionTitle'}>{themes[selected_theme].sec_title}</h1>
+                                    <p className={'sectionSummary'}>{themes[selected_theme].desc}</p>
+                                </div>
+                                <div className={styles.smContent}>
+                                    <div className={styles.smTop}>
+                                        <h3>{themes[selected_theme].section_1.title}</h3>
+                                        <header>0{current_section_1_slide + 1}/<span>0{themes[selected_theme].section_1.images.length}</span></header>
+                                    </div>
+                                    <div className={styles.smSlider}>
                                         <Swiper
                                             spaceBetween={130}
                                             onInit={(ev) => {
@@ -124,12 +177,54 @@ export default function ExclusivelyYours() {
                                                 })
                                             }
                                         </Swiper>
+                                    </div>
+                                    <div className={styles.smBottom}>
+                                        <Button title={'See Info'} theme={'gold_small'}/>
+                                        <NextBack
+                                            prevDisabled={current_section_1_slide === 0}
+                                            nextDisabled={current_section_1_slide === themes[selected_theme].section_1.images.length - 1}
+                                            onNext={() => {
+                                                section_1_swiper.slideNext()
+                                            }}
+                                            onBack={() => {
+                                                section_1_swiper.slidePrev()
+                                            }}/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={"inner " + styles.sectionTwo}>
+                                <div className={styles.sectionTwoContent}>
+                                    <div className={styles.socLeft}>
+                                        <h3>{themes[selected_theme].section_2.title}</h3>
+                                        <Button theme={'gold_small'} title={'See Info'}/>
+                                    </div>
+                                    <div className={styles.socRight}>
+                                        <div className={'bookIndex ' + styles.bookIndex}>
+                                            <header>0{current_section_1_slide + 1}/<span>0{themes[selected_theme].section_2.images.length}</span></header>
+                                        </div>
+                                        <Swiper
+                                            onInit={(ev) => {
+                                                set_section_1_swiper(ev)
+                                            }}
+                                            onSlideChange={(ev) => {
+                                                set_current_section_1_slide(ev.activeIndex)
+                                            }}
+                                            slidesPerView={'1'}>
+                                            {
+                                                themes[selected_theme].section_2.images.map((item, index) => {
+                                                    return <SwiperSlide>
+                                                        <div>
+                                                            <img src={item}/>
+                                                        </div>
+                                                    </SwiperSlide>
+                                                })
+                                            }
+                                        </Swiper>
                                         <div className={styles.sectionOneBottom}>
-                                            <header>0{current_section_1_slide + 1}/<span>0{themes[selected_theme].section_1.images.length}</span>
-                                            </header>
                                             <NextBack
                                                 prevDisabled={current_section_1_slide === 0}
-                                                nextDisabled={current_section_1_slide === themes[selected_theme].section_1.images.length - 1}
+                                                nextDisabled={current_section_1_slide === themes[selected_theme].section_2.images.length - 1}
                                                 onNext={() => {
                                                     section_1_swiper.slideNext()
                                                 }}
@@ -138,11 +233,51 @@ export default function ExclusivelyYours() {
                                                 }}/>
                                         </div>
                                     </div>
-                                    <div className={styles.socRight}>
-                                        <Button title={'See Info'}/>
+                                </div>
+                            </div>
+                            <div className={"inner " + styles.sectionMobile}>
+                                <div className={styles.smContent}>
+                                    <div className={styles.smTop}>
+                                        <h3>{themes[selected_theme].section_2.title}</h3>
+                                        <header>0{current_section_1_slide + 1}/<span>0{themes[selected_theme].section_2.images.length}</span></header>
+                                    </div>
+                                    <div className={styles.smContent}>
+                                        <Swiper
+                                            spaceBetween={130}
+                                            onInit={(ev) => {
+                                                set_section_1_swiper(ev)
+                                            }}
+                                            onSlideChange={(ev) => {
+                                                set_current_section_1_slide(ev.activeIndex)
+                                            }}
+                                            slidesPerView={'1'}>
+                                            {
+                                                themes[selected_theme].section_2.images.map((item, index) => {
+                                                    return <SwiperSlide>
+                                                        <div>
+                                                            <img src={item}/>
+                                                        </div>
+                                                    </SwiperSlide>
+                                                })
+                                            }
+                                        </Swiper>
+                                    </div>
+                                    <div className={styles.smBottom}>
+                                        <Button title={'See Info'} theme={'gold_small'}/>
+                                        <NextBack
+                                            prevDisabled={current_section_1_slide === 0}
+                                            nextDisabled={current_section_1_slide === themes[selected_theme].section_2.images.length - 1}
+                                            onNext={() => {
+                                                section_1_swiper.slideNext()
+                                            }}
+                                            onBack={() => {
+                                                section_1_swiper.slidePrev()
+                                            }}/>
                                     </div>
                                 </div>
                             </div>
+
+
                         </motion.div>
                     )
                 }

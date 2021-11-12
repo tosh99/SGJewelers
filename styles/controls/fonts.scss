@@ -49,6 +49,22 @@ p.sectionSummary {
     }
 }
 
+.bookIndex {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 68px;
+
+    header {
+        font-family: BickhamScriptPro, sans-serif;
+        font-size: 32px;
+        line-height: 116.5%;
+    }
+
+    span {
+        color: lightgray;
+    }
+}
+
 
 @media only screen and (max-width: 648px) {
     h1 {

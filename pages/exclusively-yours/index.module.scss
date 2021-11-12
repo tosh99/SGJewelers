@@ -1,5 +1,6 @@
 @import "../index.module";
 
+
 .traditionOuter {
     .tradition {
         background: url("/images/exclusively/banner.png") no-repeat;
@@ -50,7 +51,42 @@
     }
 }
 
+
 .sectionOneOuter {
+    h3 {
+        font-family: MillionaireTrialScript, sans-serif;
+        color: #003E52;
+        font-size: 28px;
+        line-height: 134.5%;
+        margin-bottom: 10px;
+    }
+
+    .bookIndex {
+        margin-bottom: 0;
+    }
+
+    .sectionMobile {
+        display: none;
+
+        .smHeader {
+
+        }
+
+        .smContent {
+            .smTop {
+
+            }
+
+            .smSlider {
+
+            }
+
+            .smBottom {
+
+            }
+        }
+    }
+
     .sectionOne {
         display: flex;
         flex-direction: column;
@@ -88,13 +124,6 @@
             .socLeft {
                 max-width: 880px;
 
-                h3 {
-                    font-family: MillionaireTrialScript, sans-serif;
-                    color: #003E52;
-                    font-size: 28px;
-                    line-height: 134.5%;
-                    margin-bottom: 10px;
-                }
 
                 img {
                     width: 100%;
@@ -104,10 +133,6 @@
                     display: flex;
                     justify-content: space-between;
                     margin-top: 20px;
-
-                    header {
-                        font-size: 44px;
-                    }
                 }
             }
 
@@ -115,9 +140,49 @@
                 padding-top: 40px;
             }
         }
+    }
+
+    .sectionTwo {
+        .sectionTwoContent {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 80px;
+            padding-bottom: 121px;
+
+            .socLeft {
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    margin-bottom: 53px;
+                }
+            }
+
+            .socRight {
+                max-width: 603px;
+
+                .bookIndex {
+                    margin-bottom: 35px;
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                .sectionOneBottom {
+                    display: flex;
+                    margin-top: 40px;
+
+                    header {
+                        font-size: 44px;
+                    }
+                }
+            }
+        }
 
 
     }
+
 }
 
 @media only screen and (max-width: 1280px) {
@@ -127,5 +192,9 @@
 
 
 @media only screen and (max-width: 648px) {
+    .sectionOneOuter {
+        .sectionMobile {
 
+        }
+    }
 }
