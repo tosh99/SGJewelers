@@ -52,7 +52,7 @@
 }
 
 
-.sectionOneOuter {
+.sectionOuter {
     h3 {
         font-family: MillionaireTrialScript, sans-serif;
         color: #003E52;
@@ -67,24 +67,30 @@
 
     .sectionMobile {
         display: none;
+    }
 
-        .smHeader {
+    .sectionHeader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 131px;
 
+        h1 {
+            font-size: 54px;
+            line-height: 61px;
+            text-transform: capitalize;
+            font-family: MillionaireTrialScript, sans-serif;
+            margin-bottom: 21px;
         }
 
-        .smContent {
-            .smTop {
-
-            }
-
-            .smSlider {
-
-            }
-
-            .smBottom {
-
-            }
+        p {
+            font-size: 16px;
+            line-height: 125%;
+            max-width: 477px;
+            color: #003E52;
+            text-align: center;
         }
+
     }
 
     .sectionOne {
@@ -92,30 +98,6 @@
         flex-direction: column;
         padding-top: 80px;
         padding-bottom: 121px;
-
-        .sectionOneHeader {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 131px;
-
-            h1 {
-                font-size: 54px;
-                line-height: 61px;
-                text-transform: capitalize;
-                font-family: MillionaireTrialScript, sans-serif;
-                margin-bottom: 21px;
-            }
-
-            p {
-                font-size: 16px;
-                line-height: 125%;
-                max-width: 477px;
-                color: #003E52;
-                text-align: center;
-            }
-
-        }
 
         .sectionOneContent {
             display: flex;
@@ -183,6 +165,27 @@
 
     }
 
+    .sectionThree {
+        display: flex;
+        flex-direction: column;
+        padding-top: 150px;
+        padding-bottom: 121px;
+
+        .sectionOneContent {
+            display: flex;
+            flex-direction: column;
+
+            .socTop, .socBottom {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .socMid {
+                margin-bottom: 41px;
+            }
+        }
+    }
+
 }
 
 @media only screen and (max-width: 1280px) {
@@ -192,8 +195,96 @@
 
 
 @media only screen and (max-width: 648px) {
-    .sectionOneOuter {
+    .traditionOuter {
+        .tradition {
+            h1 {
+                font-size: 20px;
+                line-height: 151%;
+                letter-spacing: 0.05em;
+            }
+
+            .themes {
+                .themeContent {
+                    h2 {
+                        font-size: 24px;
+                        line-height: 175%;
+                    }
+                }
+            }
+
+            section {
+                display: none;
+            }
+        }
+    }
+
+    .sectionOuter {
+        .sectionHeader {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 72px;
+            padding-top: 37px;
+
+
+            h1 {
+                font-size: 24px;
+                line-height: 61px;
+                margin-bottom: 3px;
+                font-family: MillionaireTrialScript, sans-serif;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 116.5%;
+                max-width: 477px;
+                text-align: left;
+            }
+
+        }
+
+        .sectionOne, .sectionTwo, .sectionThree {
+            display: none;
+        }
+
+
         .sectionMobile {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 99px;
+
+            .smContent {
+                display: flex;
+                flex-direction: column;
+
+                .smTop {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 19px;
+
+                    h3 {
+                        font-size: 16px;
+                        line-height: 134.5%;
+                    }
+
+                    header {
+
+                    }
+
+                }
+
+                .smSlider {
+                    margin-bottom: 30px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .smBottom {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
 
         }
     }

@@ -36,16 +36,16 @@ export default function Footer() {
                             </div>
                             {
                                 is_visible.follow && <>
-                                    <a href={'/after-purchase-care'} target="_blank">
+                                    <a href={'/after-purchase-care'}>
                                         <header className={styles.item}>After Purchase Care</header>
                                     </a>
-                                    <a href={'/gia-certification'} target="_blank">
+                                    <a href={'/gia-certification'}>
                                         <header className={styles.item}>GIA Certification</header>
                                     </a>
-                                    <a target="_blank">
+                                    <a href={'/4cs-of-diamond'}>
                                         <header className={styles.item}>4 Cs of Diamond</header>
                                     </a>
-                                    <a target="_blank">
+                                    <a href={'/social-responsibility'}>
                                         <header className={styles.item}>Social Responsibility</header>
                                     </a>
                                 </>
@@ -98,17 +98,16 @@ export default function Footer() {
                         </div>
                         <div className={styles.emails}>
                             <a href="https://www.tibarumalsjewellers.com">
-                                <header>www.tibarumalsjewellers.com</header>
+                                <header>www.sanjaygupta.world</header>
                             </a>
                             <a href="mailto: info@tibarumalsjewellers.com">
-                                <header>info@tibarumalsjewellers.com</header>
+                                <header>info@sanjaygupta.world</header>
                             </a>
                         </div>
                         <div className={styles.address}>
                             Signature 36, Rd.NO.10, OPP. al cazar mall <br/>
                             jublee hills, hyderabad <br/>
                             500033
-
                             <BackToTop/>
                         </div>
                     </div>

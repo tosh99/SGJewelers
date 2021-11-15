@@ -112,9 +112,12 @@
             .address {
                 font-family: GoldenBookLight, sans-serif;
                 font-size: 18px;
-                line-height: 24px;
+                line-height: 22px;
                 display: flex;
                 justify-content: space-between;
+                text-transform: uppercase;
+                font-weight: 300;
+                letter-spacing: 0.05em;
 
             }
         }

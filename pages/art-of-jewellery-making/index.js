@@ -40,7 +40,7 @@ export default function ExclusivelyYours() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.tradition}>
                                 <h1>Preserving <span>the</span> <br/> art <span>AND</span> craftsmanship <br/>
-                                    <span>of</span> jewellery <span>making</span></h1>
+                                    <span>of&nbsp;</span> jewellery <span>making</span></h1>
                                 <header>&nbsp;</header>
                                 <p>Sanjay Gupta is built on the foundation laid by our predecessors in 1925 — of honouring culture and the century old
                                     tradition of opulence. Our passion for perfection and modern-age interpretation of Indian jewellery have

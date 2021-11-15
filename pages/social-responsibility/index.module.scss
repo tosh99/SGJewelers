@@ -1,0 +1,92 @@
+@import "../index.module";
+
+.traditionOuter {
+    .tradition {
+        background: #003E52;
+
+        h1 {
+            font-size: 54px;
+            line-height: 145.5%;
+        }
+    }
+}
+
+.summaryOuter {
+    padding-top: 79px;
+
+    .summary {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            margin-bottom: 22px;
+        }
+
+        p {
+            max-width: 100%;
+        }
+    }
+}
+
+.movementOuter {
+    padding-top: 68px;
+    padding-bottom: 156px;
+
+    .movement {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 67px;
+
+        h1 {
+            font-size: 32px;
+            line-height: 147%;
+            letter-spacing: 0.08em;
+            margin-bottom: 34px;
+            color: #003E52;
+        }
+
+        div {
+            max-width: 762px;
+
+            header {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 125%;
+                letter-spacing: 0.06em;
+                font-family: TeodorTrialLightItalic, sans-serif;
+            }
+
+            span {
+                font-family: MillionaireTrialRoman, sans-serif;
+                font-weight: bold;
+                font-style: italic;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+
+
+}
+
+
+@media only screen and (max-width: 648px) {
+    .traditionOuter {
+        .tradition {
+            h1 {
+                font-size: 28px;
+                line-height: 144.5%;
+            }
+        }
+    }
+
+    .movementOuter {
+        .movement {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}

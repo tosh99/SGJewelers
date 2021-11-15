@@ -68,7 +68,7 @@
                 margin-bottom: 25px;
 
                 span {
-                    font-family: TeodorTrialLight, sans-serif;
+                    font-family: MillionaireTrialRoman, sans-serif;
                     font-size: 28px;
                     line-height: 40px;
                 }
@@ -111,13 +111,11 @@
                 line-height: 149%;
                 letter-spacing: 0.08em;
                 text-transform: uppercase;
-                //color: rgba(0, 62, 82, 0.9);
-                //font-family: MillionaireTrialRoman, sans-serif;
                 margin-bottom: 25px;
                 text-align: center;
 
                 span {
-                    font-family: TeodorTrialLight, sans-serif;
+                    font-family: MillionaireTrialRoman, sans-serif;
                     font-size: 28px;
                     line-height: 40px;
                 }
@@ -381,6 +379,10 @@
                 }
             }
 
+            .sgExButton {
+                display: none;
+            }
+
 
         }
 
@@ -415,6 +417,7 @@
                 span {
                     text-transform: lowercase;
                     font-family: MillionaireTrialScript, sans-serif;
+                    letter-spacing: 0;
                 }
             }
 
@@ -452,7 +455,6 @@
         padding: 160px 0 0 0;
         max-width: unset;
 
-
         .bookTop {
             display: flex;
             flex-direction: column;
@@ -461,16 +463,7 @@
             h1 {
                 font-size: 54px;
                 line-height: 75px;
-                letter-spacing: 0.08em;
-                //text-transform: uppercase;
-                color: rgba(0, 62, 82, 0.9);
-                font-family: MillionaireTrialRoman, sans-serif;
                 margin-bottom: 25px;
-
-                span {
-                    //text-transform: lowercase;
-                    font-family: MillionaireTrialScript, sans-serif;
-                }
             }
 
             p {
@@ -874,6 +867,11 @@
                     }
                 }
 
+                .sgExButton {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 40px;
+                }
 
             }
 

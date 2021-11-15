@@ -218,10 +218,22 @@
                 .carousel {
                     width: 100%;
                     margin-bottom: 27px;
+                    justify-content: flex-start;
+                    overflow-x: scroll;
 
                     div {
                         img {
                             width: 260px;
+                            margin-left: 0;
+                            margin-right: 20px;
+                        }
+
+
+                    }
+
+                    div:last-child{
+                        img {
+                            margin-right: 0;
                         }
                     }
                 }

@@ -85,7 +85,7 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.storyBottom}>
                                     <div className={styles.sbLeft}>
-                                        <Button title={'Read More'} casing={'capitalize'}/>
+                                        <Button title={'Read More'} casing={'capitalize'} theme={'gold_small'}/>
                                     </div>
                                     <div className={styles.sbRight}>
                                         <img src={'/images/iconic/story/2.png'}/>
@@ -138,7 +138,7 @@ export default function ExclusivelyYours() {
                                         <p className={'sectionSummary'}>The diamonds and gemstones used in high jewellery are distinct in nature,
                                             colour, shape, carat and clarity.
                                             Owing to their origins they are valued very highly and rare to come by in certain instances. </p>
-                                        <Button title={'Read More'} casing={'capitalize'}/>
+                                        <Button title={'Read More'} casing={'capitalize'} theme={'gold_small'}/>
                                     </div>
                                     <NextBack
                                         prevDisabled={current_rare_slide === 0}
@@ -188,7 +188,7 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.movementRight}>
                                     <img src={'/images/iconic/movement/2.png'}/>
-                                    <Button title={'Read More'} theme={'blue'} casing={'capitalize'}/>
+                                    <Button title={'Read More'} theme={'blue_small'} casing={'capitalize'}/>
                                 </div>
                             </div>
                         </motion.div>

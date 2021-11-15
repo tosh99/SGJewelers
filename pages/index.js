@@ -123,7 +123,7 @@ export default function Home() {
                                     <img src={'/images/homepage/distinguished/1.png'}/>
                                     <img src={'/images/homepage/distinguished/2.png'}/>
                                 </div>
-                                <a href={'/heritage-jewellery'}>
+                                <a href={'/iconic-design'}>
                                     <Button theme={'gold_large'} title={'Discover High Jewellery'}/>
                                 </a>
                             </div>
@@ -196,7 +196,7 @@ export default function Home() {
                             <div className={"inner " + styles.find}>
                                 <h1 className={'sectionTitle'}>Find <span>what</span> <br/> you are
                                     looking <br/><span>for</span></h1>
-                                <p className={'sectionSummary'}>We have devised a custom filter that helps you find
+                                <p className={'sectionSummary'}>We have designed a custom filter that helps you find
                                     jewellery that matches your mood and suits your style.
                                     Explore the poetic fusion of age-old traditions and contemporary renditions. Our
                                     jewellery, your way.
@@ -260,13 +260,14 @@ export default function Home() {
                                             <source src="movie.mp4" type="video/mp4"/>
                                         </video>
                                         <p>Handcrafted designs,hand-wrapped <br/> with love. </p>
-                                        <p className={styles.summary}>We have devised a custom filter that helps you
-                                            find jewellery that matches your mood and suits your style.
-                                            Explore the poetic fusion of age-old traditions and contemporary renditions.
-                                            Our jewellery, your way.
+                                        <p className={styles.summary}>Exceptional designs and exclusivity are just one of the few things you’ll
+                                            come to love about us. We put your needs and vision before anything else. It
+                                            is important for us that you fall in love with what you come to co-create with Sanjay Gupta. Your comfort
+                                            with the jewellery and satisfaction with design are of profound
+                                            importance to us.
                                         </p>
                                         <a href={'/discover-luxury'}>
-                                            <Button title={'Discover Luxury'} theme={'blue_large'}/>
+                                            <Button title={'Discover Luxury'} theme={'blue'}/>
                                         </a>
                                     </div>
                                     <div className={styles.sgExBRight}>
@@ -278,6 +279,11 @@ export default function Home() {
                                             <img src={'/images/homepage/sgex/3.png'}/>
                                             <header>Design <br/> your dream piece</header>
                                         </div>
+                                    </div>
+                                    <div className={styles.sgExButton}>
+                                        <a href={'/discover-luxury'}>
+                                            <Button title={'Discover Luxury'} theme={'blue'}/>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -333,9 +339,9 @@ export default function Home() {
                                     transition={{duration: 0.8}}>
                             <div className={"inner " + styles.book}>
                                 <div className={styles.bookTop}>
-                                    <h1>BOOK <span>an</span> <br/> APPOINTMENT IN <span>the</span> <br/> PRIVATE <span
+                                    <h1 className={'sectionTitle'}>BOOK <span>an</span> <br/> APPOINTMENT IN <span>the</span> <br/> PRIVATE <span
                                         className={styles.cap}>Salon</span></h1>
-                                    <p>We have a sequestered space in the store where we conduct our design
+                                    <p className={'sectionSummary'}>We have a sequestered space in the store where we conduct our design
                                         consultations with clients who
                                         request bespoke jewellery for their special occasions. The space is designed for
                                         you to have an intimate moment with the

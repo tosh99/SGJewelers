@@ -1,0 +1,67 @@
+@import "../index.module";
+
+.traditionOuter {
+    .tradition {
+        background: #003E52;
+
+        h1 {
+            font-size: 54px;
+            line-height: 145.5%;
+            text-transform: unset;
+        }
+    }
+}
+
+.movementOuter {
+    padding-top: 99px;
+    padding-bottom: 187px;
+
+    .movement {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 67px;
+
+        h1 {
+            font-size: 32px;
+            line-height: 147%;
+            letter-spacing: 0.08em;
+            margin-bottom: 34px;
+            color: #003E52;
+        }
+
+        p {
+            max-width: 762px;
+
+            span{
+                font-family: MillionaireTrialRoman, sans-serif;
+                font-weight: bold;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+
+
+}
+
+
+@media only screen and (max-width: 648px) {
+    .traditionOuter {
+        .tradition {
+            h1 {
+                font-size: 28px;
+                line-height: 144.5%;
+            }
+        }
+    }
+
+    .movementOuter {
+        .movement {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
