@@ -78,10 +78,10 @@ export default function Footer() {
                             </div>
                             {
                                 is_visible.company && <>
-                                    <a href={'/after-purchase-care'} target="_blank">
+                                    <a href={'https://instagram.com/sanjaygupta.world?utm_medium=copy_link'} target="_blank">
                                         <header className={styles.item}>Instagram</header>
                                     </a>
-                                    <a href={'/after-purchase-care'} target="_blank">
+                                    <a href={'https://www.facebook.com/sanjaygupta.tibarumals'} target="_blank">
                                         <header className={styles.item}>Facebook</header>
                                     </a>
                                 </>

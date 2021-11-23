@@ -1,0 +1,139 @@
+@import "../index.module";
+
+.privacyPolicyOuter {
+    padding-top: 68px;
+    padding-bottom: 135px;
+
+    .privacyPolicy {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-size: 24px;
+            line-height: 145.5%;
+            letter-spacing: 0.05em;
+            margin-bottom: 28px;
+            text-transform: uppercase;
+        }
+
+        div {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 36px;
+
+            img {
+                margin-right: 12px;
+            }
+
+            p {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 120%;
+                letter-spacing: 0.06em;
+                font-family: TeodorTrialLight, sans-serif;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-family: TeodorTrialLight, sans-serif;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 120%;
+                    margin-top: 5px;
+                    letter-spacing: 0.06em;
+                }
+            }
+        }
+
+    }
+}
+
+.usingOuter {
+    padding-bottom: 30px;
+
+    .using {
+
+        h1 {
+            font-size: 24px;
+            line-height: 164.5%;
+            text-transform: uppercase;
+        }
+
+        header {
+            margin-bottom: 35px;
+            font-size: 18px;
+            line-height: 164.5%;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #003E52;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 125%;
+            letter-spacing: 0.06em;
+            max-width: unset;
+        }
+
+    }
+}
+
+.researchOuter {
+    padding-top: 61px;
+    padding-bottom: 100px;
+
+    .research {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 29px;
+        padding-bottom: 29px;
+
+        h1 {
+            font-size: 18px;
+            line-height: 152%;
+            letter-spacing: 0.08em;
+            color: #003E52;
+            text-transform: uppercase;
+
+            span {
+                font-family: MillionaireTrialScript, sans-serif;
+                letter-spacing: 0;
+                text-transform: lowercase;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 125%;
+            max-width: 731px;
+
+            a {
+                font-family: TeodorTrialLightItalic, sans-serif;
+                font-weight: 700;
+            }
+
+            span {
+                font-family: TeodorTrialLight, sans-serif;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1280px) {
+
+
+}
+
+
+@media only screen and (max-width: 648px) {
+    .researchOuter {
+        .research {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+
+}
