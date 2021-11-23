@@ -12,24 +12,12 @@ import SwiperCore, {Autoplay, EffectFade, Navigation, Pagination} from 'swiper/c
 
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
 export default function ExclusivelyYours() {
-    const places = [1, 2, 3, 4]
-    const pickings = [
-        {
-            bg_img_url: '/images/heritage/picking/1.png',
-            content: 'We meticulously hand-select each and every one of our diamonds, assessing them individually by eye. ' +
-                'We look for the  <span>perfect alignment of facets and angles, which maximises how a diamond reflects, refracts and ' +
-                'disperses light. </span> This not only represents the quality of a diamond but results in its ultimate sparkle, ' +
-                'so you can confidently shine.'
-        },
-        {
-            bg_img_url: '/images/heritage/picking/1.png'
-        },
-        {
-            bg_img_url: '/images/heritage/picking/1.png'
-        }
-    ]
-
     const [device, set_device] = useState(2);
+
+    const [is_vintage_design, set_is_vintage_design] = useState(false);
+    const [is_sketching, set_is_sketching] = useState(false);
+    const [is_picking, set_is_picking] = useState(false);
+
 
     useEffect(() => {
         if (screen.width <= 648) {
@@ -87,13 +75,28 @@ export default function ExclusivelyYours() {
                                         marry the old and the new to create visually intriguing pieces crafted using
                                         these ancient techniques,
                                         creating fine luxury masterpieces with genuine workmanship.
+
+                                        {
+                                            is_vintage_design && <>
+                                                <br/><br/>
+                                                May it be the recently popularised <span>jaali work of the Nizami jewellery or closed-setting diamond jewellery</span>, we have been the forerunners in bringing them to the
+                                                forefront.
+                                                Their handmade flair is unequivocally exceeding in quality and wearability.
+                                                <br/><br/>
+                                                Our karigars and artisans have passed down their learnings through generations, preserving these techniques. They spend their lives dedicated to perfecting their craft
+                                                which is apparent in the minutest details of how your experience of wearing our jewellery is elevated beyond compare.
+
+                                            </>
+                                        }
                                     </p>
                                 </div>
                                 <div className={styles.vintageBanner}>
                                     <img src={'/images/heritage/vintage/vintage-design-banner.png'}/>
                                 </div>
                                 <div className={styles.vintageCarousel}>
-                                    <Button theme={'blue_small'} title={'Read More'} casing={'capitalize'}/>
+                                    <Button theme={'blue_small'} title={'Read More'} casing={'capitalize'} onClick={() => {
+                                        set_is_vintage_design(true)
+                                    }}/>
                                     <div className={styles.carousel}>
                                         {/*<Swiper*/}
                                         {/*    spaceBetween={30}*/}
@@ -141,6 +144,15 @@ export default function ExclusivelyYours() {
                                             He draws inspiration from artistic vintage paintings, marble statues,
                                             portraits of a
                                             Royal courtsman or even architecture.
+
+                                            {
+                                                is_sketching && <>
+                                                    <br/><br/>
+                                                    One can often find him doodling away as a design idea consumes his mind. Which, he then substantiates into design elements and has the principal designer sketch it in
+                                                    detail. We believe that the vision for design can come from anyone who is a connoisseur of the arts. We also welcome the clients into this process to co-create the
+                                                    design of their dream.
+                                                </>
+                                            }
                                         </p>
                                         <div className={styles.sketchingImages}>
                                             <img src={'/images/sketching/sketch-1.png'}/>
@@ -150,7 +162,9 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.sketchingRight}>
                                     <img src={'/images/sketching/sketch-2.png'}/>
-                                    <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'}/>
+                                    <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'} onClick={() => {
+                                        set_is_sketching(true)
+                                    }}/>
                                 </div>
                             </div>
                         </motion.div>
@@ -204,10 +218,25 @@ export default function ExclusivelyYours() {
                                                 ultimate
                                                 sparkle,
                                                 so you can confidently shine.
+
+                                                {
+                                                    is_picking && <>
+                                                        <br/><br/>
+                                                        All our diamonds are certified by GIA and other Swiss laboratories, and come with the Sanjay Gupta promise for their cut, colour, clarity and carat. We go beyond
+                                                        the conventional assessments so that the diamonds we choose are rare and higher in their value. The shapes bring out their exuberance and are a reflection of your
+                                                        individual style.
+
+                                                        Keeping all these design and stylistic parameters in mind, we pick the diamonds and gemstones that best compliment you. Our mounting techniques allow us to use the
+                                                        metal only to hold the stones in place without compromising on their appearance. Our jewellery is made for maximum wearability, <span>offering ease and movement owing to
+                                                        their structural lightness.</span>
+                                                    </>
+                                                }
                                             </p>
 
                                         </div>
-                                        <Button title={'Read More'} casing={'capitalize'} theme={'white_small'}/>
+                                        <Button title={'Read More'} casing={'capitalize'} theme={'white_small'} onClick={() => {
+                                            set_is_picking(true)
+                                        }}/>
                                     </div>
                                 </div>
 

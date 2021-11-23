@@ -18,6 +18,10 @@ export default function ExclusivelyYours() {
     const [rare_swiper, set_rare_swiper] = useState({});
     const [current_rare_slide, set_current_rare_slide] = useState(0);
 
+    const [is_story_visible, set_is_story_visible] = useState(false);
+    const [is_rare_rm, set_is_rare_rm] = useState(false);
+    const [is_movement_rm, set_is_movement_rm] = useState(false);
+
     const [device, set_device] = useState(2);
 
     useEffect(() => {
@@ -79,13 +83,25 @@ export default function ExclusivelyYours() {
                                             from places far and wide.
                                             We are connoisseurs of art and have an inclination towards the fine jewellery periods of yore —
                                             <br/><br/>
-                                            <span>Georgian, Victorina, Edwardian, Art Nouveau, Art Deco and Retro.</span>
+                                            <span>Georgian, Victorina, Edwardian, Art Nouveau, Art Deco and Retro. <br/><br/></span>
+
+                                            {
+                                                is_story_visible && <>
+                                                    You will find our high jewellery make use of either the clean, geometric lines of the Art Deco period or the fluent, floral language of the Art Nouveau period. The use
+                                                    of colours, techniques, materials and stones though inspired from these iconic art periods, our designs are a modern rendition of the same. <span>All reminiscent of an
+                                                    opulent past yet, looking onward to the richness of what’s to come. </span>
+                                                    We have designed jewellery pieces inspired by the Maharaja of Patliala, Queen of England, royal courtesans of India and other noblemen who celebrated the art and
+                                                    craftsmanship of high jewellery designers of their time. Our designs are also made keeping their wearer in mind so as to compliment them the best.
+                                                </>
+                                            }
                                         </p>
                                     </div>
                                 </div>
                                 <div className={styles.storyBottom}>
                                     <div className={styles.sbLeft}>
-                                        <Button title={'Read More'} casing={'capitalize'} theme={'gold_small'}/>
+                                        <Button title={'Read More'} casing={'capitalize'} theme={'gold_small'} onClick={() => {
+                                            set_is_story_visible(true)
+                                        }}/>
                                     </div>
                                     <div className={styles.sbRight}>
                                         <img src={'/images/iconic/story/2.png'}/>
@@ -108,7 +124,9 @@ export default function ExclusivelyYours() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.rare}>
                                 <div className={styles.rareHeader}>
-                                    <header>01/03</header>
+                                    <div className={'bookIndex ' + styles.bookIndex}>
+                                        <header>0{current_rare_slide + 1}/<span>0{rare_jewelleries.length}</span></header>
+                                    </div>
                                     <h1 className={'sectionTitle'}>RARE <span>and</span> <br/> pRECIOUS <span>stones</span></h1>
                                 </div>
                                 <div className={styles.rareTop}>
@@ -137,8 +155,18 @@ export default function ExclusivelyYours() {
                                     <div className={styles.rbLeft}>
                                         <p className={'sectionSummary'}>The diamonds and gemstones used in high jewellery are distinct in nature,
                                             colour, shape, carat and clarity.
-                                            Owing to their origins they are valued very highly and rare to come by in certain instances. </p>
-                                        <Button title={'Read More'} casing={'capitalize'} theme={'gold_small'}/>
+                                            Owing to their origins they are valued very highly and rare to come by in certain instances.
+                                            {
+                                                is_rare_rm && <>
+                                                    <br/><br/>We use only the finest diamonds that are of superior VVS clarity and E-F grade of being colourless. Other gemstones that we use can range from <span>Colombian
+                                                    Emeralds,
+                                                    Panjshir Emeralds, Burmese Rubies, Basra Pearls, Spinels, Padparadscha to Alexandrite.</span>
+                                                </>
+                                            }
+                                        </p>
+                                        <Button title={'Read More'} casing={'capitalize'} theme={'gold_small'} onClick={() => {
+                                            set_is_rare_rm(true)
+                                        }}/>
                                     </div>
                                     <NextBack
                                         prevDisabled={current_rare_slide === 0}
@@ -178,6 +206,14 @@ export default function ExclusivelyYours() {
                                             form beautiful clusters of light or even the <span>flush-setting</span> allowing more romantic play of
                                             hide and seek,
                                             we choose the setting to compliment both, the stone and design.
+
+                                            {
+                                                is_movement_rm && <>
+                                                    <br/><br/>
+                                                    Settings also allow for movement in jewellery so you can enjoy wearing them in more than one way. Using <span>tremblade in necklaces and earrings</span> to add that additional touch
+                                                    of amusement, we are always keeping ourselves informed of the new techniques used worldwide and the first ones to bring them to you.
+                                                </>
+                                            }
                                         </p>
 
                                         <div className={styles.mvLeftImages}>
@@ -188,7 +224,9 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.movementRight}>
                                     <img src={'/images/iconic/movement/2.png'}/>
-                                    <Button title={'Read More'} theme={'blue_small'} casing={'capitalize'}/>
+                                    <Button title={'Read More'} theme={'blue_small'} casing={'capitalize'} onClick={()=>{
+                                        set_is_movement_rm(true)
+                                    }}/>
                                 </div>
                             </div>
                         </motion.div>

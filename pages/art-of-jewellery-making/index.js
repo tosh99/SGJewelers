@@ -12,9 +12,11 @@ import SwiperCore, {Autoplay, EffectFade, Navigation, Pagination} from 'swiper/c
 
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
 export default function ExclusivelyYours() {
-    const places = [1, 2, 3, 4]
 
     const [device, set_device] = useState(2);
+
+    const [is_legacy, set_is_legacy] = useState(false);
+    const [is_inspired, set_is_inspired] = useState(false);
 
     useEffect(() => {
         if (screen.width <= 648) {
@@ -73,8 +75,21 @@ export default function ExclusivelyYours() {
                                             of the Nizam of Hyderabad, <span>His Highness Mir Osman Ali Pasha (7th Nizam)</span>, an esteemed
                                             position that has been held strongly by Mr. Sanjay Gupta by being the notable jewellery
                                             designer in the industry today.
+
+                                            {
+                                                is_legacy && <>
+                                                    <br/><br/>
+                                                    Tibarumals has always been noted to preserve the age-old techniques while the designs embody modernity. This same appreciation for all things art and the skillful
+                                                    craftsmanship of artisans who make jewellery is what Mr. Sanjay Gupta holds dear and practices even today. Our story is one
+                                                    of <span>nostalgia and a Nizami wonder</span>, growing
+                                                    with the times but never forgetting the patronage to craftsmanship of the yesteryears.
+                                                </>
+
+                                            }
                                         </p>
-                                        <Button title={'Read More'} theme={'blue_small'} casing={'capitalize'}/>
+                                        <Button title={'Read More'} theme={'blue_small'} casing={'capitalize'} onClick={() => {
+                                            set_is_legacy(true)
+                                        }}/>
                                     </div>
                                     <div className={styles.tibarumalRight}>
                                         <img src={'/images/art/tibarumal-2.png'}/>
@@ -103,7 +118,8 @@ export default function ExclusivelyYours() {
                                         father and industry stalwart, Mr. Haitram Gupta, Sanjay Gupta has paved way
                                         for designs that are one-of-a-kind and has successfully set sail into yet
                                         another glorious era for Tibarumals by setting up <span>&nbsp;his first flagship store -Sanjay Gupta by
-                                        Tibarumals Jewellers.</span></p>
+                                        Tibarumals Jewellers.</span>
+                                    </p>
                                 </div>
                                 <div className={styles.generationsVid}>
                                     <video width="320" height="240" controls>
@@ -141,7 +157,7 @@ export default function ExclusivelyYours() {
                                     <h1 className={'sectionTitle'}>Inspired <span>and</span> <br/> innovative designs</h1>
                                     <img src={'/images/art/inspired/2.png'}/>
                                     <div className={styles.inspiredContent}>
-                                    <img src={'/images/art/inspired/1.png'}/>
+                                        <img src={'/images/art/inspired/1.png'}/>
                                         <div className={styles.icRight}>
                                             <p className={'sectionSummary'}>Heritage jewellery by Sanjay Gupta has always been the talk-of-the-town
                                                 and is
@@ -152,8 +168,19 @@ export default function ExclusivelyYours() {
                                                 only
                                                 be
                                                 understood by a true patron of the art of jewellery making.
+
+                                                {
+                                                    is_inspired && <>
+                                                        <br/><br/>
+                                                        We find opportunities in every obstacle and have paved the way for utility jewellery, changeable and even dual pieces such as ear hoops that can be worn as
+                                                        bracelets. Our prêt pieces are always <span>walking the line between art and jewellery</span>. May it be classic designs or contemporary, one thing is for sure that you will
+                                                        fall in love with them over and over again.
+                                                    </>
+                                                }
                                             </p>
-                                            <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'}/>
+                                            <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'} onClick={() => {
+                                                set_is_inspired(true)
+                                            }}/>
                                         </div>
                                     </div>
                                 </div>
