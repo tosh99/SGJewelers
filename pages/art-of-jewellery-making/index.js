@@ -122,9 +122,10 @@ export default function ExclusivelyYours() {
                                     </p>
                                 </div>
                                 <div className={styles.generationsVid}>
-                                    <video width="320" height="240" controls>
-                                        <source src="movie.mp4" type="video/mp4"/>
-                                    </video>
+                                    {/*<video width="320" height="240" controls>*/}
+                                    {/*    <source src="movie.mp4" type="video/mp4"/>*/}
+                                    {/*</video>*/}
+                                        <img src={'/images/art/generations.png'}/>
                                 </div>
                                 <div className={styles.generationsBottom}>
                                     <p className={'sectionSummary'}>

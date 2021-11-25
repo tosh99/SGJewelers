@@ -7,43 +7,275 @@ import Head from "next/head";
 import PageHeader from "../../shared/components/page-header/page-header";
 import Button from "../../shared/components/button";
 
-import SwiperCore, {Autoplay, EffectFade, Navigation, Pagination} from 'swiper/core';
-import {Swiper, SwiperSlide} from 'swiper/react';
-import NextBack from "../../shared/components/nextback/nextback";
 
-
-SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
 export default function ExclusivelyYours() {
-    const themes = [{
+    const [render, set_render] = useState(1);
+    const [themes, set_themes] = useState([{
         title: 'Magnificent',
-        sec_title: 'feeling magnificent',
+        feeling_title: 'feeling magnificent',
+        banner: '/images/exclusively/magnificent/banner.png',
         desc: 'Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.',
         section_1: {
             title: 'Briolette Jhumkas',
-            images: ['/images/exclusively/section_1/1.png']
+            image: '/images/exclusively/magnificent/section_1/1.png',
+            is_content_visible: false,
+            content: [
+                {
+                    title: 'Style',
+                    desc: 'Chettinad Kundan'
+                }, {
+                    title: 'Material',
+                    desc: 'Yellow Gold'
+                }, {
+                    title: 'Stones',
+                    desc: 'Burmese Rubies, emeralds and kundans'
+                }, {
+                    title: 'Inspiration',
+                    desc: 'A homage to the emperor, Krishna Deva Raya who was often seen donning South Indian temple jewellery and gave Magri Mala that status it enjoys today.'
+                }, {
+                    title: 'Special Information',
+                    desc: ' Made using ancient Burmese rubies'
+                }
+            ]
         },
         section_2: {
             title: 'Pacheli Bangels',
-            images: ['/images/exclusively/section_2/1.png']
+            image: '/images/exclusively/magnificent/section_2/1.png',
+            is_content_visible: false,
+            content: [
+                {
+                    title: 'Style',
+                    desc: 'Pacheli / Rajasthani'
+                }, {
+                    title: 'Material',
+                    desc: 'Yellow Gold'
+                }, {
+                    title: 'Stones',
+                    desc: 'Kundan and pearls'
+                }, {
+                    title: 'Special Information',
+                    desc: 'The pearls used in this bangle are Basra pearls, one of the highest grade natural pearls, originated in the Persian Gulf.'
+                }
+            ]
         },
         section_3: {
             title: 'Jardin Necklace',
-            images: ['/images/exclusively/section_3/1.png']
+            image: '/images/exclusively/magnificent/section_3/1.png',
+            is_content_visible: false,
+            content: [
+                {
+                    title: 'Style',
+                    desc: 'Bohemian jewellery style -Uncut and unpolished stones.'
+                }, {
+                    title: 'Material',
+                    desc: 'Yellow Gold'
+                }, {
+                    title: 'Stones',
+                    desc: 'Emeralds, diamonds and Burmese Natural Rubies.'
+                }, {
+                    title: 'Inspiration',
+                    desc: 'An interpretation of a Spanish Jardin in the beginning of spring, when the lush green is dotted with rich red carnations.'
+                }, {
+                    title: 'Special Information',
+                    desc: 'The stones used in this necklace are uncut and unpolished.'
+                }
+            ]
         }
     }, {
-        title: 'Magnificent 2'
-    }]
+        title: 'Chic',
+        banner: '/images/exclusively/chic/banner.png',
+        feeling_title: 'feeling chic',
+        desc: 'Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.',
+        section_1: {
+            title: 'Multi - Colour Sapphire Studs',
+            image: '/images/exclusively/chic/section_1/1.png',
+            is_content_visible: false,
+            content: [
+                {
+                    title: 'Style',
+                    desc: 'Modern Close Setting'
+                }, {
+                    title: 'Material',
+                    desc: 'Rose Gold'
+                }, {
+                    title: 'Stones',
+                    desc: 'Multi-sapphires and diamonds'
+                }, {
+                    title: 'Inspiration',
+                    desc: 'Using the various colours of multi-sapphires to represent different facets of life'
+                }
+            ]
+        },
+        section_2: {
+            title: 'Sapphire Rose Ring',
+            image: '/images/exclusively/chic/section_2/1.png',
+            is_content_visible: false,
+            content: [
+                {
+                    title: 'Style',
+                    desc: 'Contemporary Jewellery'
+                }, {
+                    title: 'Material',
+                    desc: 'White Gold'
+                }, {
+                    title: 'Stones',
+                    desc: 'Diamonds'
+                }, {
+                    title: 'Inspiration',
+                    desc: 'Using blue diamonds to capture the celestial sky and stars in a floral bloom.'
+                }, {
+                    title: 'Special Information',
+                    desc: 'Made using the rare blue diamonds'
+                }
+            ]
+        },
+        section_3: {
+            title: 'Lariat Chain',
+            image: '/images/exclusively/chic/section_3/1.png',
+            is_content_visible: false,
+            content: [
+                {
+                    title: 'Style',
+                    desc: 'Contemporary Jewellery'
+                }, {
+                    title: 'Material',
+                    desc: 'Gold'
+                }, {
+                    title: 'Stones',
+                    desc: 'Large Morganite and diamonds'
+                },{
+                    title: 'Special Information',
+                    desc: 'The most sought-after peach pink hue of this morganite has rightfully earned its place as the international standard of quality. Carefully selected by Mr. Sanjay Gupta himself.'
+                }
+            ]
+        }
+    }, {
+        title: 'Intimate',
+        banner: '/images/exclusively/intimate/banner.png',
+        feeling_title: 'feeling intimate',
+        desc: 'Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.',
+        section_1: {
+            title: 'Twilight Drops',
+            image: '/images/exclusively/intimate/section_1/1.png',
+            is_content_visible: false,
+            content: [
+                {
+                    title: 'Style',
+                    desc: 'Oriental Ombre Effect'
+                }, {
+                    title: 'Material',
+                    desc: 'Rose Gold'
+                }, {
+                    title: 'Stones',
+                    desc: 'Pink sapphires and diamonds'
+                }, {
+                    title: 'Inspiration',
+                    desc: 'Inspired by the colours of the setting sun washed over the pale blue sky, creating an ombre of pinks as the sun slowly disappears behind the horizon.'
+                }
+            ]
+        },
+        section_2: {
+            title: 'Briolette Chandeliers',
+            image: '/images/exclusively/intimate/section_2/1.png',
+            is_content_visible: false,
+            content: [
+                {
+                    title: 'Style',
+                    desc: 'Chandelier Earrings'
+                }, {
+                    title: 'Material',
+                    desc: 'White Gold'
+                }, {
+                    title: 'Stones',
+                    desc: 'Emeralds, diamonds and briolettes'
+                }, {
+                    title: 'Inspiration',
+                    desc: 'Contemporary take on a Maang Tika'
+                }, {
+                    title: 'Special Information',
+                    desc: 'The emeralds used in these chandelier earrings have been sourced from Zambia, noted for their blueish-green beauty.'
+                }
+            ]
+        },
+        section_3: {
+            title: 'Dream Stack',
+            image: '/images/exclusively/intimate/section_3/1.png',
+            is_content_visible: false,
+            content: [
+                {
+                    title: 'Style',
+                    desc: 'Tennis Bracelets'
+                }, {
+                    title: 'Material',
+                    desc: ' White Gold'
+                }, {
+                    title: 'Stones',
+                    desc: 'Mozambique rubies, marquise and pear diamonds  andPear, marquise and full cut diamonds / Oval diamonds.'
+                },{
+                    title: 'Special Information',
+                    desc: ' The red tennis bracelet is made with natural Mozambique rubies found in African mines.'
+                }
+            ]
+        }
+    }, {
+        title: 'Celebratory',
+        banner: '/images/exclusively/celebratory/banner.png',
+        feeling_title: 'feeling celebratory',
+        desc: 'Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.',
+        section_1: {
+            title: 'Laurette Ring',
+            image: '/images/exclusively/celebratory/section_1/1.png',
+            is_content_visible: false,
+            content: [
+                {
+                    title: 'Style',
+                    desc: 'Modular Design'
+                }, {
+                    title: 'Material',
+                    desc: 'Rose Gold'
+                }, {
+                    title: 'Stones',
+                    desc: 'Pear, marquise and full cut diamonds'
+                }
+            ]
+        },
+        section_2: {
+            title: 'Butterfly Earrings',
+            image: '/images/exclusively/celebratory/section_2/1.png',
+            is_content_visible: false,
+            content: [
+                {
+                    title: 'Style',
+                    desc: 'Micro Pave Setting'
+                }, {
+                    title: 'Material',
+                    desc: 'Yellow, Rose and White Gold'
+                }, {
+                    title: 'Stones',
+                    desc: 'Diamonds'
+                }
+            ]
+        },
+        section_3: {
+            title: 'Cufflinks',
+            image: '/images/exclusively/celebratory/section_3/1.png',
+            is_content_visible: false,
+            content: [
+                {
+                    title: 'Style',
+                    desc: 'Art Deco'
+                }, {
+                    title: 'Material',
+                    desc: 'White Gold'
+                }, {
+                    title: 'Stones',
+                    desc: 'Onyx and diamonds'
+                }
+            ]
+        }
+    }]);
+
     const [selected_theme, set_selected_theme] = useState(0);
-
-    const [section_1_swiper, set_section_1_swiper] = useState({});
-    const [section_2_swiper, set_section_2_swiper] = useState({});
-    const [section_3_swiper, set_section_3_swiper] = useState({});
-
-    const [current_section_1_slide, set_current_section_1_slide] = useState(0);
-    const [current_section_2_slide, set_current_section_2_slide] = useState(0);
-    const [current_section_3_slide, set_current_section_3_slide] = useState(0);
-
-
     const [device, set_device] = useState(2);
 
     useEffect(() => {
@@ -68,7 +300,11 @@ export default function ExclusivelyYours() {
                                     initial={{opacity: 0}}
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
-                            <div className={"inner " + styles.tradition}>
+                            <div className={"inner " + styles.tradition} style={{
+                                backgroundImage: 'url(' + themes[selected_theme].banner + ')',
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat'
+                            }}>
                                 <h1>I am looking for <br/> jewellery TO <br/> compliment my mood of <br/> FEELING</h1>
                                 <div className={styles.themes}>
                                     <div className={styles.themeLeft} onClick={() => {
@@ -111,48 +347,38 @@ export default function ExclusivelyYours() {
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.sectionHeader}>
-                                <h1 className={'sectionTitle'}>{themes[selected_theme].sec_title}</h1>
+                                <h1 className={'sectionTitle'}>{themes[selected_theme].feeling_title}</h1>
                                 <p className={'sectionSummary'}>{themes[selected_theme].desc}</p>
                             </div>
+
                             <div className={"inner " + styles.sectionOne}>
                                 <div className={styles.sectionOneContent}>
                                     <div className={styles.socLeft}>
                                         <h3>{themes[selected_theme].section_1.title}</h3>
-                                        <Swiper
-                                            onInit={(ev) => {
-                                                set_section_1_swiper(ev)
-                                            }}
-                                            onSlideChange={(ev) => {
-                                                set_current_section_1_slide(ev.activeIndex)
-                                            }}
-                                            slidesPerView={'1'}>
-                                            {
-                                                themes[selected_theme].section_1.images.map((item, index) => {
-                                                    return <SwiperSlide>
-                                                        <div>
-                                                            <img src={item}/>
-                                                        </div>
-                                                    </SwiperSlide>
-                                                })
-                                            }
-                                        </Swiper>
-                                        <div className={styles.sectionOneBottom}>
-                                            <div className={'bookIndex ' + styles.bookIndex}>
-                                                <header>0{current_section_1_slide + 1}/<span>0{themes[selected_theme].section_1.images.length}</span></header>
-                                            </div>
-                                            <NextBack
-                                                prevDisabled={current_section_1_slide === 0}
-                                                nextDisabled={current_section_1_slide === themes[selected_theme].section_1.images.length - 1}
-                                                onNext={() => {
-                                                    section_1_swiper.slideNext()
-                                                }}
-                                                onBack={() => {
-                                                    section_1_swiper.slidePrev()
-                                                }}/>
-                                        </div>
+                                        <img src={themes[selected_theme].section_1.image}/>
                                     </div>
                                     <div className={styles.socRight}>
-                                        <Button theme={'gold_small'} title={'See Info'}/>
+                                        {
+                                            !themes[selected_theme].section_1.is_content_visible &&
+                                            <Button theme={'gold_small'} title={'See Info'} onClick={() => {
+                                                themes[selected_theme].section_1.is_content_visible = true;
+                                                set_render(prev => prev + 1);
+                                            }}/>
+                                        }
+                                        {
+                                            themes[selected_theme].section_1.is_content_visible && <>
+                                                <div className={styles.sectionInfo}>
+                                                    {
+                                                        themes[selected_theme].section_1.content.map((item, index) => {
+                                                            return <div className={styles.sInfo}>
+                                                                <header>{item.title} : &nbsp;</header>
+                                                                <p>{item.desc}</p>
+                                                            </div>
+                                                        })
+                                                    }
+                                                </div>
+                                            </>
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -160,40 +386,32 @@ export default function ExclusivelyYours() {
                                 <div className={styles.smContent}>
                                     <div className={styles.smTop}>
                                         <h3>{themes[selected_theme].section_1.title}</h3>
-                                        <header>0{current_section_1_slide + 1}/<span>0{themes[selected_theme].section_1.images.length}</span></header>
                                     </div>
                                     <div className={styles.smSlider}>
-                                        <Swiper
-                                            spaceBetween={130}
-                                            onInit={(ev) => {
-                                                set_section_1_swiper(ev)
-                                            }}
-                                            onSlideChange={(ev) => {
-                                                set_current_section_1_slide(ev.activeIndex)
-                                            }}
-                                            slidesPerView={'1'}>
-                                            {
-                                                themes[selected_theme].section_1.images.map((item, index) => {
-                                                    return <SwiperSlide>
-                                                        <div>
-                                                            <img src={item}/>
-                                                        </div>
-                                                    </SwiperSlide>
-                                                })
-                                            }
-                                        </Swiper>
+                                        <img src={themes[selected_theme].section_1.image}/>
                                     </div>
                                     <div className={styles.smBottom}>
-                                        <Button title={'See Info'} theme={'gold_small'}/>
-                                        <NextBack
-                                            prevDisabled={current_section_1_slide === 0}
-                                            nextDisabled={current_section_1_slide === themes[selected_theme].section_1.images.length - 1}
-                                            onNext={() => {
-                                                section_1_swiper.slideNext()
-                                            }}
-                                            onBack={() => {
-                                                section_1_swiper.slidePrev()
+                                        {
+                                            !themes[selected_theme].section_1.is_content_visible &&
+                                            <Button theme={'gold_small'} title={'See Info'} onClick={() => {
+                                                themes[selected_theme].section_1.is_content_visible = true;
+                                                set_render(prev => prev + 1);
                                             }}/>
+                                        }
+                                        {
+                                            themes[selected_theme].section_1.is_content_visible && <>
+                                                <div className={styles.sectionInfo}>
+                                                    {
+                                                        themes[selected_theme].section_1.content.map((item, index) => {
+                                                            return <div className={styles.sInfo}>
+                                                                <header>{item.title} : &nbsp;</header>
+                                                                <p>{item.desc}</p>
+                                                            </div>
+                                                        })
+                                                    }
+                                                </div>
+                                            </>
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -202,41 +420,30 @@ export default function ExclusivelyYours() {
                                 <div className={styles.sectionTwoContent}>
                                     <div className={styles.socLeft}>
                                         <h3>{themes[selected_theme].section_2.title}</h3>
-                                        <Button theme={'gold_small'} title={'See Info'}/>
+                                        {
+                                            !themes[selected_theme].section_2.is_content_visible &&
+                                            <Button theme={'gold_small'} title={'See Info'} onClick={() => {
+                                                themes[selected_theme].section_2.is_content_visible = true;
+                                                set_render(prev => prev + 1);
+                                            }}/>
+                                        }
+                                        {
+                                            themes[selected_theme].section_2.is_content_visible && <>
+                                                <div className={styles.sectionInfo}>
+                                                    {
+                                                        themes[selected_theme].section_2.content.map((item, index) => {
+                                                            return <div className={styles.sInfo}>
+                                                                <header>{item.title} : &nbsp;</header>
+                                                                <p>{item.desc}</p>
+                                                            </div>
+                                                        })
+                                                    }
+                                                </div>
+                                            </>
+                                        }
                                     </div>
                                     <div className={styles.socRight}>
-                                        <div className={'bookIndex ' + styles.bookIndex}>
-                                            <header>0{current_section_2_slide + 1}/<span>0{themes[selected_theme].section_2.images.length}</span></header>
-                                        </div>
-                                        <Swiper
-                                            onInit={(ev) => {
-                                                set_section_2_swiper(ev)
-                                            }}
-                                            onSlideChange={(ev) => {
-                                                set_current_section_2_slide(ev.activeIndex)
-                                            }}
-                                            slidesPerView={'1'}>
-                                            {
-                                                themes[selected_theme].section_2.images.map((item, index) => {
-                                                    return <SwiperSlide>
-                                                        <div>
-                                                            <img src={item}/>
-                                                        </div>
-                                                    </SwiperSlide>
-                                                })
-                                            }
-                                        </Swiper>
-                                        <div className={styles.sectionOneBottom}>
-                                            <NextBack
-                                                prevDisabled={current_section_2_slide === 0}
-                                                nextDisabled={current_section_2_slide === themes[selected_theme].section_2.images.length - 1}
-                                                onNext={() => {
-                                                    section_2_swiper.slideNext()
-                                                }}
-                                                onBack={() => {
-                                                    section_2_swiper.slidePrev()
-                                                }}/>
-                                        </div>
+                                        <img src={themes[selected_theme].section_2.image}/>
                                     </div>
                                 </div>
                             </div>
@@ -244,40 +451,33 @@ export default function ExclusivelyYours() {
                                 <div className={styles.smContent}>
                                     <div className={styles.smTop}>
                                         <h3>{themes[selected_theme].section_2.title}</h3>
-                                        <header>0{current_section_2_slide + 1}/<span>0{themes[selected_theme].section_2.images.length}</span></header>
                                     </div>
                                     <div className={styles.smSlider}>
-                                        <Swiper
-                                            spaceBetween={130}
-                                            onInit={(ev) => {
-                                                set_section_2_swiper(ev)
-                                            }}
-                                            onSlideChange={(ev) => {
-                                                set_current_section_2_slide(ev.activeIndex)
-                                            }}
-                                            slidesPerView={'1'}>
-                                            {
-                                                themes[selected_theme].section_2.images.map((item, index) => {
-                                                    return <SwiperSlide>
-                                                        <div>
-                                                            <img src={item}/>
-                                                        </div>
-                                                    </SwiperSlide>
-                                                })
-                                            }
-                                        </Swiper>
+                                        <img src={themes[selected_theme].section_2.image}/>
+
                                     </div>
                                     <div className={styles.smBottom}>
-                                        <Button title={'See Info'} theme={'gold_small'}/>
-                                        <NextBack
-                                            prevDisabled={current_section_2_slide === 0}
-                                            nextDisabled={current_section_2_slide === themes[selected_theme].section_2.images.length - 1}
-                                            onNext={() => {
-                                                section_2_swiper.slideNext()
-                                            }}
-                                            onBack={() => {
-                                                section_2_swiper.slidePrev()
+                                        {
+                                            !themes[selected_theme].section_2.is_content_visible &&
+                                            <Button theme={'gold_small'} title={'See Info'} onClick={() => {
+                                                themes[selected_theme].section_2.is_content_visible = true;
+                                                set_render(prev => prev + 1);
                                             }}/>
+                                        }
+                                        {
+                                            themes[selected_theme].section_2.is_content_visible && <>
+                                                <div className={styles.sectionInfo}>
+                                                    {
+                                                        themes[selected_theme].section_2.content.map((item, index) => {
+                                                            return <div className={styles.sInfo}>
+                                                                <header>{item.title} : &nbsp;</header>
+                                                                <p>{item.desc}</p>
+                                                            </div>
+                                                        })
+                                                    }
+                                                </div>
+                                            </>
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -286,41 +486,32 @@ export default function ExclusivelyYours() {
                                 <div className={styles.sectionOneContent}>
                                     <div className={styles.socTop}>
                                         <h3>{themes[selected_theme].section_3.title}</h3>
-                                        <div className={'bookIndex ' + styles.bookIndex}>
-                                            <header>0{current_section_3_slide + 1}/<span>0{themes[selected_theme].section_3.images.length}</span></header>
-                                        </div>
                                     </div>
                                     <div className={styles.socMid}>
-                                        <Swiper
-                                            onInit={(ev) => {
-                                                set_section_3_swiper(ev)
-                                            }}
-                                            onSlideChange={(ev) => {
-                                                set_current_section_3_slide(ev.activeIndex)
-                                            }}
-                                            slidesPerView={'1'}>
-                                            {
-                                                themes[selected_theme].section_3.images.map((item, index) => {
-                                                    return <SwiperSlide>
-                                                        <div>
-                                                            <img src={item}/>
-                                                        </div>
-                                                    </SwiperSlide>
-                                                })
-                                            }
-                                        </Swiper>
+                                        <img src={themes[selected_theme].section_3.image}/>
                                     </div>
                                     <div className={styles.socBottom}>
-                                        <Button theme={'gold_small'} title={'See Info'}/>
-                                        <NextBack
-                                            prevDisabled={current_section_3_slide === 0}
-                                            nextDisabled={current_section_3_slide === themes[selected_theme].section_3.images.length - 1}
-                                            onNext={() => {
-                                                section_3_swiper.slideNext()
-                                            }}
-                                            onBack={() => {
-                                                section_3_swiper.slidePrev()
+                                        {
+                                            !themes[selected_theme].section_3.is_content_visible &&
+                                            <Button theme={'gold_small'} title={'See Info'} onClick={() => {
+                                                themes[selected_theme].section_3.is_content_visible = true;
+                                                set_render(prev => prev + 1);
                                             }}/>
+                                        }
+                                        {
+                                            themes[selected_theme].section_3.is_content_visible && <>
+                                                <div className={styles.sectionInfo}>
+                                                    {
+                                                        themes[selected_theme].section_3.content.map((item, index) => {
+                                                            return <div className={styles.sInfo}>
+                                                                <header>{item.title} : &nbsp;</header>
+                                                                <p>{item.desc}</p>
+                                                            </div>
+                                                        })
+                                                    }
+                                                </div>
+                                            </>
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -328,40 +519,32 @@ export default function ExclusivelyYours() {
                                 <div className={styles.smContent}>
                                     <div className={styles.smTop}>
                                         <h3>{themes[selected_theme].section_3.title}</h3>
-                                        <header>0{current_section_3_slide + 1}/<span>0{themes[selected_theme].section_3.images.length}</span></header>
                                     </div>
                                     <div className={styles.smSlider}>
-                                        <Swiper
-                                            spaceBetween={130}
-                                            onInit={(ev) => {
-                                                set_section_3_swiper(ev)
-                                            }}
-                                            onSlideChange={(ev) => {
-                                                set_current_section_3_slide(ev.activeIndex)
-                                            }}
-                                            slidesPerView={'1'}>
-                                            {
-                                                themes[selected_theme].section_3.images.map((item, index) => {
-                                                    return <SwiperSlide>
-                                                        <div>
-                                                            <img src={item}/>
-                                                        </div>
-                                                    </SwiperSlide>
-                                                })
-                                            }
-                                        </Swiper>
+                                        <img src={themes[selected_theme].section_3.image}/>
                                     </div>
                                     <div className={styles.smBottom}>
-                                        <Button title={'See Info'} theme={'gold_small'}/>
-                                        <NextBack
-                                            prevDisabled={current_section_3_slide === 0}
-                                            nextDisabled={current_section_3_slide === themes[selected_theme].section_3.images.length - 1}
-                                            onNext={() => {
-                                                section_3_swiper.slideNext()
-                                            }}
-                                            onBack={() => {
-                                                section_3_swiper.slidePrev()
+                                        {
+                                            !themes[selected_theme].section_3.is_content_visible &&
+                                            <Button theme={'gold_small'} title={'See Info'} onClick={() => {
+                                                themes[selected_theme].section_3.is_content_visible = true;
+                                                set_render(prev => prev + 1);
                                             }}/>
+                                        }
+                                        {
+                                            themes[selected_theme].section_3.is_content_visible && <>
+                                                <div className={styles.sectionInfo}>
+                                                    {
+                                                        themes[selected_theme].section_3.content.map((item, index) => {
+                                                            return <div className={styles.sInfo}>
+                                                                <header>{item.title} : &nbsp;</header>
+                                                                <p>{item.desc}</p>
+                                                            </div>
+                                                        })
+                                                    }
+                                                </div>
+                                            </>
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -370,9 +553,6 @@ export default function ExclusivelyYours() {
                 }
             </InView>
 
-
-            {/*<BookNow/>*/}
-            {/*<BackToTop/>*/}
             <Footer/>
         </Fragment>
     )

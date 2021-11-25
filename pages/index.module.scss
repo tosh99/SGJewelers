@@ -227,7 +227,7 @@
                 margin-bottom: 118px;
             }
 
-            section {
+            a, section {
                 display: none;
             }
         }
@@ -338,9 +338,8 @@
                     color: #003E52;
                 }
 
-                video {
+                img {
                     width: 100%;
-                    min-height: 829px;
                 }
 
                 .summary {
@@ -687,11 +686,11 @@
                             }
 
                             .timelessone {
-                                max-width: 122px;
+                                max-width: 30%;
                             }
 
                             .timelesstwo {
-                                max-width: 193px;
+                                max-width: 60%;
                             }
                         }
                     }
@@ -725,7 +724,7 @@
                     margin-bottom: 23px;
                 }
 
-                section {
+                a, section {
                     display: flex;
                 }
             }

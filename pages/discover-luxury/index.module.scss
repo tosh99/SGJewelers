@@ -53,6 +53,11 @@
                 }
             }
         }
+
+        .virtualCarousel {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
 
@@ -157,6 +162,9 @@
 @media only screen and (max-width: 648px) {
     .traditionOuter {
         .tradition {
+            background: url("/images/discover-luxury/banner_mobile.png") no-repeat;
+            background-size: cover;
+
             h1 {
                 font-size: 28px;
                 line-height: 38px;
@@ -187,6 +195,15 @@
 
                 p {
                     max-width: 376px;
+                }
+            }
+
+            .virtualCarousel {
+                overflow-y: auto;
+
+                img {
+                    height: 251px;
+                    margin-right: 20px;
                 }
             }
         }

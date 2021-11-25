@@ -218,7 +218,7 @@ export default function Home() {
                                     {/*</Swiper>*/}
                                     <div>
                                         <img className={styles.sliderImg} src={'/images/homepage/find/1.png'}/>
-                                        <img className={styles.sliderImg} src={'/images/homepage/find/1.png'}/>
+                                        <img className={styles.sliderImg} src={'/images/homepage/find/2.png'}/>
                                     </div>
                                     <div className={styles.btn}>
                                         <a href={'/exclusively-yours'}>
@@ -256,9 +256,11 @@ export default function Home() {
                                 </div>
                                 <div className={styles.sgExBottom}>
                                     <div className={styles.sgExBLeft}>
-                                        <video width="320" height="240" controls>
-                                            <source src="movie.mp4" type="video/mp4"/>
-                                        </video>
+                                        <img src={'/images/homepage/sgex/1.png'}/>
+
+                                        {/*<video width="320" height="240" controls>*/}
+                                        {/*    <source src="movie.mp4" type="video/mp4"/>*/}
+                                        {/*</video>*/}
                                         <p>Handcrafted designs,hand-wrapped <br/> with love. </p>
                                         <p className={styles.summary}>Exceptional designs and exclusivity are just one of the few things you’ll
                                             come to love about us. We put your needs and vision before anything else. It

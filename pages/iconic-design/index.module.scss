@@ -53,9 +53,16 @@
 
             .stRight {
                 max-width: 510px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
                 p {
-                    margin-bottom: 65px;
+                    //margin-bottom: 65px;
+                }
+
+                img {
+                    width: 100%;
                 }
             }
         }
@@ -94,9 +101,8 @@
             align-items: flex-end;
             margin-bottom: 61px;
 
-            header {
-                font-size: 44px;
-                line-height: 42%;
+            .bookIndex {
+                display: none;
             }
 
             h1 {
@@ -237,7 +243,7 @@
                 flex-direction: column-reverse;
 
                 .sbLeft {
-                    padding-top: 29px;
+                    padding-top: 0;
                 }
             }
         }
@@ -250,14 +256,19 @@
 
             .rareHeader {
                 margin-bottom: 31px;
+                align-items: center;
 
                 h1 {
                     font-size: 24px;
                     line-height: 35px;
                 }
 
-                header {
-                    display: none;
+                .bookIndex {
+                    margin-bottom: 0;
+
+                    header {
+                        display: block;
+                    }
                 }
             }
 
@@ -314,7 +325,18 @@
 
                     .mvLeftImages {
                         display: flex;
+                        flex-direction: row-reverse;
                         margin-bottom: 18px;
+                        overflow-y: auto;
+
+                        .m2 {
+                            display: block;
+                        }
+
+                        img {
+                            max-height: 292px;
+                            margin-right: 10px;
+                        }
                     }
                 }
             }

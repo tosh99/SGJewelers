@@ -84,28 +84,28 @@ export default function ExclusivelyYours() {
                                             We are connoisseurs of art and have an inclination towards the fine jewellery periods of yore —
                                             <br/><br/>
                                             <span>Georgian, Victorina, Edwardian, Art Nouveau, Art Deco and Retro. <br/><br/></span>
-
-                                            {
-                                                is_story_visible && <>
-                                                    You will find our high jewellery make use of either the clean, geometric lines of the Art Deco period or the fluent, floral language of the Art Nouveau period. The use
-                                                    of colours, techniques, materials and stones though inspired from these iconic art periods, our designs are a modern rendition of the same. <span>All reminiscent of an
-                                                    opulent past yet, looking onward to the richness of what’s to come. </span>
-                                                    We have designed jewellery pieces inspired by the Maharaja of Patliala, Queen of England, royal courtesans of India and other noblemen who celebrated the art and
-                                                    craftsmanship of high jewellery designers of their time. Our designs are also made keeping their wearer in mind so as to compliment them the best.
-                                                </>
-                                            }
                                         </p>
+                                        <img src={'/images/iconic/story/2.png'}/>
                                     </div>
                                 </div>
                                 <div className={styles.storyBottom}>
                                     <div className={styles.sbLeft}>
-                                        <Button title={'Read More'} casing={'capitalize'} theme={'gold_small'} onClick={() => {
-                                            set_is_story_visible(true)
-                                        }}/>
+                                        {
+                                            is_story_visible && <p className={'sectionSummary'}>
+                                                You will find our high jewellery make use of either the clean, geometric lines of the Art Deco period or the fluent, floral language of the Art Nouveau period. The use
+                                                of colours, techniques, materials and stones though inspired from these iconic art periods, our designs are a modern rendition of the same. <span>All reminiscent of an
+                                                    opulent past yet, looking onward to the richness of what’s to come. </span>
+                                                We have designed jewellery pieces inspired by the Maharaja of Patliala, Queen of England, royal courtesans of India and other noblemen who celebrated the art and
+                                                craftsmanship of high jewellery designers of their time. Our designs are also made keeping their wearer in mind so as to compliment them the best.
+                                            </p>
+                                        }
+                                        {
+                                            !is_story_visible && <Button title={'Read More'} casing={'capitalize'} theme={'gold_small'} onClick={() => {
+                                                set_is_story_visible(true)
+                                            }}/>
+                                        }
                                     </div>
-                                    <div className={styles.sbRight}>
-                                        <img src={'/images/iconic/story/2.png'}/>
-                                    </div>
+
                                 </div>
                             </div>
                         </motion.div>
@@ -210,7 +210,8 @@ export default function ExclusivelyYours() {
                                             {
                                                 is_movement_rm && <>
                                                     <br/><br/>
-                                                    Settings also allow for movement in jewellery so you can enjoy wearing them in more than one way. Using <span>tremblade in necklaces and earrings</span> to add that additional touch
+                                                    Settings also allow for movement in jewellery so you can enjoy wearing them in more than one way. Using <span>tremblade in necklaces and earrings</span> to add that
+                                                    additional touch
                                                     of amusement, we are always keeping ourselves informed of the new techniques used worldwide and the first ones to bring them to you.
                                                 </>
                                             }
@@ -224,7 +225,7 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.movementRight}>
                                     <img src={'/images/iconic/movement/2.png'}/>
-                                    <Button title={'Read More'} theme={'blue_small'} casing={'capitalize'} onClick={()=>{
+                                    <Button title={'Read More'} theme={'blue_small'} casing={'capitalize'} onClick={() => {
                                         set_is_movement_rm(true)
                                     }}/>
                                 </div>

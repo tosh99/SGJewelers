@@ -94,6 +94,33 @@
 
     }
 
+    .sectionInfo {
+        display: flex;
+        flex-direction: column;
+
+        .sInfo {
+            display: flex;
+            align-items: flex-start;
+
+            header, p {
+                font-family: TeodorTrialLight, sans-serif;
+                font-size: 18px;
+                line-height: 149%;
+                letter-spacing: 0.05em;
+                color: #CA9040;
+            }
+
+            header {
+                white-space: nowrap;
+            }
+
+            p {
+                color: #003E52;
+                max-width: 420px;
+            }
+        }
+    }
+
     .sectionOne {
         display: flex;
         flex-direction: column;
@@ -105,8 +132,8 @@
             justify-content: space-between;
 
             .socLeft {
-                max-width: 880px;
-
+                width: 100%;
+                max-width: 640px;
 
                 img {
                     width: 100%;
@@ -142,6 +169,7 @@
             }
 
             .socRight {
+                width: 100%;
                 max-width: 603px;
 
                 .bookIndex {
@@ -183,6 +211,10 @@
 
             .socMid {
                 margin-bottom: 41px;
+
+                img {
+                    width: 100%;
+                }
             }
         }
     }

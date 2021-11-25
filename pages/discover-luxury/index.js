@@ -12,7 +12,15 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
 export default function ExclusivelyYours() {
-    const places = [1, 2, 3, 4]
+    const virtual_designs = [
+        {
+            image: '/images/virtual/1.png'
+        },
+        {
+            image: '/images/virtual/2.png'
+        }
+
+    ]
 
     const [device, set_device] = useState(2);
 
@@ -64,8 +72,7 @@ export default function ExclusivelyYours() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.virtual}>
                                 <div className={styles.virtualTop}>
-                                    <h1 className={'sectionTitle'}>Virtual <br/>
-                                        <span>design</span> Consultations</h1>
+                                    <h1 className={'sectionTitle'}>Virtual <br/> <span>design</span> Consultations</h1>
                                     <p className={'sectionSummary'}>Our client base is spread around the globe. To make it easier for you to own your
                                         exclusive Sanjay Gupta masterpiece,
                                         we also offer virtual consultations on special requests. Drop us an email
@@ -74,19 +81,12 @@ export default function ExclusivelyYours() {
                                     </p>
                                 </div>
                                 <div className={styles.virtualCarousel}>
-                                    <Swiper
-                                        spaceBetween={120}
-                                        slidesPerView={'auto'}>
-                                        {
-                                            places.map((place, index) => {
-                                                return <SwiperSlide>
-                                                    <div>
-                                                        <img src={'/images/homepage/places/1.png'}/>
-                                                    </div>
-                                                </SwiperSlide>
-                                            })
-                                        }
-                                    </Swiper>
+                                    <div>
+                                        <img src={device === 2 ? '/images/discover-luxury/virtual/1.png' : '/images/discover-luxury/virtual/1_mobile.png'}/>
+                                    </div>
+                                    <div>
+                                        <img src={'/images/discover-luxury/virtual/2.png'}/>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
