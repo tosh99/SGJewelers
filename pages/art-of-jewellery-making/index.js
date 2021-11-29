@@ -125,7 +125,7 @@ export default function ExclusivelyYours() {
                                     {/*<video width="320" height="240" controls>*/}
                                     {/*    <source src="movie.mp4" type="video/mp4"/>*/}
                                     {/*</video>*/}
-                                        <img src={'/images/art/generations.png'}/>
+                                    <img src={'/images/art/generations.png'}/>
                                 </div>
                                 <div className={styles.generationsBottom}>
                                     <p className={'sectionSummary'}>
@@ -174,14 +174,17 @@ export default function ExclusivelyYours() {
                                                     is_inspired && <>
                                                         <br/><br/>
                                                         We find opportunities in every obstacle and have paved the way for utility jewellery, changeable and even dual pieces such as ear hoops that can be worn as
-                                                        bracelets. Our prêt pieces are always <span>walking the line between art and jewellery</span>. May it be classic designs or contemporary, one thing is for sure that you will
+                                                        bracelets. Our prêt pieces are always <span>walking the line between art and jewellery</span>. May it be classic designs or contemporary, one thing is for sure that
+                                                        you will
                                                         fall in love with them over and over again.
                                                     </>
                                                 }
                                             </p>
-                                            <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'} onClick={() => {
-                                                set_is_inspired(true)
-                                            }}/>
+                                            {
+                                                !is_inspired && <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'} onClick={() => {
+                                                    set_is_inspired(true)
+                                                }}/>
+                                            }
                                         </div>
                                     </div>
                                 </div>

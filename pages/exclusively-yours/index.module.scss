@@ -101,6 +101,7 @@
         .sInfo {
             display: flex;
             align-items: flex-start;
+            margin-bottom: 10px;
 
             header, p {
                 font-family: TeodorTrialLight, sans-serif;
@@ -111,7 +112,8 @@
             }
 
             header {
-                white-space: nowrap;
+                text-transform: uppercase;
+                width: 155px;
             }
 
             p {
@@ -217,6 +219,15 @@
                 }
             }
         }
+
+        .sectionInfo {
+            .sInfo {
+                p {
+                    max-width: unset;
+                }
+            }
+        }
+
     }
 
 }

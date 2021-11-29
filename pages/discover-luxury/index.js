@@ -107,9 +107,7 @@ export default function ExclusivelyYours() {
                             <div className={"inner " + styles.boxed}>
                                 <div className={styles.boxedTop}>
                                     <h1 className={'sectionTitle'}>Boxed <span>with</span> love </h1>
-                                    <video width="320" height="240" controls>
-                                        <source src="movie.mp4" type="video/mp4"/>
-                                    </video>
+                                    <img src={'/images/discover-luxury/boxed-love-1.png'}/>
                                 </div>
                                 <div className={styles.boxedBottom}>
                                     <p className={'sectionSummary'}>We believe that every touchpoint of that first look is of prime importance.

@@ -76,41 +76,30 @@ export default function ExclusivelyYours() {
                                         these ancient techniques,
                                         creating fine luxury masterpieces with genuine workmanship.
 
-                                        {
-                                            is_vintage_design && <>
-                                                <br/><br/>
-                                                May it be the recently popularised <span>jaali work of the Nizami jewellery or closed-setting diamond jewellery</span>, we have been the forerunners in bringing them to the
-                                                forefront.
-                                                Their handmade flair is unequivocally exceeding in quality and wearability.
-                                                <br/><br/>
-                                                Our karigars and artisans have passed down their learnings through generations, preserving these techniques. They spend their lives dedicated to perfecting their craft
-                                                which is apparent in the minutest details of how your experience of wearing our jewellery is elevated beyond compare.
 
-                                            </>
-                                        }
                                     </p>
                                 </div>
                                 <div className={styles.vintageBanner}>
                                     <img src={'/images/heritage/vintage/vintage-design-banner.png'}/>
                                 </div>
                                 <div className={styles.vintageCarousel}>
-                                    <Button theme={'blue_small'} title={'Read More'} casing={'capitalize'} onClick={() => {
-                                        set_is_vintage_design(true)
-                                    }}/>
+                                    {
+                                        !is_vintage_design && <Button theme={'blue_small'} title={'Read More'} casing={'capitalize'} onClick={() => {
+                                            set_is_vintage_design(true)
+                                        }}/>
+                                    }
+                                    {
+                                        is_vintage_design && <p className={'sectionSummary'}>
+                                            May it be the recently popularised <span>jaali work of the Nizami jewellery or closed-setting diamond jewellery</span>, we have been the forerunners in bringing them to the
+                                            forefront.
+                                            Their handmade flair is unequivocally exceeding in quality and wearability.
+                                            <br/><br/>
+                                            Our karigars and artisans have passed down their learnings through generations, preserving these techniques. They spend their lives dedicated to perfecting their craft
+                                            which is apparent in the minutest details of how your experience of wearing our jewellery is elevated beyond compare.
+
+                                        </p>
+                                    }
                                     <div className={styles.carousel}>
-                                        {/*<Swiper*/}
-                                        {/*    spaceBetween={30}*/}
-                                        {/*    slidesPerView={'2'}>*/}
-                                        {/*    {*/}
-                                        {/*        places.map((place, index) => {*/}
-                                        {/*            return <SwiperSlide>*/}
-                                        {/*                <div>*/}
-                                        {/*                    <img src={'/images/homepage/places/1.png'}/>*/}
-                                        {/*                </div>*/}
-                                        {/*            </SwiperSlide>*/}
-                                        {/*        })*/}
-                                        {/*    }*/}
-                                        {/*</Swiper>*/}
                                         <div>
                                             <img src={'/images/heritage/vintage/1.png'}/>
                                         </div>
@@ -234,9 +223,11 @@ export default function ExclusivelyYours() {
                                             </p>
 
                                         </div>
-                                        <Button title={'Read More'} casing={'capitalize'} theme={'white_small'} onClick={() => {
-                                            set_is_picking(true)
-                                        }}/>
+                                        {
+                                            !is_picking && <Button title={'Read More'} casing={'capitalize'} theme={'white_small'} onClick={() => {
+                                                set_is_picking(true)
+                                            }}/>
+                                        }
                                     </div>
                                 </div>
 

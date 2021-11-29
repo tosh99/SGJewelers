@@ -88,11 +88,17 @@ export default function Home() {
                                         work with artisans who have dedicated their life’s work to preserving these
                                         age-old renditions.
                                     </p>
-                                    <Button title={'Learn More'}/>
+
+                                    <a href={'/art-of-jewellery-making'}>
+                                        <Button title={'Learn More'}/>
+                                    </a>
                                 </div>
                                 <div className={styles.pRight}>
                                     <img src={'/images/homepage/preserving.png'}/>
-                                    <Button title={'Learn More'}/>
+
+                                    <a href={'/art-of-jewellery-making'}>
+                                        <Button title={'Learn More'}/>
+                                    </a>
                                 </div>
                             </div>
                         </motion.div>
