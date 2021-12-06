@@ -329,7 +329,9 @@ export default function Home() {
                                         <source src="movie.mp4" type="video/mp4"/>
                                     </video>
                                 </div>
-                                <Button title={'Learn More'}/>
+                                <a href={'/art-of-jewellery-making'}>
+                                    <Button title={'Learn More'}/>
+                                </a>
                             </div>
                         </motion.div>
                     )
@@ -383,7 +385,9 @@ export default function Home() {
                                     </Swiper>
                                 </div>
                                 <div className={styles.bookButtons}>
-                                    <Button title={'Book Now'}/>
+                                    <a href="mailto: info@sanjaygupta.world">
+                                        <Button title={'Book Now'}/>
+                                    </a>
                                     <NextBack
                                         prevDisabled={current_book_slide === 0}
                                         nextDisabled={current_book_slide === booking_places.length - 1}

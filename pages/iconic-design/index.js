@@ -14,7 +14,7 @@ import NextBack from "../../shared/components/nextback/nextback";
 
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
 export default function ExclusivelyYours() {
-    const rare_jewelleries = [1, 2, 3, 4]
+    const rare_jewelleries = [1]
     const [rare_swiper, set_rare_swiper] = useState({});
     const [current_rare_slide, set_current_rare_slide] = useState(0);
 
@@ -164,19 +164,22 @@ export default function ExclusivelyYours() {
                                                 </>
                                             }
                                         </p>
-                                        <Button title={'Read More'} casing={'capitalize'} theme={'gold_small'} onClick={() => {
-                                            set_is_rare_rm(true)
-                                        }}/>
+                                        {
+                                            !is_rare_rm && <Button title={'Read More'} casing={'capitalize'} theme={'gold_small'} onClick={() => {
+                                                set_is_rare_rm(true)
+                                            }}/>
+                                        }
+
                                     </div>
-                                    <NextBack
-                                        prevDisabled={current_rare_slide === 0}
-                                        nextDisabled={current_rare_slide === rare_jewelleries.length - 1}
-                                        onNext={() => {
-                                            rare_swiper.slideNext()
-                                        }}
-                                        onBack={() => {
-                                            rare_swiper.slidePrev()
-                                        }}/>
+                                    {/*<NextBack*/}
+                                    {/*    prevDisabled={current_rare_slide === 0}*/}
+                                    {/*    nextDisabled={current_rare_slide === rare_jewelleries.length - 1}*/}
+                                    {/*    onNext={() => {*/}
+                                    {/*        rare_swiper.slideNext()*/}
+                                    {/*    }}*/}
+                                    {/*    onBack={() => {*/}
+                                    {/*        rare_swiper.slidePrev()*/}
+                                    {/*    }}/>*/}
                                 </div>
                             </div>
                         </motion.div>
@@ -225,9 +228,11 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.movementRight}>
                                     <img src={'/images/iconic/movement/2.png'}/>
-                                    <Button title={'Read More'} theme={'blue_small'} casing={'capitalize'} onClick={() => {
-                                        set_is_movement_rm(true)
-                                    }}/>
+                                    {
+                                        !is_movement_rm && <Button title={'Read More'} theme={'blue_small'} casing={'capitalize'} onClick={() => {
+                                            set_is_movement_rm(true)
+                                        }}/>
+                                    }
                                 </div>
                             </div>
                         </motion.div>

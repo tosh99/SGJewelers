@@ -87,9 +87,11 @@ export default function ExclusivelyYours() {
 
                                             }
                                         </p>
-                                        <Button title={'Read More'} theme={'blue_small'} casing={'capitalize'} onClick={() => {
-                                            set_is_legacy(true)
-                                        }}/>
+                                        {
+                                            !is_legacy && <Button title={'Read More'} theme={'blue_small'} casing={'capitalize'} onClick={() => {
+                                                set_is_legacy(true)
+                                            }}/>
+                                        }
                                     </div>
                                     <div className={styles.tibarumalRight}>
                                         <img src={'/images/art/tibarumal-2.png'}/>

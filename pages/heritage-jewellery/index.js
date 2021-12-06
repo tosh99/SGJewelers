@@ -127,21 +127,23 @@ export default function ExclusivelyYours() {
                                 <div className={styles.sketchingLeft}>
                                     <h1 className={'sectionTitle'}>SKETCHING</h1>
                                     <div className={styles.sketchingContent}>
-                                        <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'}/>
+                                        {
+                                            !is_sketching && <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'} onClick={() => {
+                                                set_is_sketching(true)
+                                            }}/>
+                                        }
+                                        {
+                                            is_sketching && <p className={'sectionSummary'}>
+                                                One can often find him doodling away as a design idea consumes his mind. Which, he then substantiates into design elements and has the principal designer sketch it in
+                                                detail. We believe that the vision for design can come from anyone who is a connoisseur of the arts. We also welcome the clients into this process to co-create the
+                                                design of their dream.
+                                            </p>
+                                        }
                                         <p className={'sectionSummary'}>Mr. Sanjay Gupta sees design in everything
                                             around him.
                                             He draws inspiration from artistic vintage paintings, marble statues,
                                             portraits of a
                                             Royal courtsman or even architecture.
-
-                                            {
-                                                is_sketching && <>
-                                                    <br/><br/>
-                                                    One can often find him doodling away as a design idea consumes his mind. Which, he then substantiates into design elements and has the principal designer sketch it in
-                                                    detail. We believe that the vision for design can come from anyone who is a connoisseur of the arts. We also welcome the clients into this process to co-create the
-                                                    design of their dream.
-                                                </>
-                                            }
                                         </p>
                                         <div className={styles.sketchingImages}>
                                             <img src={'/images/sketching/sketch-1.png'}/>
@@ -151,9 +153,18 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.sketchingRight}>
                                     <img src={'/images/sketching/sketch-2.png'}/>
-                                    <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'} onClick={() => {
-                                        set_is_sketching(true)
-                                    }}/>
+                                    {
+                                        !is_sketching && <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'} onClick={() => {
+                                            set_is_sketching(true)
+                                        }}/>
+                                    }
+                                    {
+                                        is_sketching && <p className={'sectionSummary'}>
+                                            One can often find him doodling away as a design idea consumes his mind. Which, he then substantiates into design elements and has the principal designer sketch it in
+                                            detail. We believe that the vision for design can come from anyone who is a connoisseur of the arts. We also welcome the clients into this process to co-create the
+                                            design of their dream.
+                                        </p>
+                                    }
                                 </div>
                             </div>
                         </motion.div>
