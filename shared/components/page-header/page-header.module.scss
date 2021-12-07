@@ -70,12 +70,13 @@
         }
 
         .hCenter {
-            min-width: 167px;
+            min-width: 187px;
         }
 
         .hRight {
             display: flex;
             justify-content: flex-end;
+            margin-top: -4px;
 
             header {
                 display: none;
@@ -84,6 +85,7 @@
             img {
                 display: flex;
                 margin-left: 10px;
+                width: 18px;
             }
         }
 

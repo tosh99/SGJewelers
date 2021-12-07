@@ -79,7 +79,8 @@ export default function ExclusivelyYours() {
                                         <img src={'/images/iconic/story/1.png'}/>
                                     </div>
                                     <div className={styles.stRight}>
-                                        <p className={'sectionSummary'}>The design inspiration for our high jewellery collection can come
+                                        <p className={'sectionSummary'}>
+                                            The design inspiration for our high jewellery collection can come
                                             from places far and wide.
                                             We are connoisseurs of art and have an inclination towards the fine jewellery periods of yore —
                                             <br/><br/>
@@ -124,9 +125,9 @@ export default function ExclusivelyYours() {
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.rare}>
                                 <div className={styles.rareHeader}>
-                                    <div className={'bookIndex ' + styles.bookIndex}>
-                                        <header>0{current_rare_slide + 1}/<span>0{rare_jewelleries.length}</span></header>
-                                    </div>
+                                    {/*<div className={'bookIndex ' + styles.bookIndex}>*/}
+                                    {/*    <header>0{current_rare_slide + 1}/<span>0{rare_jewelleries.length}</span></header>*/}
+                                    {/*</div>*/}
                                     <h1 className={'sectionTitle'}>RARE <span>and</span> <br/> pRECIOUS <span>stones</span></h1>
                                 </div>
                                 <div className={styles.rareTop}>

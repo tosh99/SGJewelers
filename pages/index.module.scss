@@ -458,6 +458,7 @@
             display: flex;
             flex-direction: column;
             padding: 0 100px;
+            margin-bottom: 68px;
 
             h1 {
                 font-size: 54px;
@@ -475,22 +476,7 @@
             }
         }
 
-        .bookIndex {
-            padding: 0 100px;
-            margin-bottom: 68px;
-            width: 100%;
-            max-width: 1440px;
-
-            header {
-                font-size: 32px;
-                line-height: 116.5%;
-            }
-        }
-
         .bookBottom {
-            //display: flex;
-
-
             div {
                 img {
                     width: 100%;
@@ -610,10 +596,8 @@
                     margin-bottom: 18px;
 
                     span {
-                        font-family: MillionaireTrialScript, sans-serif;
                         font-size: 16px;
                         line-height: 24px;
-                        text-transform: lowercase;
                     }
                 }
 
@@ -631,8 +615,8 @@
                 overflow-x: auto;
 
                 img {
-                    width: 100%;
-                    margin: 0;
+                    width: 80%;
+                    margin: 0 15px 0 0;
                 }
             }
         }

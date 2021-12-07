@@ -16,7 +16,7 @@ export default function ExclusivelyYours() {
         banner: '/images/exclusively/magnificent/banner.png',
         desc: 'Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.',
         section_1: {
-            title: 'Briolette Jhumkas',
+            title: 'Magri Mala',
             image: '/images/exclusively/magnificent/section_1/1.png',
             is_content_visible: false,
             content: [
@@ -143,7 +143,7 @@ export default function ExclusivelyYours() {
                 }, {
                     title: 'Stones',
                     desc: 'Large Morganite and diamonds'
-                },{
+                }, {
                     title: 'Special Information',
                     desc: 'The most sought-after peach pink hue of this morganite has rightfully earned its place as the international standard of quality. Carefully selected by Mr. Sanjay Gupta himself.'
                 }
@@ -211,7 +211,7 @@ export default function ExclusivelyYours() {
                 }, {
                     title: 'Stones',
                     desc: 'Mozambique rubies, marquise and pear diamonds  andPear, marquise and full cut diamonds / Oval diamonds.'
-                },{
+                }, {
                     title: 'Special Information',
                     desc: ' The red tennis bracelet is made with natural Mozambique rubies found in African mines.'
                 }
@@ -310,6 +310,7 @@ export default function ExclusivelyYours() {
                                     <div className={styles.themeLeft} onClick={() => {
                                         if (selected_theme > 0) {
                                             set_selected_theme(prev => prev - 1)
+                                            document.getElementById('section').scrollIntoView()
                                         }
                                     }}>
                                         <img src={'/images/exclusively/banner/left.svg'}/>
@@ -320,6 +321,7 @@ export default function ExclusivelyYours() {
                                     <div className={styles.themeRight} onClick={() => {
                                         if (selected_theme < themes.length - 1) {
                                             set_selected_theme(prev => prev + 1)
+                                            document.getElementById('section').scrollIntoView()
                                         }
                                     }}>
                                         <img src={'/images/exclusively/banner/right.svg'}/>
@@ -338,220 +340,222 @@ export default function ExclusivelyYours() {
             </InView>
 
             {/*Section 1*/}
-            <InView threshold={0.25} triggerOnce={true}>
-                {
-                    ({ref, inView}) => (
-                        <motion.div className={"outer " + styles.sectionOuter}
-                                    ref={ref}
-                                    initial={{opacity: 0}}
-                                    animate={inView ? {opacity: 1} : {opacity: 0}}
-                                    transition={{duration: 1}}>
-                            <div className={"inner " + styles.sectionHeader}>
-                                <h1 className={'sectionTitle'}>{themes[selected_theme].feeling_title}</h1>
-                                <p className={'sectionSummary'}>{themes[selected_theme].desc}</p>
-                            </div>
+            {/*<InView threshold={0.25} triggerOnce={true}>*/}
+            {/*    {*/}
+            {/*        ({ref, inView}) => (*/}
+            {/*            <motion.div className={"outer " + styles.sectionOuter}*/}
+            {/*                        ref={ref}*/}
+            {/*                        initial={{opacity: 0}}*/}
+            {/*                        animate={inView ? {opacity: 1} : {opacity: 0}}*/}
+            {/*                        transition={{duration: 1}}>*/}
 
-                            <div className={"inner " + styles.sectionOne}>
-                                <div className={styles.sectionOneContent}>
-                                    <div className={styles.socLeft}>
-                                        <h3>{themes[selected_theme].section_1.title}</h3>
-                                        <img src={themes[selected_theme].section_1.image}/>
-                                    </div>
-                                    <div className={styles.socRight}>
-                                        {
-                                            !themes[selected_theme].section_1.is_content_visible &&
-                                            <Button theme={'gold_small'} title={'See Info'} onClick={() => {
-                                                themes[selected_theme].section_1.is_content_visible = true;
-                                                set_render(prev => prev + 1);
-                                            }}/>
-                                        }
-                                        {
-                                            themes[selected_theme].section_1.is_content_visible && <>
-                                                <div className={styles.sectionInfo}>
-                                                    {
-                                                        themes[selected_theme].section_1.content.map((item, index) => {
-                                                            return <div className={styles.sInfo}>
-                                                                <header>{item.title} : &nbsp;</header>
-                                                                <p>{item.desc}</p>
-                                                            </div>
-                                                        })
-                                                    }
-                                                </div>
-                                            </>
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={"inner " + styles.sectionMobile}>
-                                <div className={styles.smContent}>
-                                    <div className={styles.smTop}>
-                                        <h3>{themes[selected_theme].section_1.title}</h3>
-                                    </div>
-                                    <div className={styles.smSlider}>
-                                        <img src={themes[selected_theme].section_1.image}/>
-                                    </div>
-                                    <div className={styles.smBottom}>
-                                        {
-                                            !themes[selected_theme].section_1.is_content_visible &&
-                                            <Button theme={'gold_small'} title={'See Info'} onClick={() => {
-                                                themes[selected_theme].section_1.is_content_visible = true;
-                                                set_render(prev => prev + 1);
-                                            }}/>
-                                        }
-                                        {
-                                            themes[selected_theme].section_1.is_content_visible && <>
-                                                <div className={styles.sectionInfo}>
-                                                    {
-                                                        themes[selected_theme].section_1.content.map((item, index) => {
-                                                            return <div className={styles.sInfo}>
-                                                                <header>{item.title} : &nbsp;</header>
-                                                                <p>{item.desc}</p>
-                                                            </div>
-                                                        })
-                                                    }
-                                                </div>
-                                            </>
-                                        }
-                                    </div>
-                                </div>
-                            </div>
+            <div className={"outer " + styles.sectionOuter}>
+                <div className={"inner " + styles.sectionHeader} id={'section'}>
+                    <h1 className={'sectionTitle'}>{themes[selected_theme].feeling_title}</h1>
+                    <p className={'sectionSummary'}>{themes[selected_theme].desc}</p>
+                </div>
 
-                            <div className={"inner " + styles.sectionTwo}>
-                                <div className={styles.sectionTwoContent}>
-                                    <div className={styles.socLeft}>
-                                        <h3>{themes[selected_theme].section_2.title}</h3>
+                <div className={"inner " + styles.sectionOne}>
+                    <div className={styles.sectionOneContent}>
+                        <div className={styles.socLeft}>
+                            <h3>{themes[selected_theme].section_1.title}</h3>
+                            <img src={themes[selected_theme].section_1.image}/>
+                        </div>
+                        <div className={styles.socRight}>
+                            {
+                                !themes[selected_theme].section_1.is_content_visible &&
+                                <Button theme={'gold_small'} title={'See Info'} onClick={() => {
+                                    themes[selected_theme].section_1.is_content_visible = true;
+                                    set_render(prev => prev + 1);
+                                }}/>
+                            }
+                            {
+                                themes[selected_theme].section_1.is_content_visible && <>
+                                    <div className={styles.sectionInfo}>
                                         {
-                                            !themes[selected_theme].section_2.is_content_visible &&
-                                            <Button theme={'gold_small'} title={'See Info'} onClick={() => {
-                                                themes[selected_theme].section_2.is_content_visible = true;
-                                                set_render(prev => prev + 1);
-                                            }}/>
-                                        }
-                                        {
-                                            themes[selected_theme].section_2.is_content_visible && <>
-                                                <div className={styles.sectionInfo}>
-                                                    {
-                                                        themes[selected_theme].section_2.content.map((item, index) => {
-                                                            return <div className={styles.sInfo}>
-                                                                <header>{item.title} : &nbsp;</header>
-                                                                <p>{item.desc}</p>
-                                                            </div>
-                                                        })
-                                                    }
+                                            themes[selected_theme].section_1.content.map((item, index) => {
+                                                return <div className={styles.sInfo}>
+                                                    <header>{item.title} : <span>{item.desc}</span></header>
                                                 </div>
-                                            </>
+                                            })
                                         }
                                     </div>
-                                    <div className={styles.socRight}>
-                                        <img src={themes[selected_theme].section_2.image}/>
+                                </>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div className={"inner " + styles.sectionMobile}>
+                    <div className={styles.smContent}>
+                        <div className={styles.smTop}>
+                            <h3>{themes[selected_theme].section_1.title}</h3>
+                        </div>
+                        <div className={styles.smSlider}>
+                            <img src={themes[selected_theme].section_1.image}/>
+                        </div>
+                        <div className={styles.smBottom}>
+                            {
+                                !themes[selected_theme].section_1.is_content_visible &&
+                                <Button theme={'gold_small'} title={'See Info'} onClick={() => {
+                                    themes[selected_theme].section_1.is_content_visible = true;
+                                    set_render(prev => prev + 1);
+                                }}/>
+                            }
+                            {
+                                themes[selected_theme].section_1.is_content_visible && <>
+                                    <div className={styles.sectionInfo}>
+                                        {
+                                            themes[selected_theme].section_1.content.map((item, index) => {
+                                                return <div className={styles.sInfo}>
+                                                    <header>{item.title} : &nbsp;</header>
+                                                    <p>{item.desc}</p>
+                                                </div>
+                                            })
+                                        }
                                     </div>
-                                </div>
-                            </div>
-                            <div className={"inner " + styles.sectionMobile}>
-                                <div className={styles.smContent}>
-                                    <div className={styles.smTop}>
-                                        <h3>{themes[selected_theme].section_2.title}</h3>
-                                    </div>
-                                    <div className={styles.smSlider}>
-                                        <img src={themes[selected_theme].section_2.image}/>
+                                </>
+                            }
+                        </div>
+                    </div>
+                </div>
 
-                                    </div>
-                                    <div className={styles.smBottom}>
+                <div className={"inner " + styles.sectionTwo}>
+                    <div className={styles.sectionTwoContent}>
+                        <div className={styles.socLeft}>
+                            <h3>{themes[selected_theme].section_2.title}</h3>
+                            {
+                                !themes[selected_theme].section_2.is_content_visible &&
+                                <Button theme={'gold_small'} title={'See Info'} onClick={() => {
+                                    themes[selected_theme].section_2.is_content_visible = true;
+                                    set_render(prev => prev + 1);
+                                }}/>
+                            }
+                            {
+                                themes[selected_theme].section_2.is_content_visible && <>
+                                    <div className={styles.sectionInfo}>
                                         {
-                                            !themes[selected_theme].section_2.is_content_visible &&
-                                            <Button theme={'gold_small'} title={'See Info'} onClick={() => {
-                                                themes[selected_theme].section_2.is_content_visible = true;
-                                                set_render(prev => prev + 1);
-                                            }}/>
-                                        }
-                                        {
-                                            themes[selected_theme].section_2.is_content_visible && <>
-                                                <div className={styles.sectionInfo}>
-                                                    {
-                                                        themes[selected_theme].section_2.content.map((item, index) => {
-                                                            return <div className={styles.sInfo}>
-                                                                <header>{item.title} : &nbsp;</header>
-                                                                <p>{item.desc}</p>
-                                                            </div>
-                                                        })
-                                                    }
-                                                </div>
-                                            </>
-                                        }
-                                    </div>
-                                </div>
-                            </div>
+                                            themes[selected_theme].section_2.content.map((item, index) => {
+                                                return <div className={styles.sInfo}>
+                                                    <header>{item.title} : <span>{item.desc}</span></header>
 
-                            <div className={"inner " + styles.sectionThree}>
-                                <div className={styles.sectionOneContent}>
-                                    <div className={styles.socTop}>
-                                        <h3>{themes[selected_theme].section_3.title}</h3>
-                                    </div>
-                                    <div className={styles.socMid}>
-                                        <img src={themes[selected_theme].section_3.image}/>
-                                    </div>
-                                    <div className={styles.socBottom}>
-                                        {
-                                            !themes[selected_theme].section_3.is_content_visible &&
-                                            <Button theme={'gold_small'} title={'See Info'} onClick={() => {
-                                                themes[selected_theme].section_3.is_content_visible = true;
-                                                set_render(prev => prev + 1);
-                                            }}/>
-                                        }
-                                        {
-                                            themes[selected_theme].section_3.is_content_visible && <>
-                                                <div className={styles.sectionInfo}>
-                                                    {
-                                                        themes[selected_theme].section_3.content.map((item, index) => {
-                                                            return <div className={styles.sInfo}>
-                                                                <header>{item.title} : &nbsp;</header>
-                                                                <p>{item.desc}</p>
-                                                            </div>
-                                                        })
-                                                    }
                                                 </div>
-                                            </>
+                                            })
                                         }
                                     </div>
-                                </div>
-                            </div>
-                            <div className={"inner " + styles.sectionMobile}>
-                                <div className={styles.smContent}>
-                                    <div className={styles.smTop}>
-                                        <h3>{themes[selected_theme].section_3.title}</h3>
-                                    </div>
-                                    <div className={styles.smSlider}>
-                                        <img src={themes[selected_theme].section_3.image}/>
-                                    </div>
-                                    <div className={styles.smBottom}>
+                                </>
+                            }
+                        </div>
+                        <div className={styles.socRight}>
+                            <img src={themes[selected_theme].section_2.image}/>
+                        </div>
+                    </div>
+                </div>
+                <div className={"inner " + styles.sectionMobile}>
+                    <div className={styles.smContent}>
+                        <div className={styles.smTop}>
+                            <h3>{themes[selected_theme].section_2.title}</h3>
+                        </div>
+                        <div className={styles.smSlider}>
+                            <img src={themes[selected_theme].section_2.image}/>
+
+                        </div>
+                        <div className={styles.smBottom}>
+                            {
+                                !themes[selected_theme].section_2.is_content_visible &&
+                                <Button theme={'gold_small'} title={'See Info'} onClick={() => {
+                                    themes[selected_theme].section_2.is_content_visible = true;
+                                    set_render(prev => prev + 1);
+                                }}/>
+                            }
+                            {
+                                themes[selected_theme].section_2.is_content_visible && <>
+                                    <div className={styles.sectionInfo}>
                                         {
-                                            !themes[selected_theme].section_3.is_content_visible &&
-                                            <Button theme={'gold_small'} title={'See Info'} onClick={() => {
-                                                themes[selected_theme].section_3.is_content_visible = true;
-                                                set_render(prev => prev + 1);
-                                            }}/>
-                                        }
-                                        {
-                                            themes[selected_theme].section_3.is_content_visible && <>
-                                                <div className={styles.sectionInfo}>
-                                                    {
-                                                        themes[selected_theme].section_3.content.map((item, index) => {
-                                                            return <div className={styles.sInfo}>
-                                                                <header>{item.title} : &nbsp;</header>
-                                                                <p>{item.desc}</p>
-                                                            </div>
-                                                        })
-                                                    }
+                                            themes[selected_theme].section_2.content.map((item, index) => {
+                                                return <div className={styles.sInfo}>
+                                                    <header>{item.title} : <span>{item.desc}</span></header>
+
                                                 </div>
-                                            </>
+                                            })
                                         }
                                     </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                    )
-                }
-            </InView>
+                                </>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div className={"inner " + styles.sectionThree}>
+                    <div className={styles.sectionOneContent}>
+                        <div className={styles.socTop}>
+                            <h3>{themes[selected_theme].section_3.title}</h3>
+                        </div>
+                        <div className={styles.socMid}>
+                            <img src={themes[selected_theme].section_3.image}/>
+                        </div>
+                        <div className={styles.socBottom}>
+                            {
+                                !themes[selected_theme].section_3.is_content_visible &&
+                                <Button theme={'gold_small'} title={'See Info'} onClick={() => {
+                                    themes[selected_theme].section_3.is_content_visible = true;
+                                    set_render(prev => prev + 1);
+                                }}/>
+                            }
+                            {
+                                themes[selected_theme].section_3.is_content_visible && <>
+                                    <div className={styles.sectionInfo}>
+                                        {
+                                            themes[selected_theme].section_3.content.map((item, index) => {
+                                                return <div className={styles.sInfo}>
+                                                    <header>{item.title} : <span>{item.desc}</span></header>
+
+                                                </div>
+                                            })
+                                        }
+                                    </div>
+                                </>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div className={"inner " + styles.sectionMobile}>
+                    <div className={styles.smContent}>
+                        <div className={styles.smTop}>
+                            <h3>{themes[selected_theme].section_3.title}</h3>
+                        </div>
+                        <div className={styles.smSlider}>
+                            <img src={themes[selected_theme].section_3.image}/>
+                        </div>
+                        <div className={styles.smBottom}>
+                            {
+                                !themes[selected_theme].section_3.is_content_visible &&
+                                <Button theme={'gold_small'} title={'See Info'} onClick={() => {
+                                    themes[selected_theme].section_3.is_content_visible = true;
+                                    set_render(prev => prev + 1);
+                                }}/>
+                            }
+                            {
+                                themes[selected_theme].section_3.is_content_visible && <>
+                                    <div className={styles.sectionInfo}>
+                                        {
+                                            themes[selected_theme].section_3.content.map((item, index) => {
+                                                return <div className={styles.sInfo}>
+                                                    <header>{item.title} : <span>{item.desc}</span></header>
+                                                </div>
+                                            })
+                                        }
+                                    </div>
+                                </>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/*            </motion.div>*/}
+            {/*        )*/}
+            {/*    }*/}
+            {/*</InView>*/}
 
             <Footer/>
         </Fragment>

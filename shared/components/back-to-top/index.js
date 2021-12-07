@@ -7,7 +7,7 @@ export default function BackToTop({background = 'transparent'}) {
     }
 
     return (<Fragment>
-        <div className={styles.backtoToTopOuter} style={{background: background}}>
+        <div className={styles.backtoToTopOuter} style={{background: background}} onClick={backToTop}>
             {/*<div className={"inner " + styles.inner}>*/}
             <section className={styles.backtoToTop + ' ' + (background === 'black' ? styles.backtoToTopBlack : '')} title={'Back To Top'}>
                 <header>Back to Top</header>

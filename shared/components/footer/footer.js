@@ -63,7 +63,7 @@ export default function Footer() {
                                     <a href={'/privacy-policy'}>
                                         <header className={styles.item}>Privacy Policy</header>
                                     </a>
-                                    <a href={'/disclaimer'}>
+                                    <a href={'/privacy-policy#using'}>
                                         <header className={styles.item}>Disclaimer</header>
                                     </a>
                                 </>
@@ -92,7 +92,7 @@ export default function Footer() {
                 <div className={styles.footerBottom}>
                     <div className={styles.fbLeft}>
                         <div className={styles.mobile}>
-                            <a>
+                            <a href="tel: +918885085005">
                                 <header>+91 8885 085005</header>
                             </a>
                         </div>
@@ -105,7 +105,7 @@ export default function Footer() {
                             </a>
                         </div>
                         <div className={styles.address}>
-                            Signature 36, Rd.NO.10, OPP. al cazar mall <br/>
+                            G1, 8-2-293/82/A/ 486, Signature 36, Rd.no.10, <br/>
                             jublee hills, hyderabad <br/>
                             500033
                             <BackToTop/>

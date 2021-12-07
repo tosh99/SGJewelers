@@ -5,6 +5,11 @@
 }
 
 .backtoToTop {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 3;
+
     cursor: pointer;
     width: 50px;
     display: flex;
@@ -35,7 +40,7 @@
 }
 
 .backtoToTop:hover {
-    width: 220px;
+    width: 240px;
     transition: 0.4s;
     border-radius: 35px;
 

@@ -114,7 +114,7 @@ export default function SocialResponsibility() {
                                     initial={{opacity: 0}}
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
-                            <div className={"inner " + styles.using}>
+                            <div className={"inner " + styles.using} id={'using'}>
                                 <h1 className={'sectionTitle'}>By using SANJAYGUPTA.WORLD </h1>
                                 <header>the user unconditionally accepts the terms and conditions of use as given here under :</header>
 

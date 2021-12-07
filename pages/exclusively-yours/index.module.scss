@@ -82,6 +82,7 @@
             text-transform: capitalize;
             font-family: MillionaireTrialScript, sans-serif;
             margin-bottom: 21px;
+            letter-spacing: 0;
         }
 
         p {
@@ -103,7 +104,7 @@
             align-items: flex-start;
             margin-bottom: 10px;
 
-            header, p {
+            header, span {
                 font-family: TeodorTrialLight, sans-serif;
                 font-size: 18px;
                 line-height: 149%;
@@ -113,12 +114,12 @@
 
             header {
                 text-transform: uppercase;
-                width: 155px;
+                width: 500px;
             }
 
-            p {
+            span {
                 color: #003E52;
-                max-width: 420px;
+                text-transform: initial;
             }
         }
     }
@@ -241,6 +242,9 @@
 @media only screen and (max-width: 648px) {
     .traditionOuter {
         .tradition {
+            background: url("/images/exclusively/banner_mobile.png") no-repeat;
+            background-size: cover;
+
             h1 {
                 font-size: 20px;
                 line-height: 151%;
@@ -284,6 +288,16 @@
             }
 
         }
+
+        .sectionInfo {
+
+            .sInfo {
+                header {
+                    width: 100%;
+                }
+            }
+        }
+
 
         .sectionOne, .sectionTwo, .sectionThree {
             display: none;

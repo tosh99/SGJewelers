@@ -20,7 +20,8 @@
 
 @media only screen and (max-width: 648px) {
     .nextback {
-        width: 90px;
+        //width: 90px;
+        display: none;
 
         img {
             max-width: 33px;
