@@ -19,7 +19,7 @@
     color: #CA9040;
 
     white-space: nowrap;
-
+    transition: 0.3s;
 }
 
 .buttonsGoldSmall {
@@ -27,9 +27,16 @@
     background: url("/icons/common/buttons/button_bg_gold_small.svg") no-repeat;
     background-size: contain;
     width: 148px;
-    height: 42px;
+    height: 48px;
     font-size: 14px;
     font-weight: 300;
+}
+
+.buttonsGoldLarge {
+    background: url("/icons/common/buttons/button_bg_large_gold.svg") no-repeat;
+    background-size: contain;
+    color: #CA9040;
+    width: 362px;
 }
 
 .buttonsBlueSmall {
@@ -37,16 +44,6 @@
     background: url("/icons/common/buttons/button_bg_blue_small.svg") no-repeat;
     background-size: contain;
     color: #003E52;
-    width: 148px;
-    height: 42px;
-    font-size: 14px;
-}
-
-.buttonsWhiteSmall {
-    font-family: MillionaireTrialRoman, sans-serif;
-    background: url("/icons/common/buttons/button_bg_white_small.svg") no-repeat;
-    background-size: contain;
-    color: white;
     width: 148px;
     height: 42px;
     font-size: 14px;
@@ -65,11 +62,14 @@
     color: #003E52;
 }
 
-.buttonsGoldLarge {
-    background: url("/icons/common/buttons/button_bg_large_gold.svg") no-repeat;
+.buttonsWhiteSmall {
+    font-family: MillionaireTrialRoman, sans-serif;
+    background: url("/icons/common/buttons/button_bg_white_small.svg") no-repeat;
     background-size: contain;
-    color: #CA9040;
-    width: 362px;
+    color: white;
+    width: 148px;
+    height: 42px;
+    font-size: 14px;
 }
 
 .buttonsWhiteLarge {
@@ -83,6 +83,24 @@
     text-transform: capitalize;
 }
 
+.buttons:hover, .buttonsBlue:hover {
+    color: black;
+    background: url("/icons/common/buttons/button_bg_black.svg") no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+}
+
+.buttonsGoldSmall:hover, .buttonsBlueSmall:hover, .buttonsWhiteSmall:hover {
+    background: url("/icons/common/buttons/button_bg_black_small.svg") no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+}
+
+.buttonsGoldLarge:hover, .buttonsBlueLarge:hover, .buttonsWhiteLarge:hover {
+    background: url("/icons/common/buttons/button_bg_black_large.svg") no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+}
 
 @media only screen and (max-width: 648px) {
     .buttons {
@@ -91,7 +109,6 @@
         font-size: 10px;
         line-height: 150%;
     }
-
 
     .buttonsGoldSmall {
         width: 119px;
@@ -111,15 +128,12 @@
         font-size: 12px;
     }
 
-
     .buttonsBlue {
-        background: url("/icons/common/buttons/button_bg_blue.svg") no-repeat;
-        background-size: contain;
-        color: #003E52;
+        width: 234px;
+        height: 40px;
     }
 
     .buttonsGoldLarge {
-        color: #CA9040;
         width: 284px;
         height: 32px;
     }
@@ -128,6 +142,4 @@
         width: 248px;
         height: 29px;
     }
-
-
 }

@@ -7,7 +7,6 @@ import Head from "next/head";
 import PageHeader from "../../shared/components/page-header/page-header";
 
 import SwiperCore, {Autoplay, EffectFade, Navigation, Pagination} from 'swiper/core';
-import {Swiper, SwiperSlide} from 'swiper/react';
 
 
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);

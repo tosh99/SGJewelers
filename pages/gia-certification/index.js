@@ -1,15 +1,12 @@
 import styles from './index.module.scss'
-import {Fragment, useEffect, useState} from "react";
+import {Fragment} from "react";
 import {motion} from "framer-motion"
 import {InView} from 'react-intersection-observer';
 import Footer from "../../shared/components/footer/footer";
 import Head from "next/head";
 import PageHeader from "../../shared/components/page-header/page-header";
-import Button from "../../shared/components/button";
 
 import SwiperCore, {Autoplay, EffectFade, Navigation, Pagination} from 'swiper/core';
-import {Swiper, SwiperSlide} from 'swiper/react';
-import NextBack from "../../shared/components/nextback/nextback";
 
 
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);

@@ -1,6 +1,5 @@
 import '../styles/globals.scss'
 import Head from "next/head";
-import TransitionLayout from "../shared/components/transition";
 
 function MyApp({Component, pageProps}) {
     return <>
@@ -8,9 +7,9 @@ function MyApp({Component, pageProps}) {
             <title>Products</title>
         </Head>
 
-        <TransitionLayout>
+        {/*<TransitionLayout>*/}
             <Component {...pageProps} />
-        </TransitionLayout>
+        {/*</TransitionLayout>*/}
     </>
 }
 

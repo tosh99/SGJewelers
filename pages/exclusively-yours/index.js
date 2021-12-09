@@ -14,6 +14,7 @@ export default function ExclusivelyYours() {
         title: 'Magnificent',
         feeling_title: 'feeling magnificent',
         banner: '/images/exclusively/magnificent/banner.png',
+        banner_mobile: '/images/exclusively/magnificent/banner_mobile.png',
         desc: 'Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.',
         section_1: {
             title: 'Magri Mala',
@@ -84,6 +85,7 @@ export default function ExclusivelyYours() {
     }, {
         title: 'Chic',
         banner: '/images/exclusively/chic/banner.png',
+        banner_mobile: '/images/exclusively/chic/banner_mobile.png',
         feeling_title: 'feeling chic',
         desc: 'Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.',
         section_1: {
@@ -152,6 +154,7 @@ export default function ExclusivelyYours() {
     }, {
         title: 'Intimate',
         banner: '/images/exclusively/intimate/banner.png',
+        banner_mobile: '/images/exclusively/intimate/banner_mobile.png',
         feeling_title: 'feeling intimate',
         desc: 'Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.',
         section_1: {
@@ -220,6 +223,7 @@ export default function ExclusivelyYours() {
     }, {
         title: 'Celebratory',
         banner: '/images/exclusively/celebratory/banner.png',
+        banner_mobile: '/images/exclusively/celebratory/banner_mobile.png',
         feeling_title: 'feeling celebratory',
         desc: 'Explore the poetic fusion of age-old traditions and contemporary renditions. Our jewellery, your way.',
         section_1: {
@@ -301,19 +305,18 @@ export default function ExclusivelyYours() {
                                     animate={inView ? {opacity: 1} : {opacity: 0}}
                                     transition={{duration: 1}}>
                             <div className={"inner " + styles.tradition} style={{
-                                backgroundImage: 'url(' + themes[selected_theme].banner + ')',
+                                backgroundImage: 'url(' + (device === 0 ? themes[selected_theme].banner_mobile : themes[selected_theme].banner) + ')',
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat'
                             }}>
-                                <h1>I am looking for <br/> jewellery TO <br/> compliment my mood of <br/> FEELING</h1>
+                                <h1>I am looking for <br/> jewellery TO <br/> compliment my mood  <br/> of FEELING</h1>
                                 <div className={styles.themes}>
                                     <div className={styles.themeLeft} onClick={() => {
                                         if (selected_theme > 0) {
                                             set_selected_theme(prev => prev - 1)
-                                            document.getElementById('section').scrollIntoView()
                                         }
                                     }}>
-                                        <img src={'/images/exclusively/banner/left.svg'}/>
+                                        <img src={'/images/exclusively/banner/' + (selected_theme === 0 ? 'left_disabled.svg' : 'left.svg')}/>
                                     </div>
                                     <div className={styles.themeContent}>
                                         <h2>{themes[selected_theme].title}</h2>
@@ -321,16 +324,17 @@ export default function ExclusivelyYours() {
                                     <div className={styles.themeRight} onClick={() => {
                                         if (selected_theme < themes.length - 1) {
                                             set_selected_theme(prev => prev + 1)
-                                            document.getElementById('section').scrollIntoView()
                                         }
                                     }}>
-                                        <img src={'/images/exclusively/banner/right.svg'}/>
+                                        <img src={'/images/exclusively/banner/' + (selected_theme === themes.length - 1 ? 'right_disabled.svg' : 'right.svg')}/>
                                     </div>
                                 </div>
 
 
                                 <header>&nbsp;</header>
-                                <Button title={'SEE THE PIECES'} theme={'white_large'}/>
+                                <Button title={'SEE THE PIECES'} theme={'white_large'} onClick={() => {
+                                    document.getElementById('section').scrollIntoView()
+                                }}/>
                                 <p>We have devised a custom filter that helps you find jewellery that matches your mood and suits your style.
                                 </p>
                             </div>

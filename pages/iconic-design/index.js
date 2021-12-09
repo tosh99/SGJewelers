@@ -9,7 +9,6 @@ import Button from "../../shared/components/button";
 
 import SwiperCore, {Autoplay, EffectFade, Navigation, Pagination} from 'swiper/core';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import NextBack from "../../shared/components/nextback/nextback";
 
 
 SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
