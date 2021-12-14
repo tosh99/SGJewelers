@@ -57,6 +57,10 @@
         .virtualCarousel {
             display: flex;
             justify-content: space-between;
+
+            video {
+                height: 538px;
+            }
         }
     }
 }
@@ -192,11 +196,16 @@
             }
 
             .virtualCarousel {
-                overflow-y: auto;
+                flex-direction: column;
 
                 img {
                     height: 251px;
                     margin-right: 20px;
+                }
+
+                video {
+                    height: unset;
+                    width: 100%;
                 }
             }
         }

@@ -59,7 +59,13 @@
 
 
 @media only screen and (max-width: 648px) {
-    .backtoToTopOuter {
-        display: none;
+    .backtoToTop:hover {
+        width: 50px;
+        transition: 0.4s;
+        border-radius: 35px;
+
+        header {
+            display: none;
+        }
     }
 }

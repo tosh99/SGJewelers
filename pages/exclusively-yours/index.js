@@ -309,7 +309,7 @@ export default function ExclusivelyYours() {
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat'
                             }}>
-                                <h1>I am looking for <br/> jewellery TO <br/> compliment my mood  <br/> of FEELING</h1>
+                                <h1>I am looking for <br/> jewellery TO <br/> compliment my mood <br/> of FEELING</h1>
                                 <div className={styles.themes}>
                                     <div className={styles.themeLeft} onClick={() => {
                                         if (selected_theme > 0) {
@@ -411,8 +411,7 @@ export default function ExclusivelyYours() {
                                         {
                                             themes[selected_theme].section_1.content.map((item, index) => {
                                                 return <div className={styles.sInfo}>
-                                                    <header>{item.title} : &nbsp;</header>
-                                                    <p>{item.desc}</p>
+                                                    <header>{item.title} : <span>{item.desc}</span></header>
                                                 </div>
                                             })
                                         }
@@ -441,7 +440,6 @@ export default function ExclusivelyYours() {
                                             themes[selected_theme].section_2.content.map((item, index) => {
                                                 return <div className={styles.sInfo}>
                                                     <header>{item.title} : <span>{item.desc}</span></header>
-
                                                 </div>
                                             })
                                         }
