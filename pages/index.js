@@ -153,16 +153,22 @@ export default function Home() {
                                         <div className={styles.tlContImages}>
                                             <img className={styles.timelesstwo}
                                                  src={'/images/homepage/timeless/2.png'}/>
-                                            <img className={styles.timelessone}
-                                                 src={'/images/homepage/timeless/1.png'}/>
+                                            <video controls autoPlay={true} muted className={styles.timelessone}>
+                                                <source src="/images/homepage/timeless/1.mp4" type="video/mp4"/>
+                                            </video>
+                                            {/*<img className={styles.timelessone}*/}
+                                            {/*     src={'/images/homepage/timeless/1.png'}/>*/}
                                         </div>
                                         <div className={styles.tlCreation}>
                                             <h1 className={'sectionTitle'}>Timeless creations</h1>
                                             <div className={styles.tlContImages}>
                                                 <img className={styles.timelesstwo}
                                                      src={'/images/homepage/timeless/2.png'}/>
-                                                <img className={styles.timelessone}
-                                                     src={'/images/homepage/timeless/1.png'}/>
+                                                <video controls autoPlay={true} muted className={styles.timelessone}>
+                                                    <source src="/images/homepage/timeless/1.mp4" type="video/mp4"/>
+                                                </video>
+                                                {/*<img className={styles.timelessone}*/}
+                                                {/*     src={'/images/homepage/timeless/1.png'}/>*/}
                                             </div>
                                             <p className={'sectionSummary'}>
                                                 <span>Heritage jewellery by Sanjay Gupta</span> has
@@ -179,7 +185,10 @@ export default function Home() {
                                     </a></div>
                                 <div className={styles.tlRight}>
                                     <img className={styles.timelessthree} src={'/images/homepage/timeless/3.png'}/>
-                                    <img className={styles.timelessfour} src={'/images/homepage/timeless/4.png'}/>
+                                    <video controls autoPlay={true} muted className={styles.timelessfour}>
+                                        <source src="/images/homepage/timeless/1.mp4" type="video/mp4"/>
+                                    </video>
+                                    {/*<img className={styles.timelessfour} src={'/images/homepage/timeless/4.png'}/>*/}
                                     <a href={'/heritage-jewellery'}>
                                         <Button title={'Discover Heritage Jewelery'} theme={'gold_large'}/>
                                     </a>

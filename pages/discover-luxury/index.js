@@ -81,13 +81,14 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.virtualCarousel}>
                                     <div>
-                                        {/*<img src={device === 2 ? '/images/discover-luxury/virtual/1.png' : '/images/discover-luxury/virtual/1_mobile.png'}/>*/}
+                                        <img src={device === 2 ? '/images/discover-luxury/virtual/1.png' : '/images/discover-luxury/virtual/1_mobile.png'}/>
+
+                                    </div>
+                                    <div>
                                         <video controls autoPlay={true} muted>
                                             <source src="/images/discover-luxury/virtual/10.mp4" type="video/mp4"/>
                                         </video>
-                                    </div>
-                                    <div>
-                                        <img src={'/images/discover-luxury/virtual/2.png'}/>
+                                        {/*<img src={'/images/discover-luxury/virtual/2.png'}/>*/}
                                     </div>
                                 </div>
                             </div>
@@ -109,15 +110,19 @@ export default function ExclusivelyYours() {
                             <div className={"inner " + styles.boxed}>
                                 <div className={styles.boxedTop}>
                                     <h1 className={'sectionTitle'}>Boxed <span>with</span> love </h1>
-                                    <img src={'/images/discover-luxury/boxed-love-1.png'}/>
                                 </div>
                                 <div className={styles.boxedBottom}>
-                                    <p className={'sectionSummary'}>We believe that every touchpoint of that first look is of prime importance.
-                                        Our jewellery boxes have been especially designed to add to the jewellery’s shine. They have been <span>handcrafted in
+                                    <div className={styles.boxedBLeft}>
+                                        <img src={'/images/discover-luxury/boxed-with-love.gif'}/>
+                                    </div>
+                                    <div className={styles.boxedBRight}>
+                                        <img src={'/images/discover-luxury/boxed-love-2.png'}/>
+                                        <p className={'sectionSummary'}>We believe that every touchpoint of that first look is of prime importance.
+                                            Our jewellery boxes have been especially designed to add to the jewellery’s shine. They have been <span>handcrafted in
                                         India </span> and made to keep your jewellery secure so when you open the box, the first look leaves you
-                                        mesmerised
-                                    </p>
-                                    <img src={'/images/discover-luxury/boxed-love-2.png'}/>
+                                            mesmerised
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
