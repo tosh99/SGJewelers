@@ -322,9 +322,7 @@ export default function Home() {
                                 <div className={styles.legTop}>
                                     <h1>Legacy <span>of&nbsp;</span> perfection <span>and</span> <br/>craftsmanship</h1>
                                     <div className={styles.legBottom}>
-                                        <video width="320" height="240" controls>
-                                            <source src="movie.mp4" type="video/mp4"/>
-                                        </video>
+                                        <img src={'/images/homepage/legacy.png'}/>
                                     </div>
                                     <p>Having established the standard of impeccable jewellery in 1925, Tibarumals is
                                         the forefather of preserving
@@ -334,9 +332,7 @@ export default function Home() {
                                     </p>
                                 </div>
                                 <div className={styles.legBottom}>
-                                    <video width="320" height="240" controls>
-                                        <source src="movie.mp4" type="video/mp4"/>
-                                    </video>
+                                    <img src={'/images/homepage/legacy.png'}/>
                                 </div>
                                 <a href={'/art-of-jewellery-making'}>
                                     <Button title={'Learn More'}/>
@@ -348,87 +344,71 @@ export default function Home() {
             </InView>
 
             {/*Book*/}
-            <InView threshold={0.25} triggerOnce={true}>
-                {
-                    ({ref, inView}) => (
-                        <motion.div className={"outer " + styles.bookOuter}
-                                    ref={ref}
-                                    initial={{opacity: 0}}
-                                    animate={inView ? {opacity: 1} : {opacity: 0}}
-                                    transition={{duration: 0.8}}>
-                            <div className={"inner " + styles.book}>
-                                <div className={styles.bookTop}>
-                                    <h1 className={'sectionTitle'}>BOOK <span>an</span> <br/> APPOINTMENT IN <span>the</span> <br/> PRIVATE <span
-                                        className={styles.cap}>Salon</span></h1>
-                                    <p className={'sectionSummary'}>We have a sequestered space in the store where we conduct our design
-                                        consultations with clients who
-                                        request bespoke jewellery for their special occasions. The space is designed for
-                                        you to have an intimate moment with the
-                                        design that is going to add the glimmer to your shine.
-                                    </p>
-                                </div>
-                                {/*<div className={'bookIndex ' + styles.bookIndex}>*/}
-                                {/*    <header>0{current_book_slide + 1}/<span>0{booking_places.length}</span></header>*/}
-                                {/*</div>*/}
-                                <div className={styles.bookBottom}>
-                                    <Swiper
-                                        spaceBetween={30}
-                                        centeredSlides={true}
-                                        loop={true}
-                                        onInit={(ev) => {
-                                            set_book_swiper(ev)
-                                        }}
-                                        onSlideChange={(ev) => {
-                                            set_current_book_slide(ev.activeIndex - 3)
-                                        }}
-                                        slidesPerView={'auto'}>
-                                        {
-                                            booking_places.map((place, index) => {
-                                                return <SwiperSlide>
-                                                    <div>
-                                                        <img src={place.img_src}/>
-                                                    </div>
-                                                </SwiperSlide>
-                                            })
-                                        }
-                                    </Swiper>
-                                </div>
-                                <div className={styles.bookButtons}>
-                                    <a href="mailto: info@sanjaygupta.world">
-                                        <Button title={'Book Now'}/>
-                                    </a>
-                                    <NextBack
-                                        prevDisabled={current_book_slide === 0}
-                                        nextDisabled={current_book_slide === booking_places.length - 1}
-                                        onNext={() => {
-                                            book_swiper.slideNext()
-                                        }}
-                                        onBack={() => {
-                                            book_swiper.slidePrev()
-                                        }}/>
-                                </div>
-                            </div>
-                        </motion.div>
-                    )
-                }
-            </InView>
-
-
             {/*<InView threshold={0.25} triggerOnce={true}>*/}
             {/*    {*/}
             {/*        ({ref, inView}) => (*/}
-            {/*            <motion.div className={"outer"}*/}
+            {/*            <motion.div className={"outer " + styles.bookOuter}*/}
             {/*                        ref={ref}*/}
             {/*                        initial={{opacity: 0}}*/}
             {/*                        animate={inView ? {opacity: 1} : {opacity: 0}}*/}
             {/*                        transition={{duration: 0.8}}>*/}
+            {/*                <div className={"inner " + styles.book}>*/}
+            {/*                    <div className={styles.bookTop}>*/}
+            {/*                        <h1 className={'sectionTitle'}>BOOK <span>an</span> <br/> APPOINTMENT IN <span>the</span> <br/> PRIVATE <span*/}
+            {/*                            className={styles.cap}>Salon</span></h1>*/}
+            {/*                        <p className={'sectionSummary'}>We have a sequestered space in the store where we conduct our design*/}
+            {/*                            consultations with clients who*/}
+            {/*                            request bespoke jewellery for their special occasions. The space is designed for*/}
+            {/*                            you to have an intimate moment with the*/}
+            {/*                            design that is going to add the glimmer to your shine.*/}
+            {/*                        </p>*/}
+            {/*                    </div>*/}
+            {/*                    /!*<div className={'bookIndex ' + styles.bookIndex}>*!/*/}
+            {/*                    /!*    <header>0{current_book_slide + 1}/<span>0{booking_places.length}</span></header>*!/*/}
+            {/*                    /!*</div>*!/*/}
+            {/*                    <div className={styles.bookBottom}>*/}
+            {/*                        <Swiper*/}
+            {/*                            spaceBetween={30}*/}
+            {/*                            centeredSlides={true}*/}
+            {/*                            loop={true}*/}
+            {/*                            onInit={(ev) => {*/}
+            {/*                                set_book_swiper(ev)*/}
+            {/*                            }}*/}
+            {/*                            onSlideChange={(ev) => {*/}
+            {/*                                set_current_book_slide(ev.activeIndex - 3)*/}
+            {/*                            }}*/}
+            {/*                            slidesPerView={'auto'}>*/}
+            {/*                            {*/}
+            {/*                                booking_places.map((place, index) => {*/}
+            {/*                                    return <SwiperSlide>*/}
+            {/*                                        <div>*/}
+            {/*                                            <img src={place.img_src}/>*/}
+            {/*                                        </div>*/}
+            {/*                                    </SwiperSlide>*/}
+            {/*                                })*/}
+            {/*                            }*/}
+            {/*                        </Swiper>*/}
+            {/*                    </div>*/}
+            {/*                    <div className={styles.bookButtons}>*/}
+            {/*                        <a href="mailto: info@sanjaygupta.world">*/}
+            {/*                            <Button title={'Book Now'}/>*/}
+            {/*                        </a>*/}
+            {/*                        <NextBack*/}
+            {/*                            prevDisabled={current_book_slide === 0}*/}
+            {/*                            nextDisabled={current_book_slide === booking_places.length - 1}*/}
+            {/*                            onNext={() => {*/}
+            {/*                                book_swiper.slideNext()*/}
+            {/*                            }}*/}
+            {/*                            onBack={() => {*/}
+            {/*                                book_swiper.slidePrev()*/}
+            {/*                            }}/>*/}
+            {/*                    </div>*/}
+            {/*                </div>*/}
             {/*            </motion.div>*/}
             {/*        )*/}
             {/*    }*/}
             {/*</InView>*/}
 
-            {/*<BookNow/>*/}
-            {/*<BackToTop/>*/}
             <Footer/>
         </Fragment>
     )
