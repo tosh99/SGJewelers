@@ -186,7 +186,7 @@ export default function Home() {
                                 <div className={styles.tlRight}>
                                     <img className={styles.timelessthree} src={'/images/homepage/timeless/3.png'}/>
                                     <video controls autoPlay={true} muted className={styles.timelessfour}>
-                                        <source src="/images/homepage/timeless/1.mp4" type="video/mp4"/>
+                                        <source src="/images/homepage/timeless/4.mp4" type="video/mp4"/>
                                     </video>
                                     {/*<img className={styles.timelessfour} src={'/images/homepage/timeless/4.png'}/>*/}
                                     <a href={'/heritage-jewellery'}>
