@@ -362,19 +362,20 @@
                     white-space: nowrap;
                 }
 
-                .timelessthree {
+                .sgExBRightTop {
                     img {
                         margin-bottom: 26px;
                         width: 100%;
                     }
                 }
 
-                .timelessfour {
+                .sgExBRightBottom {
                     display: flex;
 
-                    img {
+                    video {
                         margin-right: 26px;
                         width: 100%;
+                        max-width: 328px;
                     }
                 }
             }
@@ -833,7 +834,7 @@
                         line-height: 134.5%;
                     }
 
-                    .timelessthree {
+                    .sgExBRightTop {
                         max-width: calc(50% - 10px);
 
                         img {
@@ -841,7 +842,7 @@
                         }
                     }
 
-                    .timelessfour {
+                    .sgExBRightBottom {
                         display: flex;
                         flex-direction: column;
                         max-width: calc(50% - 10px);

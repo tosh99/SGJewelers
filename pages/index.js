@@ -272,10 +272,6 @@ export default function Home() {
                                 <div className={styles.sgExBottom}>
                                     <div className={styles.sgExBLeft}>
                                         <img src={'/images/homepage/sgex/1.png'}/>
-
-                                        {/*<video width="320" height="240" controls>*/}
-                                        {/*    <source src="movie.mp4" type="video/mp4"/>*/}
-                                        {/*</video>*/}
                                         <p>Handcrafted designs,hand-wrapped <br/> with love. </p>
                                         <p className={styles.summary}>Exceptional designs and exclusivity are just one of the few things you’ll
                                             come to love about us. We put your needs and vision before anything else. It
@@ -288,12 +284,15 @@ export default function Home() {
                                         </a>
                                     </div>
                                     <div className={styles.sgExBRight}>
-                                        <div className={styles.timelessthree}>
+                                        <div className={styles.sgExBRightTop}>
                                             <img src={'/images/homepage/sgex/2.png'}/>
                                             <header>Unbox old memories</header>
                                         </div>
-                                        <div className={styles.timelessfour}>
-                                            <img src={'/images/homepage/sgex/3.png'}/>
+                                        <div className={styles.sgExBRightBottom}>
+                                            <video controls autoPlay={true} muted>
+                                                <source src="/images/homepage/sgex/3.mp4" type="video/mp4"/>
+                                            </video>
+                                            {/*<img src={'/images/homepage/sgex/3.png'}/>*/}
                                             <header>Design <br/> your dream piece</header>
                                         </div>
                                     </div>

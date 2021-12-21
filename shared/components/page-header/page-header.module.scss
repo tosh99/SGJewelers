@@ -59,6 +59,10 @@
 
 }
 
+.headerScrollUp {
+    position: fixed;
+}
+
 @media only screen and (max-width: 648px) {
     .header {
         display: flex;

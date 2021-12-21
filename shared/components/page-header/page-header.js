@@ -1,13 +1,34 @@
 import styles from "./page-header.module.scss";
-import {Fragment, useState} from "react";
+import {Fragment, useEffect, useState} from "react";
 import Menu from "../menu/menu";
 
 export default function PageHeader({title, bg = 'transparent'}) {
     const [show_menu, set_show_menu] = useState(false)
+    const [doc_scroll, set_doc_scroll] = useState(0)
 
+    const [is_scroll_up, set_is_scroll_up] = useState(false)
+
+    useEffect(() => {
+        document.addEventListener('scroll', handleScroll)
+
+        return () => {
+            document.removeEventListener('scroll', handleScroll)
+        }
+    })
+
+    const handleScroll = () => {
+        const st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > doc_scroll) {
+            set_is_scroll_up(false)
+        } else {
+            set_is_scroll_up(true)
+        }
+
+        set_doc_scroll(st)
+    }
 
     return (<Fragment>
-        <div className={"outer " + ' ' + styles.headerOuter + ' ' + (bg === 'transparent' ? styles.headerOuterTrans : '')}>
+        <div className={"outer " + ' ' + styles.headerOuter + ' ' + (bg === 'transparent' ? styles.headerOuterTrans : '') + ' ' + (is_scroll_up ? styles.headerScrollUp : '')}>
             <div className={"inner " + styles.header}>
                 <div className={styles.hLeft}>
                     <header>{title ? title : <>&nbsp;</>}</header>
