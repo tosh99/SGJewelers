@@ -81,14 +81,16 @@ export default function ExclusivelyYours() {
                                 </div>
                                 <div className={styles.virtualCarousel}>
                                     <div>
-                                        <img src={device === 2 ? '/images/discover-luxury/virtual/1.png' : '/images/discover-luxury/virtual/1_mobile.png'}/>
-
-                                    </div>
-                                    <div>
+                                        {/*<img src={device === 2 ? '/images/discover-luxury/virtual/1.png' : '/images/discover-luxury/virtual/1_mobile.png'}/>*/}
                                         <video controls autoPlay={true} muted>
                                             <source src="/images/discover-luxury/virtual/10.mp4" type="video/mp4"/>
                                         </video>
-                                        {/*<img src={'/images/discover-luxury/virtual/2.png'}/>*/}
+                                    </div>
+                                    <div>
+                                        {/*<video controls autoPlay={true} muted>*/}
+                                        {/*    <source src="/images/discover-luxury/virtual/10.mp4" type="video/mp4"/>*/}
+                                        {/*</video>*/}
+                                        <img src={'/images/discover-luxury/virtual/2.png'}/>
                                     </div>
                                 </div>
                             </div>
