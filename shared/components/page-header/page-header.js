@@ -7,6 +7,7 @@ export default function PageHeader({title, bg = 'transparent'}) {
     const [doc_scroll, set_doc_scroll] = useState(0)
 
     const [is_scroll_up, set_is_scroll_up] = useState(false)
+    const [offset, set_offset] = useState(0)
 
     useEffect(() => {
         document.addEventListener('scroll', handleScroll)
@@ -18,17 +19,20 @@ export default function PageHeader({title, bg = 'transparent'}) {
 
     const handleScroll = () => {
         const st = window.pageYOffset || document.documentElement.scrollTop;
+        set_offset(st)
+
         if (st > doc_scroll) {
             set_is_scroll_up(false)
         } else {
             set_is_scroll_up(true)
         }
 
+        console.log(st)
         set_doc_scroll(st)
     }
 
     return (<Fragment>
-        <div className={"outer " + ' ' + styles.headerOuter + ' ' + (bg === 'transparent' ? styles.headerOuterTrans : '') + ' ' + (is_scroll_up ? styles.headerScrollUp : '')}>
+        <div className={"outer " + ' ' + styles.headerOuter + ' ' + (bg === 'transparent' ? styles.headerOuterTrans : '') + ' ' + ((is_scroll_up && offset > 100) ? styles.headerScrollUp : '')}>
             <div className={"inner " + styles.header}>
                 <div className={styles.hLeft}>
                     <header>{title ? title : <>&nbsp;</>}</header>

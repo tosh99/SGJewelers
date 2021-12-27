@@ -115,62 +115,62 @@ export default function ExclusivelyYours() {
             </InView>
 
             {/*Sketching*/}
-            <InView threshold={0.25} triggerOnce={true}>
-                {
-                    ({ref, inView}) => (
-                        <motion.div className={"outer " + styles.sketchingOuter}
-                                    ref={ref}
-                                    initial={{opacity: 0}}
-                                    animate={inView ? {opacity: 1} : {opacity: 0}}
-                                    transition={{duration: 1}}>
-                            <div className={"inner " + styles.sketching}>
-                                <div className={styles.sketchingLeft}>
-                                    <h1 className={'sectionTitle'}>SKETCHING</h1>
-                                    <div className={styles.sketchingContent}>
-                                        {
-                                            !is_sketching && <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'} onClick={() => {
-                                                set_is_sketching(true)
-                                            }}/>
-                                        }
-                                        {
-                                            is_sketching && <p className={'sectionSummary'}>
-                                                One can often find him doodling away as a design idea consumes his mind. Which, he then substantiates into design elements and has the principal designer sketch it in
-                                                detail. We believe that the vision for design can come from anyone who is a connoisseur of the arts. We also welcome the clients into this process to co-create the
-                                                design of their dream.
-                                            </p>
-                                        }
-                                        <p className={'sectionSummary'}>Mr. Sanjay Gupta sees design in everything
-                                            around him.
-                                            He draws inspiration from artistic vintage paintings, marble statues,
-                                            portraits of a
-                                            Royal courtsman or even architecture.
-                                        </p>
-                                        <div className={styles.sketchingImages}>
-                                            <img src={'/images/sketching/sketch-1.png'}/>
-                                            <img className={styles.img2} src={'/images/sketching/sketch-2.png'}/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className={styles.sketchingRight}>
-                                    <img src={'/images/sketching/sketch-2.png'}/>
-                                    {
-                                        !is_sketching && <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'} onClick={() => {
-                                            set_is_sketching(true)
-                                        }}/>
-                                    }
-                                    {
-                                        is_sketching && <p className={'sectionSummary'}>
-                                            One can often find him doodling away as a design idea consumes his mind. Which, he then substantiates into design elements and has the principal designer sketch it in
-                                            detail. We believe that the vision for design can come from anyone who is a connoisseur of the arts. We also welcome the clients into this process to co-create the
-                                            design of their dream.
-                                        </p>
-                                    }
-                                </div>
-                            </div>
-                        </motion.div>
-                    )
-                }
-            </InView>
+            {/*<InView threshold={0.25} triggerOnce={true}>*/}
+            {/*    {*/}
+            {/*        ({ref, inView}) => (*/}
+            {/*            <motion.div className={"outer " + styles.sketchingOuter}*/}
+            {/*                        ref={ref}*/}
+            {/*                        initial={{opacity: 0}}*/}
+            {/*                        animate={inView ? {opacity: 1} : {opacity: 0}}*/}
+            {/*                        transition={{duration: 1}}>*/}
+            {/*                <div className={"inner " + styles.sketching}>*/}
+            {/*                    <div className={styles.sketchingLeft}>*/}
+            {/*                        <h1 className={'sectionTitle'}>SKETCHING</h1>*/}
+            {/*                        <div className={styles.sketchingContent}>*/}
+            {/*                            {*/}
+            {/*                                !is_sketching && <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'} onClick={() => {*/}
+            {/*                                    set_is_sketching(true)*/}
+            {/*                                }}/>*/}
+            {/*                            }*/}
+            {/*                            {*/}
+            {/*                                is_sketching && <p className={'sectionSummary'}>*/}
+            {/*                                    One can often find him doodling away as a design idea consumes his mind. Which, he then substantiates into design elements and has the principal designer sketch it in*/}
+            {/*                                    detail. We believe that the vision for design can come from anyone who is a connoisseur of the arts. We also welcome the clients into this process to co-create the*/}
+            {/*                                    design of their dream.*/}
+            {/*                                </p>*/}
+            {/*                            }*/}
+            {/*                            <p className={'sectionSummary'}>Mr. Sanjay Gupta sees design in everything*/}
+            {/*                                around him.*/}
+            {/*                                He draws inspiration from artistic vintage paintings, marble statues,*/}
+            {/*                                portraits of a*/}
+            {/*                                Royal courtsman or even architecture.*/}
+            {/*                            </p>*/}
+            {/*                            <div className={styles.sketchingImages}>*/}
+            {/*                                <img src={'/images/sketching/sketch-1.png'}/>*/}
+            {/*                                <img className={styles.img2} src={'/images/sketching/sketch-2.png'}/>*/}
+            {/*                            </div>*/}
+            {/*                        </div>*/}
+            {/*                    </div>*/}
+            {/*                    <div className={styles.sketchingRight}>*/}
+            {/*                        <img src={'/images/sketching/sketch-2.png'}/>*/}
+            {/*                        {*/}
+            {/*                            !is_sketching && <Button theme={'gold_small'} title={'Read More'} casing={'capitalize'} onClick={() => {*/}
+            {/*                                set_is_sketching(true)*/}
+            {/*                            }}/>*/}
+            {/*                        }*/}
+            {/*                        {*/}
+            {/*                            is_sketching && <p className={'sectionSummary'}>*/}
+            {/*                                One can often find him doodling away as a design idea consumes his mind. Which, he then substantiates into design elements and has the principal designer sketch it in*/}
+            {/*                                detail. We believe that the vision for design can come from anyone who is a connoisseur of the arts. We also welcome the clients into this process to co-create the*/}
+            {/*                                design of their dream.*/}
+            {/*                            </p>*/}
+            {/*                        }*/}
+            {/*                    </div>*/}
+            {/*                </div>*/}
+            {/*            </motion.div>*/}
+            {/*        )*/}
+            {/*    }*/}
+            {/*</InView>*/}
 
             {/*Pick*/}
             <InView threshold={0.25} triggerOnce={true}>
