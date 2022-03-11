@@ -92,8 +92,8 @@ export default function Footer() {
                 <div className={styles.footerBottom}>
                     <div className={styles.fbLeft}>
                         <div className={styles.mobile}>
-                            <a href="tel: +918885085005">
-                                <header>+91 8885 085005</header>
+                            <a href="tel: +918885085055">
+                                <header>+91 8885 085055</header>
                             </a>
                         </div>
                         <div className={styles.emails}>
